@@ -8,17 +8,28 @@ public class BunnyMovement : MonoBehaviour
     public float JumpForce;
 
     private Rigidbody2D Rigidbody2D;
+    private Animator Animator;
     private float Horizontal;
+    private float Vertical;
     private bool Grounded;
 
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
+        Animator = GetComponent<Animator>();
     }
 
     void Update()
     {
         Horizontal = Input.GetAxisRaw("Horizontal") * Speed;
+        Vertical = Input.GetAxisRaw("Vertical") * Speed;
+
+        if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        else if  (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+        Animator.SetBool("Running", Horizontal != 0.0f && Vertical == 0.0f);
+        Animator.SetBool("Jumping", Vertical > 0.0f);
+
 
         if (Physics2D.Raycast(transform.position, Vector3.down, 2.0f))
         {
