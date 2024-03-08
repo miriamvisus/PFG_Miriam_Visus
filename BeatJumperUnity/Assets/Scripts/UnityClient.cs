@@ -41,7 +41,6 @@ public class UnityClient : MonoBehaviour
 
     void OnDestroy()
     {
-        // Cierra el socket cuando el GameObject sea destruido
         clientSocket.Close();
     }
 }

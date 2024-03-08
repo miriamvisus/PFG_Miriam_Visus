@@ -375,6 +375,7 @@
 -analyzer:"C:/Users/miria.PORMIR/Downloads/2022.3.17f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Users/miria.PORMIR/Downloads/2022.3.17f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/AdaptationController.cs"
+"Assets/Scripts/AudioSender.cs"
 "Assets/Scripts/BunnyMovement.cs"
 "Assets/Scripts/CameraScript.cs"
 "Assets/Scripts/FallDetectorMovement.cs"
