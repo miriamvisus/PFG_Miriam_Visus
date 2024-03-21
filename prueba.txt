@@ -1,0 +1,152 @@
+import socket
+import librosa
+import numpy as np
+from pydub import AudioSegment
+import io
+import subprocess
+
+# Dirección IP y puerto del servidor
+HOST = '127.0.0.1'
+PORT = 8888
+
+
+def receive_audio_data():
+    try:
+        # Crear un socket TCP/IP
+        server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+        # Enlazar el socket a la dirección y puerto especificados
+        server_socket.bind((HOST, PORT))
+
+        # Poner el socket en modo de escucha
+        server_socket.listen(1)
+
+        print(f"Servidor escuchando en {HOST}:{PORT}")
+
+        # Aceptar conexiones entrantes
+        client_socket, client_address = server_socket.accept()
+
+        print(f"Conexión establecida desde {client_address}")
+
+        # Recibir los datos de audio de Unity
+        audio_data = client_socket.recv(1024)
+
+        # Convertir los datos de audio de MP3 a WAV
+        audio_array = mp3_to_wav(audio_data)
+
+        # Procesar los datos de audio
+        tempo, energy = process_audio_data(audio_array)
+
+        # Cerrar los sockets
+        client_socket.close()
+        server_socket.close()
+
+        return tempo, energy
+
+    except Exception as e:
+        print(f"Error al recibir datos de audio: {e}")
+
+
+def mp3_to_wav(mp3_data):
+    # Cargar los datos de MP3 desde un objeto de bytes
+    mp3_audio = AudioSegment.from_file(io.BytesIO(mp3_data), format="mp3")
+
+    # Convertir el audio de MP3 a WAV
+    wav_data = mp3_audio.export(io.BytesIO(), format="wav").read()
+
+    return wav_data
+
+
+def process_audio_data(audio_data):
+    try:
+        # Guardar los datos de audio en un archivo WAV temporal en disco
+        with open('temp_audio.wav', 'wb') as f:
+            f.write(audio_data)
+
+        # Cargar el archivo WAV utilizando librosa
+        audio_array, _ = librosa.load('temp_audio.wav', sr=None)
+
+        # Eliminar el archivo temporal
+        # ¡Asegúrate de tener en cuenta los permisos adecuados para eliminar archivos en tu entorno!
+        # En producción, es posible que desees manejar la eliminación de archivos de una manera más segura.
+        import os
+        os.remove('temp_audio.wav')
+
+        samplerate = 44100
+
+        # Analizar el audio utilizando librosa para extraer características
+        tempo, beat_frames = librosa.beat.beat_track(y=audio_array, sr=samplerate)
+        energy = np.mean(librosa.feature.rms(y=audio_array))
+
+        # Devolver los resultados del análisis
+        return tempo, energy
+
+    except Exception as e:
+        print(f"Error al procesar datos de audio: {e}")
+
+
+def decode_mp3(file_path):
+    try:
+        # Leer el archivo MP3 como datos binarios
+        with open(file_path, 'rb') as f:
+            mp3_data = f.read()
+
+        # Pasar los datos binarios a ffmpeg para decodificar
+        ffmpeg_process = subprocess.Popen(['ffmpeg', '-i', 'pipe:', '-f', 'wav', 'pipe:'],
+                                          stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, stderr = ffmpeg_process.communicate(input=mp3_data)
+
+        if ffmpeg_process.returncode == 0:
+            # La decodificación fue exitosa, stdout contiene los datos de audio decodificados
+            return stdout
+        else:
+            # Hubo un error durante la decodificación, imprimir el mensaje de error
+            print("Error al decodificar el archivo MP3:", stderr.decode())
+            return None
+
+    except Exception as e:
+        print("Error al procesar el archivo MP3:", e)
+        return None
+
+
+if __name__ == "__main__":
+    # Ruta al archivo MP3
+    mp3_file_path = 'C:\\Users\\miria.PORMIR\\PFG_Miriam_Visus_Martin\\BeatJumperUnity\\Assets\\Audios\\Boogie Party.mp3'
+
+    # Decodificar el archivo MP3 y obtener los datos de audio decodificados
+    decoded_audio_data = decode_mp3(mp3_file_path)
+
+    # Hacer algo con los datos de audio decodificados, como guardarlos en un archivo WAV
+    if decoded_audio_data:
+        with open('audio_decodificado.wav', 'wb') as f:
+            f.write(decoded_audio_data)
+        print("Archivo WAV creado correctamente.")
+    else:
+        print("No se pudo decodificar el archivo MP3.")
+
+    # Decodificar el archivo MP3 y obtener los datos de audio decodificados
+    processed_audio_data = process_audio_data('audio_decodificado.wav')
+
+
+def decode_mp3(file_path):
+    try:
+        # Leer el archivo MP3 como datos binarios
+        with open(file_path, 'rb') as f:
+            mp3_data = f.read()
+
+        # Pasar los datos binarios a ffmpeg para decodificar
+        ffmpeg_process = subprocess.Popen(['ffmpeg', '-i', 'pipe:', '-f', 'wav', 'pipe:'],
+                                          stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, stderr = ffmpeg_process.communicate(input=mp3_data)
+
+        if ffmpeg_process.returncode == 0:
+            # La decodificación fue exitosa, stdout contiene los datos de audio decodificados
+            return stdout
+        else:
+            # Hubo un error durante la decodificación, imprimir el mensaje de error
+            print("Error al decodificar el archivo MP3:", stderr.decode())
+            return None
+
+    except Exception as e:
+        print("Error al procesar el archivo MP3:", e)
+        return None
