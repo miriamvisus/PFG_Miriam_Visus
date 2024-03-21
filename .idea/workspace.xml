@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f4a4b6f1-b97d-4cea-9703-58349bdd84f0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/BeatJumperPython/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperPython/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperPython/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperPython/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperPython/.idea/pythonProject1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperPython/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperPython/MusicManager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperPython/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Assets/Scripts/AudioSender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Assets/Scripts/AudioSender.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/Artifacts/89/897b05c670d74711003659ee76289d45" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/Artifacts/9a/9a80a29591eeaa97b549f1254ee8f5d1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/TundraBuildState.state" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/TundraBuildState.state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/TundraBuildState.state.map" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/TundraBuildState.state.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.ref.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.ref.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/backend1.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/backend1.traceevents" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/fullprofile.json" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/fullprofile.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/tundra.digestcache" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/tundra.digestcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/tundra.log.json" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/Bee/tundra.log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/BurstCache/JIT/Hashes/a110ffe6b760e4b56cb86ae44bc7857d.bhc" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/BurstCache/JIT/Hashes/a110ffe6b760e4b56cb86ae44bc7857d.bhc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/SceneVisibilityState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/Search/transactions.db" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/Search/transactions.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Library/ilpp.pid" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Library/ilpp.pid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Logs/AssetImportWorker0-prev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Logs/AssetImportWorker0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Logs/AssetImportWorker1-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Logs/AssetImportWorker1-prev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Logs/AssetImportWorker1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeatJumperUnity/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/BeatJumperUnity/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2dTIIwSbEtAPYr1rU69naRwcc5E" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f4a4b6f1-b97d-4cea-9703-58349bdd84f0" name="Changes" comment="" />
+      <created>1710025566308</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710025566308</updated>
+      <workItem from="1710025567436" duration="32000" />
+    </task>
+    <servers />
+  </component>
+</project>
