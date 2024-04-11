@@ -7,7 +7,7 @@ import sounddevice as sd
 import soundfile as sf
 from pydub import AudioSegment
 
-# Dirección IP y puerto del servidor
+# Dirección I-P y puerto del servidor
 HOST = '127.0.0.1'
 PORT = 8888
 
@@ -59,14 +59,14 @@ def receive_audio_data():
         sd.play(audio_array, samplerate=44100, blocking=True)
 
         # Guardar los datos de audio en formato WAV
-        sf.write("output_audio.wav", audio_array, samplerate)
+        sf.write("output_audio_2.wav", audio_array, samplerate)
 
         # Convertir el archivo WAV a MP3
-        audio = AudioSegment.from_wav("output_audio.wav")
-        audio.export("output_audio.mp3", format="mp3")
+        audio = AudioSegment.from_wav("output_audio_2.wav")
+        audio.export("output_audio_2.mp3", format="mp3")
 
         # Procesar los datos de audio
-        tempo, energy = process_audio_data("output_audio.mp3")
+        tempo, energy = process_audio_data("output_audio_2.mp3")
 
         # Cierra la conexión
         client_socket.close()
@@ -118,5 +118,4 @@ def calculate_tempo(y, sr):
 
 if __name__ == "__main__":
     receive_audio_data()
-    # wav_file = "C:\\Users\\miria.PORMIR\\PFG_Miriam_Visus_Martin\\BeatJumperUnity\\Assets\\Audios\\Boogie Party (mp3cut.net) (1).mp3"
-    # process_audio_data(wav_file)
+

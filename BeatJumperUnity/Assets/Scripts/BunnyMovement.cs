@@ -9,8 +9,6 @@ public class BunnyMovement : MonoBehaviour
 
     private Rigidbody2D Rigidbody2D;
     private Animator Animator;
-    private float Horizontal;
-    private float Vertical;
     private bool Grounded;
 
     void Start()
@@ -21,49 +19,43 @@ public class BunnyMovement : MonoBehaviour
 
     void Update()
     {
-        Horizontal = Input.GetAxisRaw("Horizontal") * Speed;
-        Vertical = Input.GetAxisRaw("Vertical") * Speed;
+        transform.Translate(Vector2.right * Speed * Time.deltaTime);
 
-        if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-        else if  (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-
-        Animator.SetBool("Running", Horizontal != 0.0f && Grounded);
-        Animator.SetBool("Jumping", !Grounded);
-
-
-        if (Physics2D.Raycast(transform.position, Vector3.down, 2.0f))
-        {
-            Grounded = true;
-        }
-        else Grounded = false;
-
-        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && Grounded)
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             Jump();
         }
+
+        // Actualización de la animación
+        Animator.SetBool("Running", true);
+        Animator.SetBool("Jumping", !Grounded);
     }
 
     private void Jump()
     {
-        Rigidbody2D.AddForce(Vector2.up * JumpForce);
+        // Verifica si está en el suelo antes de saltar
+        if (Grounded)
+        {
+            Rigidbody2D.AddForce(Vector2.up * JumpForce);
+        }
     }
     
     private void FixedUpdate() 
     {
-        Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
+        Grounded = Physics2D.Raycast(transform.position, Vector2.down, 2.0f);
     }
 
-        public void OnTriggerEnter2D(Collider2D FallDetectorCollider)
+    public void OnTriggerEnter2D(Collider2D FallDetectorCollider)
+    {
+        if (FallDetectorCollider.gameObject.CompareTag("FallDetector"))
         {
-            if (FallDetectorCollider.gameObject.CompareTag("FallDetector"))
-            {
-                Animator.SetBool("Hurting", true);
-                Invoke("EndGameWithDelay", 0.3f);
-            }
+            Animator.SetBool("Hurting", true);
+            Invoke("EndGameWithDelay", 0.3f);
         }
+    }
 
-        private void EndGameWithDelay()
-        {
-            GameManager.EndGame();
-        }
+    private void EndGameWithDelay()
+    {
+        GameManager.EndGame();
+    }
 }
