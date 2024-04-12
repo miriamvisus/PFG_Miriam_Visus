@@ -65,8 +65,6 @@ print("Tipo de train_data:", type(train_data))
 print("Tipo de val_data:", type(val_data))
 print("Tipo de test_data:", type(test_data))
 
-test_data['tempo'] = scaler.transform(test_data[['tempo']].values)
-
 # Guardar los datos preprocesados
 train_data.to_csv('train_data.csv', index=False)
 val_data.to_csv('val_data.csv', index=False)
@@ -78,27 +76,23 @@ val_data = pd.read_csv('val_data.csv')
 test_data = pd.read_csv('test_data.csv')
 
 # Desempaquetar la columna 'energia_0' en columnas separadas
-train_energia = pd.DataFrame(train_data['energia_0'].apply(eval).tolist())
-val_energia = pd.DataFrame(val_data['energia_0'].apply(eval).tolist())
-test_energia = pd.DataFrame(test_data['energia_0'].apply(eval).tolist())
+def unpack_energy_columns(df):
+    energia_columns = ['energia_' + str(i) for i in range(len(df['energia_0'][0]))]
+    df[energia_columns] = pd.DataFrame(df['energia_0'].tolist(), index=df.index)
+    df.drop(columns=['energia_0'], inplace=True)
+    return df
 
-# Concatenar las nuevas columnas de energía con los datos originales
-train_data = pd.concat([train_data, train_energia], axis=1)
-val_data = pd.concat([val_data, val_energia], axis=1)
-test_data = pd.concat([test_data, test_energia], axis=1)
-
-# Eliminar la columna original 'energia_0'
-train_data.drop(columns=['energia_0'], inplace=True)
-val_data.drop(columns=['energia_0'], inplace=True)
-test_data.drop(columns=['energia_0'], inplace=True)
+train_data = unpack_energy_columns(train_data)
+val_data = unpack_energy_columns(val_data)
+test_data = unpack_energy_columns(test_data)
 
 # División de características y etiquetas
-X_train = train_data.drop(columns=['tempo'])
-y_train = train_data['tempo']
-X_val = val_data.drop(columns=['tempo'])
-y_val = val_data['tempo']
-X_test = test_data.drop(columns=['tempo'])
-y_test = test_data['tempo']
+X_train = train_data.drop(columns=['tempo', 'audio']).to_numpy()
+y_train = train_data['tempo'].to_numpy()
+X_val = val_data.drop(columns=['tempo', 'audio']).to_numpy()
+y_val = val_data['tempo'].to_numpy()
+X_test = test_data.drop(columns=['tempo', 'audio']).to_numpy()
+y_test = test_data['tempo'].to_numpy()
 
 # Crear modelo de red neuronal
 model = Sequential([
