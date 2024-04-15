@@ -17,6 +17,10 @@ datos_etiquetados = [
 # Convertir datos etiquetados a un DataFrame de pandas
 df = pd.DataFrame(datos_etiquetados)
 
+# Imprimir la longitud de la lista de energía en cada fila
+for index, row in df.iterrows():
+    print(f"Longitud de la lista de energía en la fila {index}: {len(row['energia'])}")
+
 # Imprimir los tipos de datos antes de la normalización
 print("Tipos de datos antes de la normalización:")
 print("Tipo de df:", type(df))
@@ -76,9 +80,12 @@ val_data = pd.read_csv('val_data.csv')
 test_data = pd.read_csv('test_data.csv')
 
 # Desempaquetar la columna 'energia_0' en columnas separadas
+# Desempaquetar la columna 'energia_0' en columnas separadas
 def unpack_energy_columns(df):
-    energia_columns = ['energia_' + str(i) for i in range(len(df['energia_0'][0]))]
-    df[energia_columns] = pd.DataFrame(df['energia_0'].tolist(), index=df.index)
+    energia_data = df['energia_0'].apply(pd.Series)
+    max_length = len(energia_data.columns)
+    energia_columns = ['energia_' + str(i) for i in range(max_length)]
+    df[energia_columns] = energia_data
     df.drop(columns=['energia_0'], inplace=True)
     return df
 

@@ -118,4 +118,3 @@ def calculate_tempo(y, sr):
 
 if __name__ == "__main__":
     receive_audio_data()
-
