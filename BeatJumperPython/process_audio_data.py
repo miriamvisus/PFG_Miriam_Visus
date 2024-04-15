@@ -1,11 +1,6 @@
-import socket
 import librosa
 import numpy as np
 import scipy.signal as signal
-import struct
-import sounddevice as sd
-import soundfile as sf
-from pydub import AudioSegment
 
 def process_audio_data(audio_file):
     try:

@@ -5,9 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="h">
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/importedAudioTempPrimary22944" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/importedAudioTempPrimary22945" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/importedAudioTempPrimary22946" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/workerlic" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Adventures in Adventureland.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Aerosol of my Love.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Big Drumming.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Bleeping Demo.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Boogie Party.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Brain Dance.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Equatorial Complex.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Ethereal Relaxation.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Ethernight Club.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Evening.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Feral Angel Waltz .mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Funky Boxstep .mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Galactic Rap.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Goblin_Tinker_Soldier_Spy.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Guzheng City.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Hillbilly Swing.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/I Got a Stick Arr Bryan Teoh.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/I Got a Stick Feat James Gavins.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Journey To Ascend.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Late Night Radio.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Lord of the Rangs.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Magic Escape Room.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Mesmerizing Galaxy Loop.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Morning.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Neon Laser Horizon.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Newer Wave.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Paradise_Found.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Pleasant Porridge.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Sergio%27s Magic Dustbin.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Southern Gothic.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Space Jazz.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Valse Gymnopedie.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AUDIOS/Vibing Over Venus.mp3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audios.py" beforeDir="false" afterPath="$PROJECT_DIR$/audios.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_audio_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_audio_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Referencias y elementos utilizados.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Referencias y elementos utilizados.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +100,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\miria.PORMIR\PFG_Miriam_Visus_Martin\BeatJumperPython" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="BeatJumperPython" />
@@ -117,7 +159,7 @@
       <workItem from="1712848378251" duration="6961000" />
       <workItem from="1712944536055" duration="10197000" />
       <workItem from="1713180886872" duration="2127000" />
-      <workItem from="1713195864665" duration="2780000" />
+      <workItem from="1713195864665" duration="4056000" />
     </task>
     <task id="LOCAL-00001" summary="AU">
       <option name="closed" value="true" />
@@ -135,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712954483093</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="h">
+      <option name="closed" value="true" />
+      <created>1713201178946</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713201178946</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
