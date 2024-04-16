@@ -4,52 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="h">
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio1.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio10.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio11.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio12.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio13.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio14.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio15.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio16.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio17.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio18.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio19.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio2.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio20.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio21.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio22.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio23.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio24.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio25.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio26.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio27.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio28.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio29.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio3.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio30.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio31.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio32.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio33.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio4.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio5.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio6.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio7.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio8.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AUDIO/Audio9.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_audio_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_audio_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Logs/AssetImportWorker0-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Logs/AssetImportWorker1-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Logs/AssetImportWorker2-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../~$ferencias y elementos utilizados.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../~WRL0005.tmp" beforeDir="false" />
-    </list>
+    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="act" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -160,6 +124,8 @@
       <workItem from="1712944536055" duration="10197000" />
       <workItem from="1713180886872" duration="2127000" />
       <workItem from="1713195864665" duration="4056000" />
+      <workItem from="1713299867135" duration="2270000" />
+      <workItem from="1713302180375" duration="199000" />
     </task>
     <task id="LOCAL-00001" summary="AU">
       <option name="closed" value="true" />
@@ -185,7 +151,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713201178946</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="h">
+      <option name="closed" value="true" />
+      <created>1713289186847</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713289186847</updated>
+    </task>
+    <task id="LOCAL-00005" summary="act">
+      <option name="closed" value="true" />
+      <created>1713302220006</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713302220006</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,10 +176,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="AU" />
     <MESSAGE value="h" />
-    <option name="LAST_COMMIT_MESSAGE" value="h" />
+    <MESSAGE value="act" />
+    <option name="LAST_COMMIT_MESSAGE" value="act" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BeatJumperPython$prueba_2.coverage" NAME="prueba 2 Coverage Results" MODIFIED="1711049165017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/BeatJumperPython$main.coverage" NAME="main Coverage Results" MODIFIED="1713199333546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BeatJumperPython$main.coverage" NAME="main Coverage Results" MODIFIED="1713293517948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
