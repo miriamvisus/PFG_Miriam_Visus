@@ -4,179 +4,232 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="b">
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/A Very Brady Special.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Adding the Sun.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Almost Bliss.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Almost Bliss.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Almost New.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Almost New.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Ancient Rite.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Ancient Rite.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Aquarium.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Aquarium.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Blippy Trance.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Blippy Trance.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Celebration.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Celebration.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Circus of Freaks.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Circus of Freaks.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Cloud Dancer.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Cloud Dancer.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Club Seamus.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Club Seamus.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Dance of the Tuba Plum Fairy.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Dance of the Tuba Plum Fairy.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Del Rio Bravo.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Del Rio Bravo.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Derp Nugget.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Derp Nugget.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Dream Catcher.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Dream Catcher.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Energizing.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Energizing.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Envision.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Envision.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Farting Around.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Farting Around.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Flying Kerfuffle.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Flying Kerfuffle.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Frogs Legs Rag.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Frogs Legs Rag.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Fuzzball Parade.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Fuzzball Parade.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Glitter Blast.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Glitter Blast.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Gothamlicious.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Gothamlicious.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Holiday Weasel.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Holiday Weasel.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Island Meet and Greet.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Island Meet and Greet.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Krampus Workshop.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Krampus Workshop.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Laserpack.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Laserpack.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Le Grand Chase.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Le Grand Chase.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Limit 70.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Limit 70.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Loopster.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Loopster.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Lotus.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Lotus.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Magic Scout - Cottages.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Magic Scout - Cottages.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Magic Scout - Farm.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Magic Scout - Farm.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Magic Scout - Manor.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Magic Scout - Manor.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Magic Scout - Nothern Glade.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Magic Scout - Nothern Glade.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Magistar.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Magistar.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Mana Two - Part 1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Mana Two - Part 1.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Mana Two - Part 2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Mana Two - Part 2.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Mana Two - Part 3.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Mana Two - Part 3.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Maple Leaf Rag.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Maple Leaf Rag.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Midnight Tale.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Midnight Tale.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Moonlight Beach.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Moonlight Beach.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Morgana Rides.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Morgana Rides.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/New Hero in Town.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/New Hero in Town.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Night Vigil.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Night Vigil.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Night in Venice.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Night in Venice.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/On Hold for You.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/On Hold for You.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Onion Capers.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Onion Capers.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Past Sadness.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Past Sadness.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Raving Energy (faster).mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Raving Energy (faster).mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Raving Energy.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Raving Energy.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Realizer.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Realizer.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Rising Tide (faster).mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Rising Tide (faster).mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Rising Tide.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Rising Tide.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Royal Coupling.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Royal Coupling.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/SCP-x1x.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/SCP-x1x.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/SCP-x2x.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/SCP-x2x.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/SCP-x3x.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/SCP-x3x.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/SCP-x4x.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/SCP-x4x.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/SCP-x5x.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/SCP-x5x.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/SCP-x6x.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/SCP-x6x.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/SCP-x7x.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/SCP-x7x.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Screen Saver.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Screen Saver.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Sincerely.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Sincerely.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Stay the Course.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Stay the Course.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Still Pickin.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Still Pickin.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Strength of the Titans.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Strength of the Titans.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Study And Relax.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Study And Relax.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Symmetry.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Symmetry.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/The Entertainer.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/The Entertainer.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/The Ice Giants.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/The Ice Giants.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Tiki Bar Mixer.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Tiki Bar Mixer.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Trouble with Tribals.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Trouble with Tribals.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Twisting.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Twisting.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Tyrant.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Tyrant.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Voxel Revolution.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Voxel Revolution.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Wholesome.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Wholesome.mp3.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Ethereal Relaxation.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Ethereal Relaxation.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/A Very Brady Special.mp3.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Magic Escape Room.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Magic Escape Room.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Audios/Adding the Sun.mp3.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/39/39b0d518019b6c6ba9e91c87cde73314" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/f4/f40ca0b89054daf7d3f53a91a8991b58" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/TundraBuildState.state" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/TundraBuildState.state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/backend1.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/backend1.traceevents" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/fullprofile.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/fullprofile.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/tundra.digestcache" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/tundra.digestcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/tundra.log.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/tundra.log.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/SceneVisibilityState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Search/transactions.db" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Search/transactions.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/ilpp.pid" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/ilpp.pid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Logs/AssetImportWorker1.log" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Logs/AssetImportWorker1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Logs/AssetImportWorker2.log" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Logs/AssetImportWorker2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Referencias y elementos utilizados.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Referencias y elementos utilizados.docx" afterDir="false" />
+    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="unversioned files">
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/02/0290a2b8c214914794fe6131d2b623ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/08/080117507a641b4e333e76addd9a37ff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/0b/0b01b423eed4149a1f804f6a91cf7f83" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/0c/0c6b7c544a899bd8b25c1637cafb6aed" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/0c/0cf2415382ebc26a9342db1e2d4963fa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/0d/0d170788853374cb3d1a106f2a87112c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/0e/0e1c1678d2eb7926634611c2ff14893f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/0f/0f1973529986386722f87a8bd148bf85" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/12/12171fc5ead369d754320f1780236045" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/12/1218368e3331a3f38feb6cfeeca25ac4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/13/13be568c6535257dbe65368d9d1c5ff7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/15/1573c1ba1873feb1484c847622d52669" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/16/1675901a1c8137e3f7db736211b16070" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/16/16a66fe7ee09d870339e8bea62d95e95" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/17/177f8425f04456eff78b0b376a080c82" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/17/17d82b86f3a38302330c406711f1d307" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/19/19d0bbbb739cc78bb02ef25ea52e1a4b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/1a/1a6b42d55dc62772f572585d8bf7b2f9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/1f/1f506d78870729ded78fd78d2074d570" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/1f/1f5ed20e105ef38904edd60b85c85feb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/1f/1f676e6e1e661cf9fb85ed293707c4c1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/21/21ca973d4a3b040d64cd716baf680172" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/24/24ce888c0b8fb34e5d79a4986d3b60c8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/27/2716d27b29f487adc3549059fc81fc50" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/27/273f26d47ec57416d93bef162ec289b0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/27/2756ad74aae3bc20d2a9d39de4ffe288" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/28/280cbfaea5b71095a0dd4b0f4825f971" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/2b/2bfb1e7087f43359b8dd67d5af1d1b6a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/2c/2c02f3efff3a1f227f6258c02bd91a71" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/2d/2d2eda0af906bfff27a8a45e18499b25" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/2f/2f80c616b32b62b98e4e5dbc1f326ecb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/30/3023d1062a8fe97dbb1c4c3797231671" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/32/320258387e4248a324a55c794c7052ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/32/32bbc8dc45da50772b6de2d132dc6e51" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/32/32c3353dbb84613951f7b97ac0abbea6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/33/3354940607a343a4e915d170d1bd3002" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/34/34071e226fb2fb0f7db2ffe995f6eebd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/34/348ad14a519d14abee2a031c9ed5f042" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/36/36abebbf853f517d8ac20c133d80f01b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/37/375decf24bae9b479e6d51c0176fa1ea" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/37/378933998920a981f7bc49f00cc9c198" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/37/37f213f2a94b8b3bd410016b08a72a9b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/38/38aa868bb9dc3aa7c499b99210fe8bd6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/3a/3a2e4b475993e98af73f87e6f089e2aa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/3a/3ab2371c99b014594632160616d0dc46" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/3a/3ae3eba2472dc3758886e9d1b0ac37d4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/3c/3cc09ebf3df5952827ea8d564ac41c57" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/3d/3d0cb2ca62b9bc135baf3f45f470f541" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/3d/3d8963b0dcdc017e81f2f56145451bf1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/3e/3e5135bf248bb0459eff562b983ebd5e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/40/40b159ec8fb6e9f18d335c68c71522e6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/41/41c0e908e84b71cad5269bff8dc527ef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/42/42f1c3f0a83a4d8383c0aa0cb7e348d2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/43/437b4725c8144f8d6f6b22a135a122fb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/43/4390a434d9dcf1c810e9053db5fca028" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/43/43a3645027ca54ab79a309945bc59a94" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/44/44db9e034098795d4f09977c4a300779" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/48/4857d92de9e62cc6fd2223a658f0697c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/48/4868a72005b7dce59038704c42f6139e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/49/4982134da34c55345056a2da07e67e36" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/4c/4c33875f605cfe8165a63cbd2ad5e5af" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/4c/4cc6b03a9cc2384fba718d3a66941c41" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/4d/4d333fed920bf9d6856a7e4aa20faeb3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/4d/4d53339ab028bf59c18c4beaf3748dfb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/4e/4ec9dfde481194ab12d78434a2df7735" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/4f/4f8dbf581bc7a3b0d3772f95dd2ab99b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/52/52759340f1b5d251b6c297e44a723165" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/55/559d398f0ca32c5c3422383886d5479d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/58/58e2abf03ad3a51c2dbf7b80ab1ef021" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/59/59d695e123d46a0d81c9d1cedd64e13a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/5a/5a1d479eec2a3e3ded42d2961230532b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/5e/5e15fbff369e0323fa74938fbd1492e3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/5e/5e76479d36886507c9358d86689b0588" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/61/616f1bae50bd716fec237cf6572a28f3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/62/625602dba0fca785af83d1ce963e5c0e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/62/6267fca8d82921a914850d68d76ba555" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/64/64062b14f845b3fac605737cc2af0ffd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/65/65bcaab2889dcbd280ff7756f1e5c3ae" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/66/66910b01710933c237320ed2a5b82308" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/67/67860a5ee4d0ffad764a70a772828e93" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/6d/6dee35c573bf8bafff57242ea853adc8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/6e/6e20dfeb5538a43593ffbe67248c3e49" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/6e/6e44aa640d94df65118a2771c8426f75" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/6e/6ebc37fef79d9be182b88e1717b67c86" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/70/70107e8a0622a51d61edb4ebfdaca6dc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/72/720bf9803a105f9ab6015e667f686b16" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/72/721bc5406585e93e790b3d4bcb8e1dea" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/73/731ca1600d955beb0bd50be0887e25ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/75/754f8f4c17a686feaefc02d717725eb9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/75/757eb0f2a81eb770b9b1fa90edd60636" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/76/765c9bc9463a2429230659d4e650d810" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/77/773f2e36a9ea14f7fce7315fe80af47e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/77/778bb4033461164a14bc605ff368fc1c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/77/77adb8313a3e0bd9038b4d8acc676ebf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/7b/7b6f541416d6e5ad12a3cdf56ff40840" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/80/8091f8738fddb61bf993fc333dd1f2a5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/85/856dbe460477c8c188ccb6b4de3ffe69" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/85/85dad889e450e7a931e149fde96706c3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/87/87c890e5f3f533b0cadf559468df492f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/88/881ce18d73e2eb91a611e97d1f39f0dc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/88/88b6ded4d59650f69e2a3ac53b5e5a41" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/8c/8c9a587c21be4eda6ffe45b46c7e6877" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/8c/8ca6afcecf02c40a5300653560c79e2b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/8f/8f26c578d162587631c710a338782a17" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/90/90d834afae033d0213f8f8fcf05da1ef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/90/90e12165866249c235f5a1eedbff00c6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/92/9218990b379d800c854490429253e88d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/92/92d6197ec637e833464876db494f74f1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/92/92da20e8f8c2c8d962cd3a6f6bd0f6c5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/94/948554df67b9ed8b31ba36280ccaeace" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/94/9487fbe2fe6cc972f4bc3e28f1d691ff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/96/969d109ce3ed11040208b3d0ea6856b1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/99/9912d21ee87c77ad65fcfa4b8e5464f2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/9a/9a9ebb86d363990cd41a06f05a1c933c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/9e/9e544b74694f3fba6bea78d3cc8699b8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/9e/9e68100b4f62d731d8eb90a2c0565b0a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/9f/9f50a285446eefcfcf523856968ede29" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/a0/a01719de749ba4871b833660fbbb5a20" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/a0/a083398563308b5108bd5485d0b55f36" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/a0/a0a7c28e0d60ece3d6ef9e8d9f2ceef5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/a1/a1341d30417c592fa54f58c8af8e4094" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/a1/a1d5cb71ebc768c8ab24b9f3436be234" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/a1/a1dd386f77612a6532f9e07361527911" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/a7/a730a7f30adc52d42750ac72896ac1be" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/a9/a9270c030f519abe3f587f01c5cc133f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/a9/a9fb386b2259bd2acc1c2187923c1675" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/ab/ab591e593a2ebef8cf37e1fdebc8d70c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/ac/ac639b6780f47f441bf5ab7a1494b452" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/ad/adf2122ce68241c9231e32df4ac8f209" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/ae/ae9024f2ee05a6cd0f733c9ae1c63881" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/af/af797bc2d33c252d289b311a92585e67" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/b0/b011ebe876c65d0318d1e11a14f18ead" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/b0/b02c6b9e40ccfd872da6d589093b1b71" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/b0/b03a65161ca1404a2b31fc2dbcaa4381" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/b0/b0423f80c813a238f3b6d63b08569d77" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/b0/b0976cec7e6c93417472f8c0fc3a20d1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/b1/b12dc2334c576be29db330ca3bf4c48b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/b1/b171233ce08acf137a3f96ef14f76630" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/b2/b2da8d069ce229645a4fc096d8ca0184" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/b5/b5be12264c330a250b59ed857df16061" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/b8/b8aada2d7edd462a0d0b9665f4da32a4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/b8/b8f53261b41b5e203b1a43e89b474a2a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/ba/ba13f5204c9c846facc6c435daefe7b7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/bb/bb24be60532d214281b6dd9027774e45" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/be/be05bf60a18583a604ba764fa3ca695c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/c0/c03b1b1ab0f1e54f1a6bd9edd7654b99" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/c1/c17a12ea0adef705d8983559d7b9f413" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/c2/c2ef6d110e720434276b454c780df902" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/c3/c353c867bb03ce79cd1e5a51ba7ff37d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/c6/c6ec71f3a5fdce6a3a2fd72f992c0311" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/c9/c9b95e33912042fd76c9f9f5b297864e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/ca/ca5b6bd4292bb8c1dee5f9651e96b956" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/ca/ca8e7fd76eb3d2f965d380b5a3a9730e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/cb/cbed3e2698ed8869831a6c7693c0afc6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/ce/ce2b6fc853b5c020348f241c7643fbab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/ce/ce68dbd8360679c9e48ddd3fead8b4dd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/ce/cedf3139f9c0c451a90467c0d0bd0274" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/d0/d0d2f2186333cc157067c10c9f5aed14" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/d1/d146b58f17df784ded153b5ffdc1ef8d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/d1/d1489f194500be3be4d32f81f6853bb2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/d1/d1aa211f93715946083d26c0d161af8c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/d3/d3021bbda792226aeb343110f9dc8545" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/d3/d3b12abedac31d24059ac6564691ac71" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/d4/d4cef417d6450493d309597037d82295" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/d5/d58fd576942591e4370d0d475c242f56" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/d9/d9bc077087428566fb7286a5ae6dd345" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/da/da62efd33ad17a18c106442530eb99cd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/dc/dc37216f5ab7519b97b3e1bcd3971627" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/dc/dc4ee339f5e4b1d742529af322040149" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/dc/dcd477dcfc75f8726c20842100ab17c3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/dd/dd25770fa874e5057a03c3a2dba8c026" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/dd/ddc0297be02b48c1a54bd2bbc5da1140" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/dd/dde864f52e0fa2de4da2c03e89a2032b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/de/dea934dc92784f7bf3a910d19b9daf48" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/e0/e07968d62dfe005b0763aa11ddefe90a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/e2/e283dcb0d983361e1c919ea145b5efaf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/e3/e35dcd6604439d9d675de48df92c3726" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/e5/e53130bfc23ee836fd666b85b02f01e6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/e8/e869b10a0445b4b34f412e23614b6d30" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/e9/e92069ef74cdc25cf07e328ce9f79743" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/e9/e9d0fd18ac8c7a3e12d2b4ba015a979e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/eb/eb6590bdedf2940458121c7d01e2f4bb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/eb/ebe74a264fa50d660a4d3e6d62097cdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/eb/ebeaa63c3696d72b5210582078d8140b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/ed/ed00134ca0a2e1cedebc10097d54032e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/ef/ef3cda5baf3577b967255764825bc8dc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/ef/ef80788ae11dd13f6b6d89569d9c4271" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/f0/f07819beb3e7c82798fdbef0d30601bc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/f1/f1d231b71a4a9b164dcd1de1648c3b28" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/f2/f205253b9d7afe9bffa0738963df914e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/f2/f2a74d76a17d017ae7fcbaf859b359ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/f2/f2f88773b30ee1b5dd3717d7a5d46e16" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/f3/f34b7bf67a64aa6335db7da3d43c4869" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/f3/f366d05c7027e5747d3ef5d162c6f820" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/f4/f4316987c4021421a0be651a79538f65" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/f4/f47e616ee044848d03002d3843f6f0ff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/f4/f492c4f6b0aa393a0acaec7ec76d4e54" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/f6/f66c0c53ab60ff18ade445c6392a541f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/f6/f6899c70fd1abcc55306ac63d2c87334" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/f6/f6af74c093841e6a4a547eb6078646b9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/f6/f6dd2a314772976c33d500d0c10df40c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/f7/f7d0c7f695d8acb52ad2bf24829617b8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/fd/fde7d17d7acdd422c70e0eb85d0c1dea" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/fe/fe30e1c3d8990813ddd889b9f281f09e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/fe/febda49269b862b705b5c6d4c4e33380" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/ff/ffc7d43fe49ad851763cde30c3082175" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Artifacts/ff/ffca277239bf11be3db63a9bced2c483" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/EditorInstance.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Logs/AssetImportWorker0-prev.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Logs/AssetImportWorker1-prev.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Logs/AssetImportWorker2-prev.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Logs/AssetImportWorker3.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/FSTimeGet-67bfd9305ca95b845977edf620624991" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/FSTimeGet-fa679aad59ae6fc4ba766db30a88000b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/fsbankcache27216/Voxel Revolution_3FA67F44FDAB3D54.fobj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/fsbankcache27217/Cloud Dancer_504E9AF5BE3F1E70.fobj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/fsbankcache27218/SCP-x2x_E7E1C6864F4889EA.fobj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/fsbankcache27219/Club Seamus_2DC53BA279E9ADC2.fobj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/fsbankcache27220/Derp Nugget_76E0DB617FE623B0.fobj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/importedAudioTempPrimary27216" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/importedAudioTempPrimary27217" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/importedAudioTempPrimary27218" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/importedAudioTempPrimary27219" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/importedAudioTempPrimary27220" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/workerlic" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +353,7 @@
       <workItem from="1713299867135" duration="2270000" />
       <workItem from="1713302180375" duration="199000" />
       <workItem from="1713302394801" duration="3073000" />
-      <workItem from="1713370916122" duration="1911000" />
+      <workItem from="1713370916122" duration="2561000" />
     </task>
     <task id="LOCAL-00001" summary="AU">
       <option name="closed" value="true" />
@@ -358,7 +411,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713376077248</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="audiosunity">
+      <option name="closed" value="true" />
+      <created>1713376926602</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713376926602</updated>
+    </task>
+    <task id="LOCAL-00009" summary="unversioned files">
+      <option name="closed" value="true" />
+      <created>1713377335032</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713377335032</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +438,9 @@
     <MESSAGE value="h" />
     <MESSAGE value="act" />
     <MESSAGE value="b" />
-    <option name="LAST_COMMIT_MESSAGE" value="b" />
+    <MESSAGE value="audiosunity" />
+    <MESSAGE value="unversioned files" />
+    <option name="LAST_COMMIT_MESSAGE" value="unversioned files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BeatJumperPython$prueba_2.coverage" NAME="prueba 2 Coverage Results" MODIFIED="1711049165017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
