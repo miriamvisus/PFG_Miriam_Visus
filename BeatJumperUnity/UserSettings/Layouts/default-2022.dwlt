@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 1515
-    y: 51
+    x: 1544
+    y: 64
     width: 1532
     height: 770
   m_ShowMode: 4
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 115
+  controlID: 124
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -331,8 +331,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1519.2001
-    y: 64.8
+    x: 1544
+    y: 94
     width: 213
     height: 444
   m_SerializedDataModeController:
@@ -350,7 +350,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 90f9ffff
+      m_ExpandedIDs: 1cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -855,8 +855,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1729
-    y: 81
+    x: 1758
+    y: 94
     width: 948
     height: 444
   m_SerializedDataModeController:
@@ -914,7 +914,7 @@ MonoBehaviour:
       width: 948
       height: 423
     m_Scale: {x: 1.2874999, y: 1.2874999}
-    m_Translation: {x: 463.97403, y: 205.20001}
+    m_Translation: {x: 463.97403, y: 205.20003}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -922,7 +922,7 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -360.3682
-      y: -159.37866
+      y: -159.37868
       width: 736.3107
       height: 328.5437
     m_MinimalGUI: 1
@@ -1023,8 +1023,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1519.2001
-    y: 436.80002
+    x: 1544
+    y: 559
     width: 1163
     height: 234
   m_SerializedDataModeController:
@@ -1063,9 +1063,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a8640000
-    m_LastClickedID: 25768
-    m_ExpandedIDs: 00000000a264000000ca9a3b
+    m_SelectedIDs: 22640000
+    m_LastClickedID: 25634
+    m_ExpandedIDs: 000000002064000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1169,8 +1169,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2679
-    y: 81
+    x: 2708
+    y: 94
     width: 367
     height: 699
   m_SerializedDataModeController:
