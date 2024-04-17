@@ -5,6 +5,8 @@ import scipy.signal as signal
 import requests
 import os
 import tempfile
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
 from io import BytesIO
 import struct
 import sounddevice as sd
@@ -83,13 +85,18 @@ def load_audios_from_git(git_repo_url, audio_folder, num_audios):
         else:
             print(f"Failed to fetch audio from {audio_url}. Status code: {response_audio.status_code}")
 
+    return tempos, energias
+
 
 # Especifica los nombres de las carpetas y la cantidad de imágenes por carpeta en el repositorio Git
 git_repo_url = 'https://github.com/miriamvisus/PFG_Miriam_Visus_Martin'
 audio_folder = 'AUDIOS'
-num_audios = 108
+num_audios = 86
 
 
 # Carga los audios desde el repositorio Git
-audios_data = load_audios_from_git(git_repo_url, audio_folder, num_audios)
+tempos, energias = load_audios_from_git(git_repo_url, audio_folder, num_audios)
+
+
+
 

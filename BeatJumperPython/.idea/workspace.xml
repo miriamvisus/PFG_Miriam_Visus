@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="libburst">
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/PackageCache/com.unity.burst@1.8.11/.Runtime/libburst-llvm-15.dylib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/EditorInstance.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Search/transactions.db" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Search/transactions.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Temp/FSTimeGet-67bfd9305ca95b845977edf620624991" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Temp/FSTimeGet-fa679aad59ae6fc4ba766db30a88000b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Temp/fsbankcache27216/Voxel Revolution_3FA67F44FDAB3D54.fobj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Temp/fsbankcache27217/Cloud Dancer_504E9AF5BE3F1E70.fobj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Temp/fsbankcache27218/SCP-x2x_E7E1C6864F4889EA.fobj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Temp/fsbankcache27219/Club Seamus_2DC53BA279E9ADC2.fobj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Temp/fsbankcache27220/Derp Nugget_76E0DB617FE623B0.fobj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Temp/importedAudioTempPrimary27216" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Temp/importedAudioTempPrimary27217" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Temp/importedAudioTempPrimary27218" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Temp/importedAudioTempPrimary27219" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Temp/importedAudioTempPrimary27220" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Temp/workerlic" beforeDir="false" />
-    </list>
+    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="libburst" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,6 +128,8 @@
       <workItem from="1713302180375" duration="199000" />
       <workItem from="1713302394801" duration="3073000" />
       <workItem from="1713370916122" duration="3213000" />
+      <workItem from="1713378400393" duration="3570000" />
+      <workItem from="1713385092787" duration="2558000" />
     </task>
     <task id="LOCAL-00001" summary="AU">
       <option name="closed" value="true" />
