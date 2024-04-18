@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="lib" />
+    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="pad">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example.py" beforeDir="false" afterPath="$PROJECT_DIR$/example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_audio_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_audio_data.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +133,9 @@
       <workItem from="1713302394801" duration="3073000" />
       <workItem from="1713370916122" duration="3213000" />
       <workItem from="1713378400393" duration="3570000" />
-      <workItem from="1713385092787" duration="2996000" />
+      <workItem from="1713385092787" duration="4506000" />
+      <workItem from="1713390752192" duration="2647000" />
+      <workItem from="1713453731527" duration="4980000" />
     </task>
     <task id="LOCAL-00001" summary="AU">
       <option name="closed" value="true" />
@@ -243,7 +249,55 @@
       <option name="project" value="LOCAL" />
       <updated>1713389134348</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="audios">
+      <option name="closed" value="true" />
+      <created>1713389203872</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1713389203872</updated>
+    </task>
+    <task id="LOCAL-00016" summary="ws">
+      <option name="closed" value="true" />
+      <created>1713389372243</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1713389372243</updated>
+    </task>
+    <task id="LOCAL-00017" summary="liburst">
+      <option name="closed" value="true" />
+      <created>1713389416605</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1713389416605</updated>
+    </task>
+    <task id="LOCAL-00018" summary="pad">
+      <option name="closed" value="true" />
+      <created>1713390498425</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1713390498425</updated>
+    </task>
+    <task id="LOCAL-00019" summary="pad">
+      <option name="closed" value="true" />
+      <created>1713460442255</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1713460442255</updated>
+    </task>
+    <task id="LOCAL-00020" summary="pad">
+      <option name="closed" value="true" />
+      <created>1713460520915</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1713460520915</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,10 +315,14 @@
     <MESSAGE value="pyref" />
     <MESSAGE value="logslayouts" />
     <MESSAGE value="lib" />
-    <option name="LAST_COMMIT_MESSAGE" value="lib" />
+    <MESSAGE value="audios" />
+    <MESSAGE value="ws" />
+    <MESSAGE value="liburst" />
+    <MESSAGE value="pad" />
+    <option name="LAST_COMMIT_MESSAGE" value="pad" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BeatJumperPython$prueba_2.coverage" NAME="prueba 2 Coverage Results" MODIFIED="1711049165017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/BeatJumperPython$main.coverage" NAME="main Coverage Results" MODIFIED="1713293517948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BeatJumperPython$main.coverage" NAME="main Coverage Results" MODIFIED="1713464356328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
