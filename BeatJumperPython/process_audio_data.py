@@ -93,7 +93,11 @@ def load_audios_from_git(git_repo_url, audio_folder, num_audios, target_shape):
 # Especifica los nombres de las carpetas y la cantidad de imágenes por carpeta en el repositorio Git
 git_repo_url = 'https://github.com/miriamvisus/PFG_Miriam_Visus_Martin'
 audio_folder = 'AUDIOS'
+<<<<<<< HEAD
 num_audios = 117
+=======
+num_audios = 85
+>>>>>>> 336adbdc205ba1fe21c2d5a5f17b9acd3fc6fe1a
 # Definir el tamaño deseado del espectrograma
 target_shape = (128, 8000)
 
