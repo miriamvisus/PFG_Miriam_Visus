@@ -1,16 +1,12 @@
-import socket
 import librosa
 import numpy as np
-import scipy.signal as signal
 import requests
 import os
 import tempfile
 from sklearn.model_selection import train_test_split
-import matplotlib.pyplot as plt
-from sklearn.linear_model import LinearRegression
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Input, Conv2D, Dense, Activation, Flatten, Reshape, UpSampling2D, MaxPooling2D, BatchNormalization, Dropout, LeakyReLU, Concatenate
-from tensorflow.keras.optimizers import Adam
+
 
 from tensorflow.keras.layers import concatenate
 from io import BytesIO
@@ -18,6 +14,11 @@ import struct
 import sounddevice as sd
 import soundfile as sf
 from pydub import AudioSegment
+from tensorflow.keras.optimizers import Adam
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+import scipy.signal as signal
+import socket
 
 #Calcular tempo y energía
 def process_audio_data(audio_file):
@@ -43,7 +44,7 @@ def process_audio_data(audio_file):
         print(f"Error al procesar datos de audio: {e}")
 
 
-# Cargar las imágenes desde el repositorio Git
+# Cargar los audios desde el repositorio Git
 def load_audios_from_git(git_repo_url, audio_folder, num_audios, target_shape):
     spectrograms = []
     tempos = []
@@ -92,7 +93,7 @@ def load_audios_from_git(git_repo_url, audio_folder, num_audios, target_shape):
 # Especifica los nombres de las carpetas y la cantidad de imágenes por carpeta en el repositorio Git
 git_repo_url = 'https://github.com/miriamvisus/PFG_Miriam_Visus_Martin'
 audio_folder = 'AUDIOS'
-num_audios = 86
+num_audios = 117
 # Definir el tamaño deseado del espectrograma
 target_shape = (128, 8000)
 
