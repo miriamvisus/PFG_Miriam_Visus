@@ -568,3 +568,189 @@ model.fit(energias_train, tempos_train, epochs=10, batch_size=32, validation_dat
 # Evaluar el modelo en el conjunto de prueba
 loss = model.evaluate(energias_test, tempos_test)
 print("Loss:", loss)
+
+
+import librosa
+import numpy as np
+import requests
+import os
+import tempfile
+from sklearn.model_selection import train_test_split
+from tensorflow.keras.models import Sequential, Model
+from tensorflow.keras.layers import Input, Conv2D, Dense, Activation, Flatten, Reshape, UpSampling2D, MaxPooling2D, BatchNormalization, Dropout, LeakyReLU, Concatenate
+from tensorflow.keras.optimizers import Adam
+
+from io import BytesIO
+import struct
+import sounddevice as sd
+import soundfile as sf
+from pydub import AudioSegment
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+import scipy.signal as signal
+import socket
+
+#Calcular duración máxima
+def calculate_max_duration(git_repo_url, audio_folder, num_audios):
+    base_url = git_repo_url.rstrip('/')  + '/raw/main'
+    max_duration = 0
+
+    for i in range(num_audios):
+        audio_path = f"{audio_folder}/Audio{i+1}.mp3"
+        audio_url = f"{base_url}/{audio_path}"
+
+        response_audio = requests.get(audio_url)
+
+        if response_audio.status_code == 200:
+            with tempfile.NamedTemporaryFile(suffix='.mp3', delete=False) as temp_audio_file:
+                temp_audio_file.write(response_audio.content)
+                temp_audio_file.close()
+                audio_file_path = temp_audio_file.name
+
+                try:
+
+                    print(f"Calculando la duración del audio {i + 1}")
+
+                    # Actualizar la duración máxima
+                    duration = librosa.get_duration(filename=audio_file_path)
+                    print("Duración:", duration)
+                    if duration > max_duration:
+                        max_duration = duration
+                    print(f"Duración máxima hasta el audio {i + 1}:", max_duration)
+
+                finally:
+                    # Eliminar el archivo temporal después de usarlo
+                    os.unlink(audio_file_path)
+        else:
+                print(f"Failed to fetch audio from {audio_url}. Status code: {response_audio.status_code}")
+
+    return max_duration
+
+
+#Calcular tempo y energía
+def process_audio_data(audio_file, max_duration):
+    try:
+        # Cargar los datos de audio utilizando librosa.load()
+        y, sr = librosa.load(audio_file, sr=None)
+
+        # Asegurar que todos los audios tengan la misma duración
+        y = librosa.util.fix_length(y, size=int(max_duration * sr))
+
+        # Calcular el espectrograma
+        spectrogram = librosa.feature.melspectrogram(y=y, sr=sr, n_fft=2048, hop_length=512)
+
+        # Convertir a decibelios
+        spectrogram_db = librosa.power_to_db(spectrogram, ref=np.max)
+
+        # Ajustar la forma
+        spectrogram_db = spectrogram_db[:, :128]  # Ajustar a (128, 128)
+
+        # Calcular el tempo
+        tempo = librosa.beat.tempo(y=y, sr=sr)
+
+        # Calcular la energía
+        energy = librosa.feature.rms(y=y)
+
+        print("Tempo:", tempo)
+        print("Energía:", energy)
+
+        return spectrogram_db, tempo, energy
+
+    except Exception as e:
+        print(f"Error al procesar datos de audio: {e}")
+
+
+# Cargar los audios desde el repositorio Git
+def load_audios_from_git(git_repo_url, audio_folder, num_audios, max_duration):
+    spectrograms_db = []
+    tempos = []
+    energies = []
+    base_url = git_repo_url.rstrip('/')  + '/raw/main'
+
+    for i in range(num_audios):
+        audio_path = f"{audio_folder}/Audio{i+1}.mp3"
+        audio_url = f"{base_url}/{audio_path}"
+
+        response_audio = requests.get(audio_url)
+
+        if response_audio.status_code == 200:
+            with tempfile.NamedTemporaryFile(suffix='.mp3', delete=False) as temp_audio_file:
+                temp_audio_file.write(response_audio.content)
+                temp_audio_file.close()
+                audio_file_path = temp_audio_file.name
+
+                try:
+
+                    # Procesar los datos de audio
+                    print(f"Procesando audio {i+1}")
+                    spectrogram_db, tempo, energy = process_audio_data(audio_file_path, max_duration)
+
+
+                    # Imprimir las formas de los datos
+                    print("Forma del espectrograma:", spectrogram_db.shape)
+                    print("Forma del tempo:", tempo.shape)
+                    print("Forma de la energía:", energy.shape)
+
+                    # Convertir tempo y energy a arrays numpy de una sola fila y varias columnas
+                    spectrograms_db.append(spectrogram_db)
+                    tempos.append(tempo)
+                    energies.append(energy)
+
+                finally:
+                    # Eliminar el archivo temporal después de usarlo
+                    os.unlink(audio_file_path)
+        else:
+                print(f"Failed to fetch audio from {audio_url}. Status code: {response_audio.status_code}")
+
+    return np.array(spectrograms_db), np.array(tempos), np.array(energies)
+
+
+# Especifica los nombres de las carpetas y la cantidad de imágenes por carpeta en el repositorio Git
+git_repo_url = 'https://github.com/miriamvisus/PFG_Miriam_Visus_Martin'
+audio_folder = 'AUDIOS'
+num_audios = 60
+
+#Calcular duración máxima
+max_duration = calculate_max_duration(git_repo_url, audio_folder, num_audios)
+
+# Carga los audios desde el repositorio Git
+spectrograms_db, tempos, energies = load_audios_from_git(git_repo_url, audio_folder, num_audios, max_duration)
+
+# Dividir los datos en conjuntos de entrenamiento y prueba
+spectrogramsdb_train, spectrogramsdb_test, tempos_train, tempos_test, energies_train, energies_test = train_test_split(
+    spectrograms_db, tempos, energies, test_size=0.2, random_state=42)
+
+
+# Definir la arquitectura del modelo CNN
+def create_model():
+    input_img = Input(shape=(128, 128, 1))
+
+    x = Conv2D(64, (3, 3), activation='relu', padding='same')(input_img)
+    x = MaxPooling2D((2, 2), padding='same')(x)
+    x = Conv2D(128, (3, 3), activation='relu', padding='same')(x)
+    x = Flatten(x)
+    x = Dense(128, activation='relu')(x)
+    x = Dense(64, activation='relu')(x)
+    output = Dense(2)
+
+    model = Model(input_img, output())
+
+    return model
+
+model = create_model()
+
+# Compilar el modelo
+model.compile(optimizer='adam', loss='mean_squared_error')
+
+# Entrenar el modelo
+model.fit(
+    x=spectrogramsdb_train[..., np.newaxis],  # Agregar una dimensión para el canal (escala de grises)
+    y=np.stack((tempos_train, energies_train), axis=-1),  # Apilar tempo y energía como una sola matriz de salida
+    epochs=10,
+    batch_size=32,
+    validation_data=(spectrogramsdb_test[..., np.newaxis], np.stack((tempos_test, energies_test), axis=-1))
+)
+
+# Evaluar el modelo en el conjunto de prueba
+loss = model.evaluate(spectrogramsdb_test[..., np.newaxis], np.stack((tempos_test, energies_test), axis=-1))
+print("Loss:", loss)
