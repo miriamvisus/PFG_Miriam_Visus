@@ -141,11 +141,6 @@ def adjust_character_speed(tempo):
     else:
         return 7.0
 
-# Generar plataformas en base al tempo y la energía del audio
-def generate_platforms(tempo, energy):
-    # Lógica para generar plataformas en función del tempo y la energía
-    # Puedes ajustar la frecuencia o la altura de las plataformas según sea necesario
-    pass
 
 character_speeds = []
 
@@ -154,13 +149,56 @@ for i in range(num_audios):
     # Ajustar la velocidad del personaje
     character_speed = adjust_character_speed(tempos[i])
     character_speeds.append(character_speed)
+    character_speeds_np = np.array(character_speeds)
 
+#Generar plataformas
+def generate_platforms(tempo, energies):
+    # Factor de escala para ajustar la altura de las plataformas en función de la energía
+    energy_scale_factor = 100
+
+    # Frecuencia de generación de plataformas en segundos
+    generation_frequency = 1.0 / (tempo / 60.0)  # Convertir el tempo a BPM y calcular la frecuencia
+
+    # Altura base de las plataformas
+    base_platform_height = 0.0  # Altura en unidades de Unity
+
+    # Espacio vertical y horizontal discreto entre plataformas en unidades de Unity
+    vertical_spacings = [0, 1, 2, 3, 4]
+    horizontal_spacings = [0, 1, 2, 3]
+
+    # Limitar la altura de las plataformas en la escena de Unity al rango de -3 a 10
+    min_height = -3.0
+    max_height = 10.0
+
+    # Limitar la posición horizontal de las plataformas en la escena de Unity
+    min_horizontal_position = 0
+    max_horizontal_position = float('inf')  # Usamos float('inf') para representar infinito como límite máximo
+
+    # Iterar sobre las energías de cada audio y ajustar la altura de las plataformas
+    for energy in energies:
+        # Ajustar la altura de las plataformas en función de la energía
+        platform_height = base_platform_height + energy * energy_scale_factor
+
+        # Limitar la altura al rango especificado
+        platform_height = np.clip(platform_height, min_height, max_height)
+
+        # Elegir un espacio vertical y horizontal de forma aleatoria
+        vertical_spacing = np.random.choice(vertical_spacings)
+        horizontal_spacing = np.random.choice(horizontal_spacings)
+
+        # Generar la posición de la plataforma en función del espacio y la altura
+        platform_position = (horizontal_spacing, platform_height, vertical_spacing)
+
+        # Aquí puedes usar la posición generada para instanciar la plataforma en tu juego de Unity
+        # Puedes agregar código aquí para generar las plataformas en tu juego
+
+        print(f"Plataforma generada en posición: {platform_position}. Frecuencia de generación: {generation_frequency} segundos.")
 
 # Dividir los datos de tempo y energía en conjuntos de entrenamiento y prueba
 tempos_train, tempos_test, energies_train, energies_test = train_test_split(tempos, energies, test_size=0.2, random_state=42)
 
 # Dividir las etiquetas en conjuntos de entrenamiento y prueba de manera consistente
-y_train, y_test = train_test_split(character_speeds, test_size=0.2, random_state=42)
+y_train, y_test = train_test_split(character_speeds_np, test_size=0.2, random_state=42)
 
 # Expandir tempos_train para que tenga dos dimensiones
 tempos_train_expanded = np.expand_dims(tempos_train, axis=-1)
