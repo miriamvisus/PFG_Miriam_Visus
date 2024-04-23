@@ -30,4 +30,3 @@ public class FallDetectorMovement : MonoBehaviour
         transform.position = new Vector3(0, transform.position.y, transform.position.z);
     }
 }
-
