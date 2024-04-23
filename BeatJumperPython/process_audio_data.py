@@ -147,17 +147,20 @@ def generate_platforms(tempo, energy):
     # Puedes ajustar la frecuencia o la altura de las plataformas según sea necesario
     pass
 
+character_speeds = []
+
 # Iterar sobre los datos de audio y ajustar la velocidad del personaje y generar plataformas
 for i in range(num_audios):
     # Ajustar la velocidad del personaje
-    velocidad_personaje = adjust_character_speed(tempos[i])
+    character_speed = adjust_character_speed(tempos[i])
+    character_speeds.append(character_speed)
 
 
 # Dividir los datos de tempo y energía en conjuntos de entrenamiento y prueba
 tempos_train, tempos_test, energies_train, energies_test = train_test_split(tempos, energies, test_size=0.2, random_state=42)
 
 # Dividir las etiquetas en conjuntos de entrenamiento y prueba de manera consistente
-y_train, y_test = train_test_split(velocidades, test_size=0.2, random_state=42)
+y_train, y_test = train_test_split(character_speeds, test_size=0.2, random_state=42)
 
 # Expandir tempos_train para que tenga dos dimensiones
 tempos_train_expanded = np.expand_dims(tempos_train, axis=-1)
