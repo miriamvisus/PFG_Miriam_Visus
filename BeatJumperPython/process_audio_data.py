@@ -1,3 +1,5 @@
+from typing import List, Any
+
 import librosa
 import numpy as np
 import requests
@@ -172,7 +174,7 @@ def adjust_platform_height(energies):
 
 character_speeds = []
 platform_frequencies = []
-platform_heights = []
+platform_heights: list[list[float | Any]] = []
 
 # Iterar sobre los datos de audio y ajustar la velocidad del personaje y generar plataformas
 for i in range(num_audios):
@@ -191,7 +193,8 @@ for i in range(num_audios):
 
 character_speeds = np.array(character_speeds)
 platform_frequencies = np.array(platform_frequencies)
-platform_heights = np.concatenate(platform_heights)
+
+
 
 # Dividir los datos de tempo y energía en conjuntos de entrenamiento y prueba
 tempos_train, tempos_test, energies_train, energies_test = train_test_split(tempos, energies, test_size=0.2, random_state=42)
@@ -230,17 +233,14 @@ x_test_platforms = np.column_stack((tempos_test_expanded, energies_test, avg_ene
 # Dividir las etiquetas de velocidad en conjuntos de entrenamiento y prueba de manera consistente
 character_speeds_train, character_speeds_test = train_test_split(character_speeds, test_size=0.2, random_state=42)
 
-# Dividir las etiquetas de altura de plataformas en conjuntos de entrenamiento y prueba de manera consistente
-platform_heights_train, platform_heights_test = train_test_split(platform_heights, test_size=0.2, random_state=42)
-
 # Dividir las etiquetas de frecuencia plataformas en conjuntos de entrenamiento y prueba de manera consistente
 platform_frequencies_train, platform_frequencies_test = train_test_split(platform_frequencies, test_size=0.2, random_state=42)
 
 # Concatenar las velocidades del personaje con las etiquetas originales
-y_train = np.column_stack((character_speeds_train, platform_heights_train, platform_frequencies_train))
+y_train = np.column_stack((character_speeds_train, platform_frequencies_train))
 
 # Concatenar las velocidades del personaje con las etiquetas originales
-y_test = np.column_stack((character_speeds_test, platform_heights_test, platform_frequencies_test))
+y_test = np.column_stack((character_speeds_test, platform_frequencies_test))
 
 print("Forma de x_train:", x_train_platforms.shape)
 print("Forma de x_test:", x_test_platforms.shape)

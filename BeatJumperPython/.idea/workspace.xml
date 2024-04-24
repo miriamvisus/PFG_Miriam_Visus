@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="ia" />
+    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="ia">
+      <change afterPath="$PROJECT_DIR$/example6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_audio_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_audio_data.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,7 +144,7 @@
       <workItem from="1713732653284" duration="20912000" />
       <workItem from="1713872453758" duration="3997000" />
       <workItem from="1713894530168" duration="12965000" />
-      <workItem from="1713979029756" duration="6850000" />
+      <workItem from="1713979029756" duration="9415000" />
     </task>
     <task id="LOCAL-00001" summary="AU">
       <option name="closed" value="true" />
@@ -398,7 +402,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713986557894</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="ia">
+      <option name="closed" value="true" />
+      <created>1713986625750</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1713986625750</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
