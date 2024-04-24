@@ -8,16 +8,6 @@ from tensorflow.keras.models import Sequential, Model
 from tensorflow.keras.layers import Input, Conv2D, Dense, Activation, Flatten, Reshape, UpSampling2D, MaxPooling2D, BatchNormalization, Dropout, LeakyReLU, Concatenate
 from tensorflow.keras.optimizers import Adam
 
-from io import BytesIO
-import struct
-import sounddevice as sd
-import soundfile as sf
-from pydub import AudioSegment
-import matplotlib.pyplot as plt
-from sklearn.linear_model import LinearRegression
-import scipy.signal as signal
-import socket
-
 #Calcular duración máxima
 def calculate_max_duration(git_repo_url, audio_folder, num_audios):
     base_url = git_repo_url.rstrip('/')  + '/raw/main'
@@ -133,6 +123,7 @@ tempos, energies = load_audios_from_git(git_repo_url, audio_folder, num_audios, 
 
 # Ajustar la velocidad del personaje en base al tempo del audio
 def adjust_character_speed(tempo):
+
     # Lógica para ajustar la velocidad del personaje en función del tempo
     if tempo < 100:
         return 5.0
@@ -142,14 +133,19 @@ def adjust_character_speed(tempo):
         return 7.0
 
 
-#Generar plataformas
-def generate_platforms(tempo, energies):
+#Generar frecuencia de generación de plataformas
+def adjust_platform_frequency(tempo):
+
+    # Frecuencia de generación de plataformas en segundos
+    generation_frequency = 1.0 / (tempo / 60.0)
+    return generation_frequency
+
+
+#Generar altura de las plataformas
+def adjust_platform_height(energies):
 
     # Factor de escala para ajustar la altura de las plataformas en función de la energía
     energy_scale_factor = 100
-
-    # Frecuencia de generación de plataformas en segundos
-    generation_frequency = 1.0 / (tempo / 60.0)  # Convertir el tempo a BPM y calcular la frecuencia
 
     # Altura base de las plataformas
     base_platform_height = 0.0  # Altura en unidades de Unity
@@ -157,9 +153,7 @@ def generate_platforms(tempo, energies):
     # Limitar la altura de las plataformas en la escena de Unity al rango de -3 a 10
     min_height = -3.0
     max_height = 10.0
-
-    platforms = []  # Lista para almacenar las plataformas generadas
-    platform_labels = []  # Lista para almacenar las etiquetas correspondientes a las plataformas generadas
+    platform_heights = []  # Lista para almacenar las etiquetas correspondientes a las plataformas generadas
 
     # Iterar sobre las energías de cada audio y ajustar la altura de las plataformas
     for energy in energies:
@@ -171,19 +165,14 @@ def generate_platforms(tempo, energies):
             # Limitar la altura al rango especificado
             platform_height = np.clip(platform_height, min_height, max_height)
 
-            platform_labels.append(platform_height)  # Usamos la altura como etiqueta
+            platform_heights.append(platform_height)
 
-    # Convertir las listas etiquetas a arrays numpy
-    platform_labels_np = np.array(platform_labels)
-
-    print("Forma de platform_labels:", platform_labels_np.shape)
-
-    return np.array(platform_labels)
+    return platform_heights
 
 
 character_speeds = []
-platforms = []
-platform_labels = []
+platform_frequencies = []
+platform_heights = []
 
 # Iterar sobre los datos de audio y ajustar la velocidad del personaje y generar plataformas
 for i in range(num_audios):
@@ -191,12 +180,18 @@ for i in range(num_audios):
     # Ajustar la velocidad del personaje
     character_speed = adjust_character_speed(tempos[i])
     character_speeds.append(character_speed)
-    character_speeds_np = np.array(character_speeds)
-    # Generar plataformas
-    platforms_audio, labels_audio = generate_platforms(tempos[i], energies[i])
-    platforms.extend(platforms_audio)
-    platform_labels.extend(labels_audio)
 
+    # Generar frecuencia de generación de plataformas
+    platform_frequency = adjust_platform_frequency(tempos[i])
+    platform_frequencies.append(platform_frequencies)
+
+    # Generar altura de las plataformas
+    platform_heights_audio = adjust_platform_height(energies[i])
+    platform_heights.append(platform_heights_audio)
+
+character_speeds = np.array(character_speeds)
+platform_frequencies = np.array(platform_frequencies)
+platform_heights = np.concatenate(platform_heights)
 
 # Dividir los datos de tempo y energía en conjuntos de entrenamiento y prueba
 tempos_train, tempos_test, energies_train, energies_test = train_test_split(tempos, energies, test_size=0.2, random_state=42)
@@ -233,19 +228,22 @@ x_test = np.column_stack((tempos_test_expanded, energies_test))
 x_test_platforms = np.column_stack((tempos_test_expanded, energies_test, avg_energy_test))
 
 # Dividir las etiquetas de velocidad en conjuntos de entrenamiento y prueba de manera consistente
-character_speeds_train, character_speeds_test = train_test_split(character_speeds_np, test_size=0.2, random_state=42)
+character_speeds_train, character_speeds_test = train_test_split(character_speeds, test_size=0.2, random_state=42)
 
-# Dividir las etiquetas de plataformas en conjuntos de entrenamiento y prueba de manera consistente
-platform_labels_train, platform_labels_test = train_test_split(platform_labels, test_size=0.2, random_state=42)
+# Dividir las etiquetas de altura de plataformas en conjuntos de entrenamiento y prueba de manera consistente
+platform_heights_train, platform_heights_test = train_test_split(platform_heights, test_size=0.2, random_state=42)
+
+# Dividir las etiquetas de frecuencia plataformas en conjuntos de entrenamiento y prueba de manera consistente
+platform_frequencies_train, platform_frequencies_test = train_test_split(platform_frequencies, test_size=0.2, random_state=42)
 
 # Concatenar las velocidades del personaje con las etiquetas originales
-y_train = np.column_stack((character_speeds_train, platform_labels_train))
+y_train = np.column_stack((character_speeds_train, platform_heights_train, platform_frequencies_train))
 
 # Concatenar las velocidades del personaje con las etiquetas originales
-y_test = np.column_stack((character_speeds_test, platform_labels_test))
+y_test = np.column_stack((character_speeds_test, platform_heights_test, platform_frequencies_test))
 
-print("Forma de x_train_platforms:", x_train_platforms.shape)
-print("Forma de x_test_platforms:", x_test_platforms.shape)
+print("Forma de x_train:", x_train_platforms.shape)
+print("Forma de x_test:", x_test_platforms.shape)
 print("Forma de y_train:", y_train.shape)
 print("Forma de y_test:", y_test.shape)
 
@@ -269,13 +267,13 @@ model.compile(optimizer='adam', loss='mean_squared_error')
 
 # Entrenar el modelo
 model.fit(
-    x=x_train_platforms,  # Usamos los datos de entrada ajustados para el entrenamiento
+    x=x_train,  # Usamos los datos de entrada ajustados para el entrenamiento
     y=y_train,  # Etiquetas de salida: velocidades del personaje
     epochs=10,
     batch_size=32,
-    validation_data=(x_test_platforms, y_test)  # Datos de validación
+    validation_data=(x_test, y_test)  # Datos de validación
 )
 
 # Evaluar el modelo en el conjunto de prueba
-loss = model.evaluate(x_test, character_speeds_test)
+loss = model.evaluate(x_test, y_test)
 print("Loss:", loss)

@@ -4,35 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="unversioned files">
+    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="backup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/process_audio_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_audio_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Scripts/AdaptationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Scripts/AdaptationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Scripts/BunnyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Scripts/BunnyMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Scripts/CameraScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Scripts/CameraScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Scripts/FallDetectorMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Scripts/FallDetectorMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Scripts/GoBack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Scripts/GoBack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Scripts/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Assets/Scripts/Menu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/TundraBuildState.state" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/TundraBuildState.state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/backend1.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/backend1.traceevents" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/fullprofile.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/fullprofile.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/tundra.digestcache" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/tundra.digestcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/tundra.log.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/tundra.log.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/BurstCache/JIT/Hashes/a110ffe6b760e4b56cb86ae44bc7857d.bhc" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/BurstCache/JIT/Hashes/a110ffe6b760e4b56cb86ae44bc7857d.bhc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/GridBrush/UnityEditor.Tilemaps.GridBrush.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/GridBrush/UnityEditor.Tilemaps.GridBrush.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/InspectorExpandedItems.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Search/transactions.db" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Search/transactions.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/UIElements/EditorWindows/UnityEditor.Tilemaps.GridPaintPaletteWindow.pref" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/UIElements/EditorWindows/UnityEditor.Tilemaps.GridPaintPaletteWindow.pref" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/ilpp.pid" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/ilpp.pid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/SourceAssetDB" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +143,8 @@
       <workItem from="1713722876165" duration="7783000" />
       <workItem from="1713732653284" duration="20912000" />
       <workItem from="1713872453758" duration="3997000" />
-      <workItem from="1713894530168" duration="12542000" />
+      <workItem from="1713894530168" duration="12965000" />
+      <workItem from="1713979029756" duration="6108000" />
     </task>
     <task id="LOCAL-00001" summary="AU">
       <option name="closed" value="true" />
@@ -394,7 +370,31 @@
       <option name="project" value="LOCAL" />
       <updated>1713894241369</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="ia">
+      <option name="closed" value="true" />
+      <created>1713908710065</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1713908710065</updated>
+    </task>
+    <task id="LOCAL-00030" summary="unversioned files">
+      <option name="closed" value="true" />
+      <created>1713908751609</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1713908751609</updated>
+    </task>
+    <task id="LOCAL-00031" summary="backup">
+      <option name="closed" value="true" />
+      <created>1713908809472</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1713908809472</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,8 +427,11 @@
     <MESSAGE value="pad" />
     <MESSAGE value="bju" />
     <MESSAGE value="bjp" />
+    <MESSAGE value="ia" />
     <MESSAGE value="unversioned files" />
-    <option name="LAST_COMMIT_MESSAGE" value="unversioned files" />
+    <MESSAGE value="unversioned files2" />
+    <MESSAGE value="backup" />
+    <option name="LAST_COMMIT_MESSAGE" value="backup" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BeatJumperPython$prueba_2.coverage" NAME="prueba 2 Coverage Results" MODIFIED="1711049165017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

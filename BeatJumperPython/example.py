@@ -10,6 +10,16 @@ import struct
 import sounddevice as sd
 import soundfile as sf
 from pydub import AudioSegment
+import time
+from io import BytesIO
+import struct
+import sounddevice as sd
+import soundfile as sf
+from pydub import AudioSegment
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+import scipy.signal as signal
+import socket
 
 # Cargar las imágenes desde el repositorio Git
 def load_audios_from_git(git_repo_url, audio_folder, num_audios):
