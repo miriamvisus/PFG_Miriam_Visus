@@ -5,9 +5,11 @@ import numpy as np
 import requests
 import os
 import tempfile
+
+from numpy import ndarray, dtype
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.models import Sequential, Model
-from tensorflow.keras.layers import Input, Conv2D, Dense, Activation, Flatten, Reshape, UpSampling2D, MaxPooling2D, BatchNormalization, Dropout, LeakyReLU, Concatenate
+from tensorflow.keras.layers import Input, Conv2D, Dense, Activation, Flatten, Reshape, UpSampling2D, MaxPooling2D, BatchNormalization, Dropout, LeakyReLU, Concatenate, LSTM
 from tensorflow.keras.optimizers import Adam
 
 #Calcular duración máxima
@@ -169,12 +171,12 @@ def adjust_platform_height(energies):
 
             platform_heights.append(platform_height)
 
-    return platform_heights
+    return np.array(platform_heights)
 
 
 character_speeds = []
 platform_frequencies = []
-platform_heights: list[list[float | Any]] = []
+platform_heights = []
 
 # Iterar sobre los datos de audio y ajustar la velocidad del personaje y generar plataformas
 for i in range(num_audios):
@@ -185,38 +187,34 @@ for i in range(num_audios):
 
     # Generar frecuencia de generación de plataformas
     platform_frequency = adjust_platform_frequency(tempos[i])
-    platform_frequencies.append(platform_frequencies)
+    platform_frequencies.append(platform_frequency)
 
-    # Generar altura de las plataformas
+    # Generar frecuencia de generación de plataformas
     platform_heights_audio = adjust_platform_height(energies[i])
-    platform_heights.append(platform_heights_audio)
+    platform_heights.extend(platform_heights_audio)
 
 character_speeds = np.array(character_speeds)
 platform_frequencies = np.array(platform_frequencies)
+platform_heights = np.array(platform_heights)
 
+print("Forma de platform_heights:", platform_heights.shape)
+# Redimensionar platform_heights para luego concatenarlo con character_speeds y platform_frequencies (5*1*20687 = 103435)
+platform_heights = np.reshape(platform_heights, (5, 1, 20687))
 
 
 # Dividir los datos de tempo y energía en conjuntos de entrenamiento y prueba
 tempos_train, tempos_test, energies_train, energies_test = train_test_split(tempos, energies, test_size=0.2, random_state=42)
 
-# Crear características adicionales para las plataformas!!!!!!!
-avg_energy = [np.mean(energy) for energy in energies]  # Calcular la energía promedio para cada plataforma
-avg_energy_np = np.array(avg_energy)
+print("Forma de tempos_train:", tempos_train.shape)
+print("Forma de tempos_test:", tempos_test.shape)
+print("Forma de energies_train:", energies_train.shape)
+print("Forma de energies_test:", energies_test.shape)
 
-# Dividir energía promedio para cada plataforma en conjuntos de entrenamiento y prueba
-avg_energy_train, avg_energy_test = train_test_split(avg_energy_np, test_size=0.2, random_state=42)
-
-# Expandir tempos_train para que tenga dos dimensiones
+# Expandir tempos_train para que tenga tres dimensiones
 tempos_train_expanded = np.expand_dims(tempos_train, axis=-1)
 
 # Reemplazar la forma de tempos_train_expanded con la forma de energies_train
 tempos_train_expanded = np.repeat(tempos_train_expanded, energies_train.shape[2], axis=-1)
-
-# Utilizar np.column_stack para unir los datos de entrada!!!!!!
-x_train = np.column_stack((tempos_train_expanded, energies_train))
-
-# Unir las características de las plataformas con los datos de entrada existentes !!!!!
-x_train_platforms = np.column_stack((tempos_train_expanded, energies_train, avg_energy_train))
 
 # Expandir tempos_test para que tenga tres dimensiones
 tempos_test_expanded = np.expand_dims(tempos_test, axis=-1)
@@ -224,26 +222,62 @@ tempos_test_expanded = np.expand_dims(tempos_test, axis=-1)
 # Reemplazar la forma de tempos_test_expanded con la forma de energies_test
 tempos_test_expanded = np.repeat(tempos_test_expanded, energies_test.shape[2], axis=-1)
 
-# Utilizar np.column_stack para unir los datos de entrada de prueba !!!!
-x_test = np.column_stack((tempos_test_expanded, energies_test))
+# Utilizar np.column_stack para unir los datos de entrada
+x_train = np.column_stack((tempos_train_expanded, energies_train))
 
-# Utilizar np.column_stack para unir los datos de entrada de prueba !!!!!
-x_test_platforms = np.column_stack((tempos_test_expanded, energies_test, avg_energy_test))
+# Utilizar np.column_stack para unir los datos de entrada de prueba
+x_test = np.column_stack((tempos_test_expanded, energies_test))
 
 # Dividir las etiquetas de velocidad en conjuntos de entrenamiento y prueba de manera consistente
 character_speeds_train, character_speeds_test = train_test_split(character_speeds, test_size=0.2, random_state=42)
 
-# Dividir las etiquetas de frecuencia plataformas en conjuntos de entrenamiento y prueba de manera consistente
+# Dividir las etiquetas de frecuencia de plataformas en conjuntos de entrenamiento y prueba de manera consistente
 platform_frequencies_train, platform_frequencies_test = train_test_split(platform_frequencies, test_size=0.2, random_state=42)
 
-# Concatenar las velocidades del personaje con las etiquetas originales
-y_train = np.column_stack((character_speeds_train, platform_frequencies_train))
+# Dividir las etiquetas de altura de plataformas en conjuntos de entrenamiento y prueba de manera consistente
+platform_heights_train, platform_heights_test = train_test_split(platform_heights, test_size=0.2, random_state=42)
+
+print("Forma de character_speeds_train:", character_speeds_train.shape)
+print("Forma de character_speeds_test:", character_speeds_test.shape)
+print("Forma de platform_frequencies_train:", platform_frequencies_train.shape)
+print("Forma de platform_frequencies_test:", platform_frequencies_test.shape)
+print("Forma de platform_heights_train:", platform_heights_train.shape)
+print("Forma de platform_heights_test:", platform_heights_test.shape)
+
+# Expandir character_speeds_train para que tenga tres dimensiones
+character_speeds_train_expanded = np.expand_dims(character_speeds_train, axis=-1)
+character_speeds_train_expanded = np.expand_dims(character_speeds_train_expanded, axis=-1)
+
+# Reemplazar la forma de character_speeds_train_expanded con la forma de platform_heights_train
+character_speeds_train_expanded = np.repeat(character_speeds_train_expanded, platform_heights_train.shape[2], axis=-1)
+
+# Expandir character_speeds_test para que tenga tres dimensiones
+character_speeds_test_expanded = np.expand_dims(character_speeds_test, axis=-1)
+character_speeds_test_expanded = np.expand_dims(character_speeds_test_expanded, axis=-1)
+
+# Reemplazar la forma de character_speeds_test_expanded con la forma de platform_heights_test
+character_speeds_test_expanded = np.repeat(character_speeds_test_expanded, platform_heights_test.shape[2], axis=-1)
+
+# Expandir platform_frequencies_train para que tenga tres dimensiones
+platform_frequencies_train_expanded = np.expand_dims(platform_frequencies_train, axis=-1)
+
+# Reemplazar la forma de platform_frequencies_train_expanded con la forma de platform_heights_train
+platform_frequencies_train_expanded = np.repeat(platform_frequencies_train_expanded, platform_heights_train.shape[2], axis=-1)
+
+# Expandir platform_frequencies_test para que tenga tres dimensiones
+platform_frequencies_test_expanded = np.expand_dims(platform_frequencies_test, axis=-1)
+
+# Reemplazar la forma de platform_frequencies_test_expanded con la forma de platform_heights_test
+platform_frequencies_test_expanded = np.repeat(platform_frequencies_test_expanded, platform_heights_test.shape[2], axis=-1)
 
 # Concatenar las velocidades del personaje con las etiquetas originales
-y_test = np.column_stack((character_speeds_test, platform_frequencies_test))
+y_train = np.column_stack((character_speeds_train_expanded, platform_frequencies_train_expanded, platform_heights_train))
 
-print("Forma de x_train:", x_train_platforms.shape)
-print("Forma de x_test:", x_test_platforms.shape)
+# Concatenar las velocidades del personaje con las etiquetas originales
+y_test = np.column_stack((character_speeds_test_expanded, platform_frequencies_test_expanded, platform_heights_test))
+
+print("Forma de x_train:", x_train.shape)
+print("Forma de x_test:", x_test.shape)
 print("Forma de y_train:", y_train.shape)
 print("Forma de y_test:", y_test.shape)
 
@@ -252,9 +286,14 @@ def create_model():
     model = Sequential([
         # Capa de entrada: concatena las características de tempo y energía
         Input(shape=(2, energies_train.shape[2])),  # 2 características: tempo y energía
-        # Capa densa con activación ReLU
-        Dense(64, activation='relu'),
-        # Capa de salida: una neurona para predecir la velocidad del personaje
+
+        # Capa LSTM para procesar la entrada tridimensional de las plataformas
+        LSTM(64, activation='relu', return_sequences=True),
+
+        # Capa de salida: Concatenar las velocidades del personaje con las características de las plataformas
+        Concatenate(axis=1),  # Concatenar a lo largo de la dimensión de las plataformas
+
+        # Capa densa para predecir la velocidad del personaje
         Dense(1)  # Salida continua para la velocidad
     ])
     return model
