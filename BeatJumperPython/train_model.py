@@ -1,15 +1,13 @@
-from typing import List, Any
-
 import librosa
 import numpy as np
 import requests
 import os
 import tempfile
 
-from numpy import ndarray, dtype
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, f1_score
 from tensorflow.keras.models import Sequential, Model
-from tensorflow.keras.layers import Input, Conv2D, Dense, Activation, Flatten, Reshape, UpSampling2D, MaxPooling2D, BatchNormalization, Dropout, LeakyReLU, Concatenate, LSTM
+from tensorflow.keras.layers import Input, Dense, Dropout, LeakyReLU, Concatenate, LSTM
 from tensorflow.keras.optimizers import Adam
 
 #Calcular duración máxima
@@ -131,10 +129,12 @@ def adjust_character_speed(tempo):
     # Lógica para ajustar la velocidad del personaje en función del tempo
     if tempo < 100:
         return 5.0
-    elif 100 <= tempo < 120:
+    elif 100 <= tempo < 110:
         return 6.0
-    else:
+    elif 110 <= tempo < 120:
         return 7.0
+    else:
+        return 8.0
 
 
 #Generar frecuencia de generación de plataformas
@@ -222,38 +222,28 @@ def create_model():
     # Capa de entrada para la energía
     energy_input = Input(shape=(energies_train.shape[1], energies_train.shape[2]))  # Varias características: energía
 
-    # Capa densa para predecir la velocidad del personaje
-    dense1 = Dense(128, activation='relu')(tempo_input)
-    dense1 = Dense(64, activation='relu')(dense1)
-    dense1 = Dense(32, activation='relu')(dense1)
-    dense1 = Dense(16, activation='relu')(dense1)
-    dense1 = Dense(8, activation='relu')(dense1)
-    dense1 = Dropout(0.5)(dense1)
+    dense_tempo = Dense(128, activation='relu')(tempo_input)
+    dense_tempo = Dense(64, activation='relu')(dense_tempo)
+    dense_tempo = Dense(32, activation='relu')(dense_tempo)
+    dense_tempo = Dense(16, activation='relu')(dense_tempo)
+    dense_tempo = Dense(8, activation='relu')(dense_tempo)
+    dense_tempo = Dropout(0.5)(dense_tempo)
 
-    # Capa densa para predecir la frecuencia de generación de plataformas
-    dense2 = Dense(128, activation='relu')(tempo_input)
-    dense2 = Dense(64, activation='relu')(dense2)
-    dense2 = Dense(32, activation='relu')(dense2)
-    dense2 = Dense(16, activation='relu')(dense2)
-    dense2 = Dense(8, activation='relu')(dense2)
-    dense2 = Dropout(0.5)(dense2)
-
-    # Capa densa para predecir la altura de las plataformas
-    dense3 = Dense(128, activation='relu')(energy_input)
-    dense3 = Dense(64, activation='relu')(dense3)
-    dense3 = Dense(32, activation='relu')(dense3)
-    dense3 = Dense(16, activation='relu')(dense3)
-    dense3 = Dense(8, activation='relu')(dense3)
-    dense3 = Dropout(0.5)(dense3)
+    dense_energy = Dense(128, activation='relu')(energy_input)
+    dense_energy = Dense(64, activation='relu')(dense_energy)
+    dense_energy = Dense(32, activation='relu')(dense_energy)
+    dense_energy = Dense(16, activation='relu')(dense_energy)
+    dense_energy = Dense(8, activation='relu')(dense_energy)
+    dense_energy = Dropout(0.5)(dense_energy)
 
     # Capa de salida para la velocidad del personaje
-    output_speed = Dense(1)(dense1)  # Salida continua para la velocidad del personaje
+    output_speed = Dense(1)(dense_tempo)  # Salida continua para la velocidad del personaje
 
     # Capa de salida para la frecuencia de generación de plataformas
-    output_frequency = Dense(1)(dense2)  # Salida continua para la frecuencia de generación de plataformas
+    output_frequency = Dense(1)(dense_tempo)  # Salida continua para la frecuencia de generación de plataformas
 
     # Capa de salida para la altura de las plataformas
-    output_height = Dense(1)(dense3)  # Salida continua para la altura de las plataformas
+    output_height = Dense(1)(dense_energy)  # Salida continua para la altura de las plataformas
 
     # Modelo que toma dos entradas: tempo y energía, y tiene tres salidas: velocidad, frecuencia y altura
     model = Model(inputs=[tempo_input, energy_input], outputs=[output_speed, output_frequency, output_height])
@@ -270,11 +260,14 @@ model.compile(optimizer='adam', loss='mean_squared_error')
 model.fit(
     x=[tempos_train, energies_train],  # Usamos los datos de entrada ajustados para el entrenamiento
     y=[character_speeds_train, platform_frequencies_train, platform_heights_train],  # Etiquetas de salida
-    epochs=2000,
+    epochs=1000,
     batch_size=32,
     validation_data=([tempos_test, energies_test], [character_speeds_test, platform_frequencies_test, platform_heights_test])  # Datos de validación
 )
 
 # Evaluar el modelo en el conjunto de prueba
 loss = model.evaluate([tempos_test, energies_test], [character_speeds_test, platform_frequencies_test, platform_heights_test])
-print("Loss:", loss)
+print("Pérdida en el conjunto de prueba:", loss)
+
+# Guardar el modelo entreando
+model.save('trained_model.keras')
