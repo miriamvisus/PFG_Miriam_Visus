@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638437800019907210
-    m_Hash: 3104217734
+      ticks: 638497697714244093
+    m_Hash: 3844030772
   m_LockFileStatus:
     m_FilePath: C:/Users/miria.PORMIR/PFG_Miriam_Visus_Martin/BeatJumperUnity/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638437800019920211
-    m_Hash: 1234274519
+      ticks: 638497697714321033
+    m_Hash: 347184396
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -114,8 +114,10 @@ m_ResolvedPackages:
     - 2.1.0-preview.6
     - 2.1.0
     - 2.2.0
+    - 2.3.1
     compatible:
     - 2.2.0
+    - 2.3.1
     recommended: 2.2.0
     deprecated: []
   dependencies: []
@@ -342,9 +344,11 @@ m_ResolvedPackages:
     - 3.0.25
     - 3.0.26
     - 3.0.27
+    - 3.0.28
     compatible:
     - 3.0.27
-    recommended: 3.0.27
+    - 3.0.28
+    recommended: 3.0.28
     deprecated: []
   dependencies:
   - name: com.unity.ext.nunit
@@ -468,6 +472,117 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+- packageId: com.unity.ml-agents@git+https://github.com/Unity-Technologies/ml-agents.git?path=com.unity.ml-agents#release_21
+  testable: 0
+  isDirectDependency: 1
+  version: 3.0.0-exp.1
+  source: 5
+  resolvedPath: C:\Users\miria.PORMIR\PFG_Miriam_Visus_Martin\BeatJumperUnity\Library\PackageCache\com.unity.ml-agents@7a03145ae4
+  assetPath: Packages/com.unity.ml-agents
+  name: com.unity.ml-agents
+  displayName: ML Agents
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: Use state-of-the-art machine learning to create intelligent character
+    behaviors in any Unity environment (games, robotics, film, etc.).
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.16.0-preview
+    - 1.0.0-preview
+    - 1.0.1-preview
+    - 1.0.2-preview
+    - 1.0.2
+    - 1.0.3
+    - 1.0.4
+    - 1.0.5
+    - 1.0.6
+    - 1.0.7
+    - 1.0.8
+    - 1.1.0-preview
+    - 1.2.0-preview
+    - 1.3.0-preview
+    - 1.4.0-preview
+    - 1.5.0-preview
+    - 1.6.0-preview
+    - 1.7.0-preview
+    - 1.7.2-preview
+    - 1.8.0-preview
+    - 1.8.1-preview
+    - 1.9.0-preview
+    - 1.9.1-preview
+    - 2.0.0-exp.1
+    - 2.0.0-pre.3
+    - 2.0.0
+    - 2.0.1
+    - 2.1.0-exp.1
+    - 2.2.1-exp.1
+    - 2.3.0-exp.2
+    - 2.3.0-exp.3
+    - 3.0.0-exp.1
+    compatible:
+    - 2.0.1
+    - 2.1.0-exp.1
+    - 2.2.1-exp.1
+    - 2.3.0-exp.2
+    - 2.3.0-exp.3
+    - 3.0.0-exp.1
+    recommended: 2.0.1
+    deprecated: []
+  dependencies:
+  - name: com.unity.sentis
+    version: 1.2.0-exp.2
+  - name: com.unity.modules.imageconversion
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.sentis
+    version: 1.2.0-exp.2
+  - name: com.unity.burst
+    version: 1.8.11
+  - name: com.unity.mathematics
+    version: 1.2.6
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.modules.imageconversion
+    version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 2.0.1
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
 - packageId: com.unity.test-framework@1.1.33
   testable: 0
   isDirectDependency: 1
@@ -535,6 +650,7 @@ m_ResolvedPackages:
     - 1.4.1
     - 1.4.2
     - 1.4.3
+    - 1.4.4
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -554,6 +670,7 @@ m_ResolvedPackages:
     - 1.4.1
     - 1.4.2
     - 1.4.3
+    - 1.4.4
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -732,6 +849,7 @@ m_ResolvedPackages:
     - 3.2.0-pre.6
     - 3.2.0-pre.7
     - 3.2.0-pre.8
+    - 3.2.0-pre.9
     - 4.0.0-pre.1
     - 4.0.0-pre.2
     compatible:
@@ -746,6 +864,7 @@ m_ResolvedPackages:
     - 3.2.0-pre.6
     - 3.2.0-pre.7
     - 3.2.0-pre.8
+    - 3.2.0-pre.9
     - 4.0.0-pre.1
     - 4.0.0-pre.2
     recommended: 3.0.8
@@ -985,6 +1104,7 @@ m_ResolvedPackages:
     - 1.0.0
     - 3.0.0-exp.1
     - 3.0.0-exp.3
+    - 3.0.0-exp.4
     compatible:
     - 1.0.0
     recommended: 1.0.0
@@ -1080,9 +1200,13 @@ m_ResolvedPackages:
     - 1.8.0
     - 1.9.0
     - 1.9.1
+    - 1.9.2
+    - 1.9.4
     compatible:
     - 1.9.1
-    recommended: 1.9.1
+    - 1.9.2
+    - 1.9.4
+    recommended: 1.9.4
     deprecated:
     - 1.8.0-pre.1
   dependencies:
@@ -3098,6 +3222,98 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+- packageId: com.unity.sentis@1.2.0-exp.2
+  testable: 0
+  isDirectDependency: 0
+  version: 1.2.0-exp.2
+  source: 1
+  resolvedPath: C:\Users\miria.PORMIR\PFG_Miriam_Visus_Martin\BeatJumperUnity\Library\PackageCache\com.unity.sentis@1.2.0-exp.2
+  assetPath: Packages/com.unity.sentis
+  name: com.unity.sentis
+  displayName: Sentis
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: 'The Sentis package is a neural network inference library for Unity.
+    You can use Sentis to import trained neural network models into Unity, then run
+    them in real time locally on any platform Unity supports and in the Editor. You
+    can run models on the GPU or the CPU.
+
+
+    You can use Sentis to run models
+    that do style transfer, generate assets, automate non-player character (NPC)
+    logic, and much more
+
+
+    Visit https://discussions.unity.com/c/10 for updates
+    and resources on the Sentis beta, including a full sample project.'
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 1.0.0-exp.6
+    - 1.1.0-exp.2
+    - 1.1.1-exp.2
+    - 1.2.0-exp.2
+    - 1.3.0-pre.1
+    - 1.3.0-pre.2
+    - 1.3.0-pre.3
+    - 1.4.0-pre.1
+    - 1.4.0-pre.2
+    - 1.4.0-pre.3
+    compatible:
+    - 1.0.0-exp.6
+    - 1.1.0-exp.2
+    - 1.1.1-exp.2
+    - 1.2.0-exp.2
+    recommended: 
+    deprecated: []
+  dependencies:
+  - name: com.unity.burst
+    version: 1.8.4
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.modules.imageconversion
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.burst
+    version: 1.8.11
+  - name: com.unity.mathematics
+    version: 1.2.6
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.modules.imageconversion
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638308507480000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.sentis@1.2/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/UnityInferenceEngine.git
+    revision: 03a4bb1ba45958aea199062458cacd5b9796e6f4
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
 - packageId: com.unity.2d.animation@9.0.4
   testable: 0
   isDirectDependency: 0
@@ -3240,6 +3456,7 @@ m_ResolvedPackages:
     - 10.0.2
     - 10.0.3
     - 10.1.0
+    - 10.1.1
     compatible:
     - 9.0.4
     - 9.1.0
@@ -3491,6 +3708,8 @@ m_ResolvedPackages:
     - 9.0.0-pre.2
     - 9.0.0
     - 9.0.1
+    - 9.0.2
+    - 9.0.3
     compatible:
     - 8.0.3
     - 8.0.4
@@ -3722,6 +3941,8 @@ m_ResolvedPackages:
     - 10.0.0
     - 10.0.1
     - 10.0.2
+    - 10.0.3
+    - 10.0.4
     compatible:
     - 9.0.2
     recommended: 9.0.2
@@ -4017,10 +4238,14 @@ m_ResolvedPackages:
     - 1.0.1
     - 1.1.0
     - 1.1.1
+    - 1.1.2
+    - 1.1.3
     compatible:
     - 1.1.0
     - 1.1.1
-    recommended: 1.1.1
+    - 1.1.2
+    - 1.1.3
+    recommended: 1.1.3
     deprecated: []
   dependencies:
   - name: com.unity.2d.sprite
@@ -4076,6 +4301,196 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.1.0
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+- packageId: com.unity.burst@1.8.11
+  testable: 0
+  isDirectDependency: 0
+  version: 1.8.11
+  source: 1
+  resolvedPath: C:\Users\miria.PORMIR\PFG_Miriam_Visus_Martin\BeatJumperUnity\Library\PackageCache\com.unity.burst@1.8.11
+  assetPath: Packages/com.unity.burst
+  name: com.unity.burst
+  displayName: Burst
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: Burst is a compiler that translates from IL/.NET bytecode to highly
+    optimized native code using LLVM.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.2.4-preview.5
+    - 0.2.4-preview.7
+    - 0.2.4-preview.11
+    - 0.2.4-preview.12
+    - 0.2.4-preview.13
+    - 0.2.4-preview.14
+    - 0.2.4-preview.15
+    - 0.2.4-preview.16
+    - 0.2.4-preview.17
+    - 0.2.4-preview.18
+    - 0.2.4-preview.19
+    - 0.2.4-preview.20
+    - 0.2.4-preview.21
+    - 0.2.4-preview.22
+    - 0.2.4-preview.23
+    - 0.2.4-preview.24
+    - 0.2.4-preview.25
+    - 0.2.4-preview.30
+    - 0.2.4-preview.31
+    - 0.2.4-preview.33
+    - 0.2.4-preview.34
+    - 0.2.4-preview.37
+    - 0.2.4-preview.41
+    - 0.2.4-preview.45
+    - 0.2.4-preview.48
+    - 0.2.4-preview.50
+    - 1.1.0-preview.2
+    - 1.1.0-preview.3
+    - 1.1.0-preview.4
+    - 1.1.1
+    - 1.1.2
+    - 1.1.3-preview.3
+    - 1.2.0-preview.1
+    - 1.2.0-preview.5
+    - 1.2.0-preview.6
+    - 1.2.0-preview.8
+    - 1.2.0-preview.9
+    - 1.2.0-preview.10
+    - 1.2.0-preview.11
+    - 1.2.0-preview.12
+    - 1.2.0
+    - 1.2.1
+    - 1.2.2
+    - 1.2.3
+    - 1.3.0-preview.1
+    - 1.3.0-preview.2
+    - 1.3.0-preview.3
+    - 1.3.0-preview.4
+    - 1.3.0-preview.5
+    - 1.3.0-preview.6
+    - 1.3.0-preview.7
+    - 1.3.0-preview.8
+    - 1.3.0-preview.9
+    - 1.3.0-preview.10
+    - 1.3.0-preview.11
+    - 1.3.0-preview.12
+    - 1.3.0-preview.13
+    - 1.3.0
+    - 1.3.1
+    - 1.3.2
+    - 1.3.3
+    - 1.3.4
+    - 1.3.5
+    - 1.3.6
+    - 1.3.7
+    - 1.3.8
+    - 1.3.9
+    - 1.4.0-pre.1
+    - 1.4.0-preview.1
+    - 1.4.0-preview.2
+    - 1.4.0-preview.3
+    - 1.4.0-preview.4
+    - 1.4.0-preview.5
+    - 1.4.1-pre.1
+    - 1.4.1-pre.2
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    - 1.4.4-preview.1
+    - 1.4.4-preview.2
+    - 1.4.4
+    - 1.4.5
+    - 1.4.6
+    - 1.4.7
+    - 1.4.8
+    - 1.4.9
+    - 1.4.11
+    - 1.5.0-pre.3
+    - 1.5.0-pre.4
+    - 1.5.0-pre.5
+    - 1.5.0
+    - 1.5.1
+    - 1.5.2
+    - 1.5.3
+    - 1.5.4
+    - 1.5.5
+    - 1.5.6-preview.1
+    - 1.5.6
+    - 1.6.0-pre.2
+    - 1.6.0-pre.3
+    - 1.6.0-pre.4
+    - 1.6.0
+    - 1.6.1
+    - 1.6.2
+    - 1.6.3
+    - 1.6.4
+    - 1.6.5
+    - 1.6.6
+    - 1.7.0-pre.1
+    - 1.7.0
+    - 1.7.1
+    - 1.7.2
+    - 1.7.3
+    - 1.7.4
+    - 1.8.0-pre.1
+    - 1.8.0-pre.2
+    - 1.8.0
+    - 1.8.1
+    - 1.8.2
+    - 1.8.3
+    - 1.8.4
+    - 1.8.7
+    - 1.8.8
+    - 1.8.9
+    - 1.8.10
+    - 1.8.11
+    - 1.8.12
+    - 1.8.13
+    - 1.8.14
+    compatible:
+    - 1.8.11
+    - 1.8.12
+    - 1.8.13
+    - 1.8.14
+    recommended: 1.8.14
+    deprecated: []
+  dependencies:
+  - name: com.unity.mathematics
+    version: 1.2.1
+  resolvedDependencies:
+  - name: com.unity.mathematics
+    version: 1.2.6
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638360965820000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: git@github.cds.internal.unity3d.com:unity/burst
+    revision: 1d80ef69a5caadb47bb90e69e6fc822e3a334bd3
+    path: 
+  unityLifecycle:
+    version: 1.8.11
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -4156,6 +4571,7 @@ m_ResolvedPackages:
     - 9.0.1
     - 9.0.2
     - 9.0.3
+    - 9.0.4
     compatible:
     - 8.0.2
     recommended: 8.0.2
@@ -4375,6 +4791,8 @@ m_ResolvedPackages:
     - 2.3.0-pre.3
     - 2.4.0-exp.2
     - 2.4.0-pre.2
+    - 2.4.0-pre.5
+    - 2.4.0
     compatible:
     - 1.2.4
     - 1.3.1
@@ -4393,6 +4811,8 @@ m_ResolvedPackages:
     - 2.3.0-pre.3
     - 2.4.0-exp.2
     - 2.4.0-pre.2
+    - 2.4.0-pre.5
+    - 2.4.0
     recommended: 1.2.4
     deprecated: []
   dependencies:
@@ -4437,192 +4857,6 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.2.4
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-- packageId: com.unity.burst@1.8.11
-  testable: 0
-  isDirectDependency: 0
-  version: 1.8.11
-  source: 1
-  resolvedPath: C:\Users\miria.PORMIR\PFG_Miriam_Visus_Martin\BeatJumperUnity\Library\PackageCache\com.unity.burst@1.8.11
-  assetPath: Packages/com.unity.burst
-  name: com.unity.burst
-  displayName: Burst
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: assets
-  description: Burst is a compiler that translates from IL/.NET bytecode to highly
-    optimized native code using LLVM.
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 0.2.4-preview.5
-    - 0.2.4-preview.7
-    - 0.2.4-preview.11
-    - 0.2.4-preview.12
-    - 0.2.4-preview.13
-    - 0.2.4-preview.14
-    - 0.2.4-preview.15
-    - 0.2.4-preview.16
-    - 0.2.4-preview.17
-    - 0.2.4-preview.18
-    - 0.2.4-preview.19
-    - 0.2.4-preview.20
-    - 0.2.4-preview.21
-    - 0.2.4-preview.22
-    - 0.2.4-preview.23
-    - 0.2.4-preview.24
-    - 0.2.4-preview.25
-    - 0.2.4-preview.30
-    - 0.2.4-preview.31
-    - 0.2.4-preview.33
-    - 0.2.4-preview.34
-    - 0.2.4-preview.37
-    - 0.2.4-preview.41
-    - 0.2.4-preview.45
-    - 0.2.4-preview.48
-    - 0.2.4-preview.50
-    - 1.1.0-preview.2
-    - 1.1.0-preview.3
-    - 1.1.0-preview.4
-    - 1.1.1
-    - 1.1.2
-    - 1.1.3-preview.3
-    - 1.2.0-preview.1
-    - 1.2.0-preview.5
-    - 1.2.0-preview.6
-    - 1.2.0-preview.8
-    - 1.2.0-preview.9
-    - 1.2.0-preview.10
-    - 1.2.0-preview.11
-    - 1.2.0-preview.12
-    - 1.2.0
-    - 1.2.1
-    - 1.2.2
-    - 1.2.3
-    - 1.3.0-preview.1
-    - 1.3.0-preview.2
-    - 1.3.0-preview.3
-    - 1.3.0-preview.4
-    - 1.3.0-preview.5
-    - 1.3.0-preview.6
-    - 1.3.0-preview.7
-    - 1.3.0-preview.8
-    - 1.3.0-preview.9
-    - 1.3.0-preview.10
-    - 1.3.0-preview.11
-    - 1.3.0-preview.12
-    - 1.3.0-preview.13
-    - 1.3.0
-    - 1.3.1
-    - 1.3.2
-    - 1.3.3
-    - 1.3.4
-    - 1.3.5
-    - 1.3.6
-    - 1.3.7
-    - 1.3.8
-    - 1.3.9
-    - 1.4.0-pre.1
-    - 1.4.0-preview.1
-    - 1.4.0-preview.2
-    - 1.4.0-preview.3
-    - 1.4.0-preview.4
-    - 1.4.0-preview.5
-    - 1.4.1-pre.1
-    - 1.4.1-pre.2
-    - 1.4.1
-    - 1.4.2
-    - 1.4.3
-    - 1.4.4-preview.1
-    - 1.4.4-preview.2
-    - 1.4.4
-    - 1.4.5
-    - 1.4.6
-    - 1.4.7
-    - 1.4.8
-    - 1.4.9
-    - 1.4.11
-    - 1.5.0-pre.3
-    - 1.5.0-pre.4
-    - 1.5.0-pre.5
-    - 1.5.0
-    - 1.5.1
-    - 1.5.2
-    - 1.5.3
-    - 1.5.4
-    - 1.5.5
-    - 1.5.6-preview.1
-    - 1.5.6
-    - 1.6.0-pre.2
-    - 1.6.0-pre.3
-    - 1.6.0-pre.4
-    - 1.6.0
-    - 1.6.1
-    - 1.6.2
-    - 1.6.3
-    - 1.6.4
-    - 1.6.5
-    - 1.6.6
-    - 1.7.0-pre.1
-    - 1.7.0
-    - 1.7.1
-    - 1.7.2
-    - 1.7.3
-    - 1.7.4
-    - 1.8.0-pre.1
-    - 1.8.0-pre.2
-    - 1.8.0
-    - 1.8.1
-    - 1.8.2
-    - 1.8.3
-    - 1.8.4
-    - 1.8.7
-    - 1.8.8
-    - 1.8.9
-    - 1.8.10
-    - 1.8.11
-    - 1.8.12
-    compatible:
-    - 1.8.11
-    - 1.8.12
-    recommended: 1.8.12
-    deprecated: []
-  dependencies:
-  - name: com.unity.mathematics
-    version: 1.2.1
-  resolvedDependencies:
-  - name: com.unity.mathematics
-    version: 1.2.6
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 638360965820000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: git@github.cds.internal.unity3d.com:unity/burst
-    revision: 1d80ef69a5caadb47bb90e69e6fc822e3a334bd3
-    path: 
-  unityLifecycle:
-    version: 1.8.11
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
