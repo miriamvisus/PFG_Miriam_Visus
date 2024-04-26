@@ -115,8 +115,3 @@ def calculate_tempo(y, sr):
     else:
         return None
 
-
-if __name__ == "__main__":
-    audio = "C:\\Users\miria.PORMIR\PFG_Miriam_Visus_Martin\AUDIOS\Audio1.mp3"
-    process_audio_data(audio)
-    #receive_audio_data()
