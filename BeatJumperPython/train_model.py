@@ -159,6 +159,12 @@ def adjust_platform_height(energies):
     max_height = 10.0
     platform_heights = []  # Lista para almacenar las etiquetas correspondientes a las plataformas generadas
 
+    # Espacio mínimo y máximo entre las alturas de las plataformas
+    min_platform_space = 0
+    max_platform_space = 4
+
+    last_platform_height = base_platform_height  # Inicializar la altura de la última plataforma
+
     # Iterar sobre las energías de cada audio y ajustar la altura de las plataformas
     for energy in energies:
         for energy_value in energy:
@@ -169,7 +175,14 @@ def adjust_platform_height(energies):
             # Limitar la altura al rango especificado
             platform_height = np.clip(platform_height, min_height, max_height)
 
+            # Asegurar que el espacio entre plataformas esté dentro del rango permitido
+            platform_height = np.clip(platform_height, last_platform_height + min_platform_space,
+                                      last_platform_height + max_platform_space)
+
             platform_heights.append(platform_height)
+
+            # Actualizar la altura de la última plataforma
+            last_platform_height = platform_height
 
     return np.array(platform_heights)
 
@@ -198,7 +211,7 @@ platform_frequencies = np.array(platform_frequencies)
 platform_heights = np.array(platform_heights)
 
 print("Forma de platform_heights:", platform_heights.shape)
-# Redimensionar platform_heights para que todaas las muestras tengan el mismo tamaño
+# Redimensionar platform_heights para que todos los arrays tengan el mismo número de muestras
 platform_heights = np.reshape(platform_heights, (num_audios, 1, energies.shape[2]))
 
 
@@ -270,4 +283,4 @@ loss = model.evaluate([tempos_test, energies_test], [character_speeds_test, plat
 print("Pérdida en el conjunto de prueba:", loss)
 
 # Guardar el modelo entreando
-model.save('trained_model.keras')
+model.save('trained_model.h5')
