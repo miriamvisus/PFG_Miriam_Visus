@@ -283,4 +283,4 @@ loss = model.evaluate([tempos_test, energies_test], [character_speeds_test, plat
 print("Pérdida en el conjunto de prueba:", loss)
 
 # Guardar el modelo entreando
-model.save('trained_model.h5')
+model.save('trained_model.keras')
