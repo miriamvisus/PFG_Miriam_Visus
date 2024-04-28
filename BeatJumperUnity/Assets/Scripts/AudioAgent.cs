@@ -9,15 +9,22 @@ using System.Collections;
 public class AudioAgent : Agent
 {
     // URL del modelo en GitHub
-    public string modelUrl = "https://github.com/miriamvisus/PFG_Miriam_Visus_Martin/blob/main/BeatJumperPython/trained_model.keras";
+    public string modelUrl = "https://github.com/miriamvisus/PFG_Miriam_Visus_Martin/raw/main/BeatJumperPython/trained_model.h5";
 
     // Datos de entrada para el modelo
     private float tempo;
     private float[] energy;
 
+    // Referencia al modelo cargado
+    private TensorFlowModel model;
+
     // Método para inicializar el agente
     public override void Initialize()
     {
+        // Descargar el modelo desde la URL y cargarlo
+        model = new TensorFlowModel(modelUrl);
+        model.Load();
+
         // Inicializar el entorno del agente aquí si es necesario
     }
 
@@ -35,8 +42,11 @@ public class AudioAgent : Agent
     // Método para realizar acciones
     public override void OnActionReceived(ActionBuffers actions)
     {
-        // Realizar acciones en el entorno basadas en las salidas del modelo
+        // Obtener las salidas del modelo para las acciones
+        List<float> outputs = model.Execute(tempo, energy);
+
         // Aquí debes implementar la lógica para aplicar las acciones al entorno de Unity
+        // Por ejemplo, actualizar la velocidad del personaje, la frecuencia de generación de plataformas, etc.
     }
 
     // Método para reiniciar el agente
@@ -49,5 +59,12 @@ public class AudioAgent : Agent
         {
             energy[i] = Random.Range(0f, 1f); // Generar valores de energía aleatorios entre 0 y 1
         }
+    }
+
+    // Método para cerrar el agente
+    public override void OnTerminate()
+    {
+        // Liberar recursos al finalizar la ejecución del agente
+        model.Dispose();
     }
 }
