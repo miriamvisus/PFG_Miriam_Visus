@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638497697714244093
-    m_Hash: 3844030772
+      ticks: 638499178001265575
+    m_Hash: 1635338161
   m_LockFileStatus:
     m_FilePath: C:/Users/miria.PORMIR/PFG_Miriam_Visus_Martin/BeatJumperUnity/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638497697714321033
-    m_Hash: 347184396
+      ticks: 638499178001275574
+    m_Hash: 160017775
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
