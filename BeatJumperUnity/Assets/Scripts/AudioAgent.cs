@@ -11,7 +11,7 @@ public class AudioAgent : Agent
 {
     TFGraph graph;
     TFSession session;
-    string modelUrl = "https://github.com/miriamvisus/PFG_Miriam_Visus_Martin/raw/main/BeatJumperPython/trained_model.h5";
+    string modelUrl = "https://github.com/miriamvisus/PFG_Miriam_Visus_Martin/raw/main/BeatJumperPython/saved_model/saved_model.pb";
     string modelFilePath;
 
     float tempo;
