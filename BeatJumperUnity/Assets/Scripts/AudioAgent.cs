@@ -11,17 +11,24 @@ public class AudioAgent : Agent
 {
     TFGraph graph;
     TFSession session;
-    string modelUrl = "https://github.com/miriamvisus/PFG_Miriam_Visus_Martin/raw/main/BeatJumperPython/trained_model.pb";
+    string modelUrl = "https://github.com/miriamvisus/PFG_Miriam_Visus_Martin/raw/main/BeatJumperPython/trained_model.h5";
+    string modelFilePath;
 
     float tempo;
     float[] energy;
 
     public override void Initialize()
     {
-        // Descargar y cargar el grafo del modelo TensorFlow
-        DownloadModel();
+        modelFilePath = Application.persistentDataPath + "/trained_model.pb";
+
+        if (!File.Exists(modelFilePath))
+        {
+            DownloadModel();
+        }
+
+        // Cargar el grafo del modelo TensorFlow
         graph = new TFGraph();
-        graph.Import(new TFBuffer(File.ReadAllBytes(Application.persistentDataPath + "/trained_model.pb")));
+        graph.Import(new TFBuffer(File.ReadAllBytes(modelFilePath)));
 
         // Inicializar la sesión TensorFlow
         session = new TFSession(graph);
@@ -40,8 +47,7 @@ public class AudioAgent : Agent
             }
 
             // Guardar el modelo descargado en el directorio persistente de la aplicación
-            string filePath = Application.persistentDataPath + "/trained_model.pb";
-            File.WriteAllBytes(filePath, www.bytes);
+            File.WriteAllBytes(modelFilePath, www.bytes);
         }
     }
 
