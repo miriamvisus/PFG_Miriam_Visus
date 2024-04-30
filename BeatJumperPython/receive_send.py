@@ -55,9 +55,6 @@ def receive_audio_data():
 
         samplerate = 44100
 
-        # Reproduce el audio
-        sd.play(audio_array, samplerate=44100, blocking=True)
-
         # Guardar los datos de audio en formato WAV
         sf.write("output_audio.wav", audio_array, samplerate)
 
