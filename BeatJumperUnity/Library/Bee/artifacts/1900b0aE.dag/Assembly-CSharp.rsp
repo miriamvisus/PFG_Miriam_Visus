@@ -407,6 +407,7 @@
 "Assets/ML-Agents/Examples/SharedAssets/Scripts/TargetContact.cs"
 "Assets/ML-Agents/Examples/SharedAssets/Scripts/TargetController.cs"
 "Assets/Scripts/AdaptationController.cs"
+"Assets/Scripts/AudioAgent.cs"
 "Assets/Scripts/AudioSender.cs"
 "Assets/Scripts/BunnyMovement.cs"
 "Assets/Scripts/CameraScript.cs"

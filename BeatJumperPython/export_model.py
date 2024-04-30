@@ -1,5 +1,6 @@
 import tensorflow as tf
+
 model = tf.keras.models.load_model('trained_model.h5')
-# Compilar el modelo para construir las métricas
-model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-tf.saved_model.save(model, 'saved_model')
+# Export the model
+tf.saved_model.save(model, "saved_model")
+# python -m tf2onnx.convert --saved-model ./saved_model --output trained_model.onnx

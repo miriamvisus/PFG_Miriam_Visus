@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TensorFlow;
 using System;
+using System.IO;
 
 public class TensorFlowModelLoader : MonoBehaviour
 {
@@ -16,7 +17,12 @@ public class TensorFlowModelLoader : MonoBehaviour
     {
         // Cargar el modelo desde el archivo .pb
         graph = new TFGraph();
-        graph.Import(modelPath);
+
+        // Cargar el contenido del archivo del modelo en un TFBuffer
+        var modelBuffer = new TFBuffer(File.ReadAllBytes(modelPath));
+
+        // Importar el modelo desde el TFBuffer
+        graph.Import(modelBuffer);
 
         // Realizar una inferencia de prueba
         PerformInference();
@@ -31,8 +37,27 @@ public class TensorFlowModelLoader : MonoBehaviour
             var inputOp = graph["input_node"][0];
             var outputOp = graph["output_node"][0];
 
-            // Preparar los datos de entrada (ejemplo)
-            var inputTensor = new TFTensor(new float[1, 2] { { 1.0f, 2.0f } });
+            // Preparar los datos de entrada
+            float[,] inputData = new float[1, 2] { { 1.0f, 2.0f } };
+
+            // Calcular el tamaño total del array unidimensional
+            int totalSize = inputData.GetLength(0) * inputData.GetLength(1);
+
+            // Crear el array unidimensional
+            float[] flattenedInputData = new float[totalSize];
+
+            // Convertir la matriz bidimensional al array unidimensional
+            int index = 0;
+            for (int i = 0; i < inputData.GetLength(0); i++)
+            {
+                for (int j = 0; j < inputData.GetLength(1); j++)
+                {
+                    flattenedInputData[index++] = inputData[i, j];
+                }
+            }
+
+            // Crear el tensor con los datos de entrada
+            var inputTensor = new TFTensor(flattenedInputData);
 
             // Ejecutar el grafo para realizar una inferencia
             var output = session.Run(new[] { inputOp }, new TFTensor[] { inputTensor }, new[] { outputOp });
