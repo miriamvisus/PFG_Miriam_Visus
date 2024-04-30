@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638499178001265575
-    m_Hash: 1635338161
+      ticks: 638500682044559896
+    m_Hash: 146384125
   m_LockFileStatus:
     m_FilePath: C:/Users/miria.PORMIR/PFG_Miriam_Visus_Martin/BeatJumperUnity/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638499178001275574
-    m_Hash: 160017775
+      ticks: 638500682062684807
+    m_Hash: 3981043252
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,6 +22,115 @@ m_LocalPackages:
 m_ProjectPath: C:/Users/miria.PORMIR/PFG_Miriam_Visus_Martin/BeatJumperUnity/Packages
 m_EditorVersion: 2022.3.17f1 (4fc78088f837)
 m_ResolvedPackages:
+- packageId: com.unity.barracuda@3.0.0
+  testable: 0
+  isDirectDependency: 1
+  version: 3.0.0
+  source: 1
+  resolvedPath: C:\Users\miria.PORMIR\PFG_Miriam_Visus_Martin\BeatJumperUnity\Library\PackageCache\com.unity.barracuda@3.0.0
+  assetPath: Packages/com.unity.barracuda
+  name: com.unity.barracuda
+  displayName: Barracuda
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: Barracuda is lightweight and cross-platform Neural Net inference library.
+    Barracuda supports inference both on GPU and CPU.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.2.7-preview
+    - 0.3.0-preview
+    - 0.3.1-preview
+    - 0.3.2-preview
+    - 0.4.0-preview
+    - 0.5.0-preview
+    - 0.6.0-preview
+    - 0.6.1-preview
+    - 0.6.2-preview
+    - 0.6.3-preview
+    - 0.7.0-preview
+    - 0.7.1-preview
+    - 0.8.0-preview
+    - 1.0.0
+    - 1.0.1
+    - 1.0.2
+    - 1.0.3
+    - 1.0.4
+    - 1.1.0-preview
+    - 1.1.1-preview
+    - 1.1.2-preview
+    - 1.2.0-preview
+    - 1.2.1-preview
+    - 1.3.0-preview
+    - 1.3.1-preview
+    - 1.3.2-preview
+    - 1.3.3-preview
+    - 1.4.0-preview
+    - 2.0.0-pre.2
+    - 2.0.0-pre.3
+    - 2.0.0-pre.4
+    - 2.0.0-pre.5
+    - 2.0.0-pre.6
+    - 2.0.0
+    - 2.1.0-preview
+    - 2.2.0-preview
+    - 2.2.1-preview
+    - 2.3.0-preview
+    - 2.3.1-preview
+    - 2.4.0-preview
+    - 3.0.0
+    compatible:
+    - 3.0.0
+    recommended: 3.0.0
+    deprecated: []
+  dependencies:
+  - name: com.unity.burst
+    version: 1.6.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.modules.imageconversion
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.burst
+    version: 1.8.11
+  - name: com.unity.mathematics
+    version: 1.2.6
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.modules.imageconversion
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637817245160000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/UnityInferenceEngine.git
+    revision: 26d48d6d408d03dc87eab5c945a97d2e155877d2
+    path: 
+  unityLifecycle:
+    version: 3.0.0
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
 - packageId: com.unity.collab-proxy@2.2.0
   testable: 0
   isDirectDependency: 1
@@ -466,117 +575,6 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 2.0.22
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-- packageId: com.unity.ml-agents@git+https://github.com/Unity-Technologies/ml-agents.git?path=com.unity.ml-agents#release_21
-  testable: 0
-  isDirectDependency: 1
-  version: 3.0.0-exp.1
-  source: 5
-  resolvedPath: C:\Users\miria.PORMIR\PFG_Miriam_Visus_Martin\BeatJumperUnity\Library\PackageCache\com.unity.ml-agents@7a03145ae4
-  assetPath: Packages/com.unity.ml-agents
-  name: com.unity.ml-agents
-  displayName: ML Agents
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: 
-  description: Use state-of-the-art machine learning to create intelligent character
-    behaviors in any Unity environment (games, robotics, film, etc.).
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 0.16.0-preview
-    - 1.0.0-preview
-    - 1.0.1-preview
-    - 1.0.2-preview
-    - 1.0.2
-    - 1.0.3
-    - 1.0.4
-    - 1.0.5
-    - 1.0.6
-    - 1.0.7
-    - 1.0.8
-    - 1.1.0-preview
-    - 1.2.0-preview
-    - 1.3.0-preview
-    - 1.4.0-preview
-    - 1.5.0-preview
-    - 1.6.0-preview
-    - 1.7.0-preview
-    - 1.7.2-preview
-    - 1.8.0-preview
-    - 1.8.1-preview
-    - 1.9.0-preview
-    - 1.9.1-preview
-    - 2.0.0-exp.1
-    - 2.0.0-pre.3
-    - 2.0.0
-    - 2.0.1
-    - 2.1.0-exp.1
-    - 2.2.1-exp.1
-    - 2.3.0-exp.2
-    - 2.3.0-exp.3
-    - 3.0.0-exp.1
-    compatible:
-    - 2.0.1
-    - 2.1.0-exp.1
-    - 2.2.1-exp.1
-    - 2.3.0-exp.2
-    - 2.3.0-exp.3
-    - 3.0.0-exp.1
-    recommended: 2.0.1
-    deprecated: []
-  dependencies:
-  - name: com.unity.sentis
-    version: 1.2.0-exp.2
-  - name: com.unity.modules.imageconversion
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.modules.physics
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.sentis
-    version: 1.2.0-exp.2
-  - name: com.unity.burst
-    version: 1.8.11
-  - name: com.unity.mathematics
-    version: 1.2.6
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.modules.imageconversion
-    version: 1.0.0
-  - name: com.unity.modules.physics
-    version: 1.0.0
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
-  repository:
-    type: 
-    url: 
-    revision: 
-    path: 
-  unityLifecycle:
-    version: 2.0.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -3216,98 +3214,6 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.0.6
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-- packageId: com.unity.sentis@1.2.0-exp.2
-  testable: 0
-  isDirectDependency: 0
-  version: 1.2.0-exp.2
-  source: 1
-  resolvedPath: C:\Users\miria.PORMIR\PFG_Miriam_Visus_Martin\BeatJumperUnity\Library\PackageCache\com.unity.sentis@1.2.0-exp.2
-  assetPath: Packages/com.unity.sentis
-  name: com.unity.sentis
-  displayName: Sentis
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: assets
-  description: 'The Sentis package is a neural network inference library for Unity.
-    You can use Sentis to import trained neural network models into Unity, then run
-    them in real time locally on any platform Unity supports and in the Editor. You
-    can run models on the GPU or the CPU.
-
-
-    You can use Sentis to run models
-    that do style transfer, generate assets, automate non-player character (NPC)
-    logic, and much more
-
-
-    Visit https://discussions.unity.com/c/10 for updates
-    and resources on the Sentis beta, including a full sample project.'
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 1.0.0-exp.6
-    - 1.1.0-exp.2
-    - 1.1.1-exp.2
-    - 1.2.0-exp.2
-    - 1.3.0-pre.1
-    - 1.3.0-pre.2
-    - 1.3.0-pre.3
-    - 1.4.0-pre.1
-    - 1.4.0-pre.2
-    - 1.4.0-pre.3
-    compatible:
-    - 1.0.0-exp.6
-    - 1.1.0-exp.2
-    - 1.1.1-exp.2
-    - 1.2.0-exp.2
-    recommended: 
-    deprecated: []
-  dependencies:
-  - name: com.unity.burst
-    version: 1.8.4
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.modules.imageconversion
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.burst
-    version: 1.8.11
-  - name: com.unity.mathematics
-    version: 1.2.6
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.modules.imageconversion
-    version: 1.0.0
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 638308507480000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.sentis@1.2/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/UnityInferenceEngine.git
-    revision: 03a4bb1ba45958aea199062458cacd5b9796e6f4
-    path: 
-  unityLifecycle:
-    version: 
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
