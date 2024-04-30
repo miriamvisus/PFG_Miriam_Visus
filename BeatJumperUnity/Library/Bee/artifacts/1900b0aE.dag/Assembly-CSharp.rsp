@@ -386,6 +386,7 @@
 "Assets/Scripts/AudioSender.cs"
 "Assets/Scripts/BunnyMovement.cs"
 "Assets/Scripts/CameraScript.cs"
+"Assets/Scripts/DataReceiver.cs"
 "Assets/Scripts/FallDetectorMovement.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/GoBack.cs"
