@@ -1,9 +1,7 @@
 import socket
 import librosa
 import numpy as np
-import scipy.signal as signal
 import struct
-import sounddevice as sd
 import soundfile as sf
 from pydub import AudioSegment
 
@@ -63,12 +61,14 @@ def receive_audio_data():
 
         # Procesar los datos de audio
         tempo, energy = process_audio_data("output_audio.mp3")
+        energy_array_length = energy.shape[1]
+        print("Longitud de la energía:", energy_array_length)
 
         # Cierra la conexión
         client_socket.close()
         server_socket.close()
 
-        return tempo, energy
+        return tempo, energy, energy_array_length
 
     except Exception as e:
         print(f"Error al recibir datos de audio: {e}")
@@ -115,5 +115,5 @@ def send_data_to_unity(tempo, energy):
     except Exception as e:
         print(f"Error al enviar datos a Unity: {e}")
 
-tempo, energy = receive_audio_data()
-send_data_to_unity(tempo, energy)
+tempo, energy, energy_array_length = receive_audio_data()
+send_data_to_unity(tempo, energy, energy_array_length)
