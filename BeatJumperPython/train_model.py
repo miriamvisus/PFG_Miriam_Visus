@@ -284,5 +284,3 @@ print("Pérdida en el conjunto de prueba:", loss)
 
 # Guardar el modelo entreando
 model.save('trained_model.h5')
-# Guardar el modelo entreando
-model.save('trained_model.keras')

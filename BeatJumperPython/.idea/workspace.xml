@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="ad">
-      <change afterPath="$PROJECT_DIR$/../~$ferencias y elementos utilizados.docx" afterDir="false" />
+    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="ae">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,15 +160,7 @@
       <workItem from="1714397406116" duration="3806000" />
       <workItem from="1714401275126" duration="13366000" />
       <workItem from="1714459785335" duration="1473000" />
-      <workItem from="1714461735989" duration="3325000" />
-    </task>
-    <task id="LOCAL-00025" summary="bju">
-      <option name="closed" value="true" />
-      <created>1713816220489</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1713816220489</updated>
+      <workItem from="1714461735989" duration="3695000" />
     </task>
     <task id="LOCAL-00026" summary="bju">
       <option name="closed" value="true" />
@@ -554,7 +546,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714465132193</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="ae">
+      <option name="closed" value="true" />
+      <created>1714465162208</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1714465162208</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +572,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="e" />
     <MESSAGE value="f" />
     <MESSAGE value="g" />
     <MESSAGE value="h" />
@@ -597,7 +596,8 @@
     <MESSAGE value="ab" />
     <MESSAGE value="ac" />
     <MESSAGE value="ad" />
-    <option name="LAST_COMMIT_MESSAGE" value="ad" />
+    <MESSAGE value="ae" />
+    <option name="LAST_COMMIT_MESSAGE" value="ae" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BeatJumperPython$prueba_2.coverage" NAME="prueba 2 Coverage Results" MODIFIED="1711049165017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
