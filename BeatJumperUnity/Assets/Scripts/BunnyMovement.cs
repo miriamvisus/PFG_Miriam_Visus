@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class BunnyMovement : MonoBehaviour
 {
@@ -56,6 +58,7 @@ public class BunnyMovement : MonoBehaviour
 
     private void EndGameWithDelay()
     {
-        GameManager.EndGame();
+        Debug.Log("El juego ha terminado.");
+        SceneManager.LoadScene("GameOverScene");
     }
 }

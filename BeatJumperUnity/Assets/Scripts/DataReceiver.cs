@@ -4,6 +4,7 @@ using System.Net.Sockets;
 using System.IO;
 using UnityEngine;
 
+
 public class DataReceiver : MonoBehaviour
 {
     public string serverIP = "127.0.0.1"; 
