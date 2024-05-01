@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="ap" />
+    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="ap">
+      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/backend1.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/backend1.traceevents" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/fullprofile.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/fullprofile.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/tundra.digestcache" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/tundra.digestcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/ilpp.pid" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/ilpp.pid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,6 +160,7 @@
       <workItem from="1714596417347" duration="726000" />
       <workItem from="1714597249366" duration="1107000" />
       <workItem from="1714601379946" duration="134000" />
+      <workItem from="1714601529048" duration="42000" />
     </task>
     <task id="LOCAL-00037" summary="tm">
       <option name="closed" value="true" />
