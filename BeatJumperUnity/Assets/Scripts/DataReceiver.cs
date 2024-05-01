@@ -8,12 +8,16 @@ using UnityEngine;
 public class DataReceiver : MonoBehaviour
 {
     public string serverIP = "127.0.0.1"; 
-    public int port = 8888; 
+    public int port = 8001;
+    TcpListener server;
+    TcpClient client;
 
     void Start()
     {
         // Establece la conexión
-        TcpClient client = new TcpClient(serverIP, port);
+        server = new TcpListener(IPAddress.Parse(serverIP), port);
+        server.Start();
+        client = server.AcceptTcpClient();
         NetworkStream stream = client.GetStream();
 
         // Recibe los datos de tempo
@@ -21,8 +25,12 @@ public class DataReceiver : MonoBehaviour
         stream.Read(tempoBytes, 0, tempoBytes.Length);
         float tempo = BitConverter.ToSingle(tempoBytes, 0);
 
+        // Recibe la longitud del array de energía
+        byte[] energyLengthBytes = new byte[4];
+        stream.Read(energyLengthBytes, 0, energyLengthBytes.Length);
+        int energyLength = BitConverter.ToInt32(energyLengthBytes, 0);
+
         // Recibe los datos de energía
-        int energyLength = 10; // Ajusta esto al tamaño real de los datos de energía
         byte[] energyBytes = new byte[sizeof(float) * energyLength];
         stream.Read(energyBytes, 0, energyBytes.Length);
         float[] energy = new float[energyLength];

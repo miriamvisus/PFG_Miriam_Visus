@@ -5,9 +5,10 @@ import struct
 import soundfile as sf
 from pydub import AudioSegment
 
-# Dirección I-P y puerto del servidor
+# Dirección IP y puerto del servidor
 HOST = '127.0.0.1'
-PORT = 8888
+RECEIVE_PORT = 8000
+SEND_PORT = 8001
 
 def receive_audio_data():
     try:
@@ -16,12 +17,12 @@ def receive_audio_data():
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
         # Enlazar el socket a la dirección y puerto especificados
-        server_socket.bind((HOST, PORT))
+        server_socket.bind((HOST, RECEIVE_PORT))
 
         # Poner el socket en modo de escucha
         server_socket.listen(1)
 
-        print(f"Servidor escuchando en {HOST}:{PORT}")
+        print(f"Servidor escuchando en {HOST}:{RECEIVE_PORT}")
 
         # Aceptar conexiones entrantes
         client_socket, client_address = server_socket.accept()
@@ -61,14 +62,14 @@ def receive_audio_data():
 
         # Procesar los datos de audio
         tempo, energy = process_audio_data("output_audio.mp3")
-        energy_array_length = energy.shape[1]
-        print("Longitud de la energía:", energy_array_length)
+        energy_length = energy.shape[1]
+        print("Longitud de la energía:", energy_length)
 
         # Cierra la conexión
         client_socket.close()
         server_socket.close()
 
-        return tempo, energy, energy_array_length
+        return tempo, energy, energy_length
 
     except Exception as e:
         print(f"Error al recibir datos de audio: {e}")
@@ -93,20 +94,22 @@ def process_audio_data(audio_file):
     except Exception as e:
         print(f"Error al procesar datos de audio: {e}")
 
-def send_data_to_unity(tempo, energy):
+def send_data_to_unity(tempo, energy, energy_length):
     try:
         # Crear un socket TCP/IP
         client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
         # Conectar al servidor
-        client_socket.connect((HOST, PORT))
+        client_socket.connect((HOST, SEND_PORT))
 
-        # Empaquetar los datos de tempo y energía
+        # Empaquetar los datos de tempo, longitud de energía y energía
         tempo_bytes = struct.pack('f', tempo)
+        energy_length_bytes = struct.pack('I', energy_length)
         energy_bytes = struct.pack(f'{len(energy)}f', *energy)
 
-        # Enviar los datos de tempo y energía
+        # Enviar los datos de tempo, longitud de energía y energía
         client_socket.send(tempo_bytes)
+        client_socket.send(energy_length_bytes)
         client_socket.send(energy_bytes)
 
         # Cerrar la conexión
@@ -115,5 +118,6 @@ def send_data_to_unity(tempo, energy):
     except Exception as e:
         print(f"Error al enviar datos a Unity: {e}")
 
-tempo, energy, energy_array_length = receive_audio_data()
-send_data_to_unity(tempo, energy, energy_array_length)
+
+tempo, energy, energy_length = receive_audio_data()
+send_data_to_unity(tempo, energy, energy_length)

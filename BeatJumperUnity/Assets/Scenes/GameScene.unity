@@ -3978,9 +3978,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1816424711}
-  - component: {fileID: 1816424714}
   - component: {fileID: 1816424713}
   - component: {fileID: 1816424715}
+  - component: {fileID: 1816424714}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -4108,11 +4108,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1816424709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1729ca8b4455ac48b24967413fd3371, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e663ff594f007d48b58d9de2314a0ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serverIP: 127.0.0.1
-  port: 8888
+  port: 8001
 --- !u!114 &1816424715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4122,11 +4122,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1816424709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e663ff594f007d48b58d9de2314a0ac, type: 3}
+  m_Script: {fileID: 11500000, guid: f1729ca8b4455ac48b24967413fd3371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serverIP: 127.0.0.1
-  port: 8888
+  port: 8000
 --- !u!1 &1913171081
 GameObject:
   m_ObjectHideFlags: 0

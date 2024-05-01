@@ -1,13 +1,14 @@
-using UnityEngine;
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.IO;
+using UnityEngine;
 
 
 public class AudioSender : MonoBehaviour
 {
     public string serverIP = "127.0.0.1"; 
-    public int port = 8888; 
+    public int port = 8000; 
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class AudioSender : MonoBehaviour
         // Establece la conexión
         TcpClient client = new TcpClient(serverIP, port);
         NetworkStream stream = client.GetStream();
-
+    
         // Envía el tamaño del archivo de audio
         byte[] sizeBytes = System.BitConverter.GetBytes(audioData.Length);
         stream.Write(sizeBytes, 0, sizeBytes.Length);
