@@ -2,6 +2,7 @@ using System;
 using System.Net;
 using System.Net.Sockets;
 using System.IO;
+using System.Collections;
 using UnityEngine;
 
 public class AudioSender : MonoBehaviour
@@ -9,7 +10,9 @@ public class AudioSender : MonoBehaviour
     public string serverIP = "127.0.0.1"; 
     public int port = 8000; 
 
-    void Start()
+    private bool sendError = false;
+
+    public IEnumerator SendAudioData()
     {
         try
         {
@@ -43,9 +46,14 @@ public class AudioSender : MonoBehaviour
             stream.Close();
             client.Close();
         }
+
         catch (Exception e)
         {
             Debug.LogError("Error al enviar datos de audio: " + e.Message);
+            sendError = true;
         }
+
+        // Devuelve el estado del envío
+        yield return sendError;
     }
 }

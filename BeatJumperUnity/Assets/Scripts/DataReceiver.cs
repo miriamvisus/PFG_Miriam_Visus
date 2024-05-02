@@ -11,7 +11,7 @@ public class DataReceiver : MonoBehaviour
     TcpListener server;
     TcpClient client;
 
-    void Start()
+    public void StartReceiving()
     {
         try
         {
@@ -45,6 +45,7 @@ public class DataReceiver : MonoBehaviour
             Debug.Log("Tempo recibido: " + tempo);
             Debug.Log("Energía recibida: " + string.Join(", ", energy));
         }
+
         catch (Exception e)
         {
             Debug.LogError("Error al recibir datos de audio: " + e.Message);
