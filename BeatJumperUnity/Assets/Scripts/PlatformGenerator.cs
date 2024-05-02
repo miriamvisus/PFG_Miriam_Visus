@@ -10,12 +10,14 @@ public class PlatformGenerator : MonoBehaviour
     public TileBase[] platformTiles;
     
     public int platformWidth = 1;
-    public float minVerticalSpacing = 0f;
-    public float maxVerticalSpacing = 0.1f;
+    public float[] heights;
     public float minHorizontalSpacing = 0f;
     public float maxHorizontalSpacing = 0.1f;
     public float generationOffset = 10f; // Distancia desde la cámara para comenzar a generar
+    public float generationFrequency;  // Frecuencia de generación de plataformas (segundos por plataforma)
 
+    private int currentGenerationIndex = 0;
+    private float timer = 0f;
     private Vector3Int lastTilePosition;
 
     void Start()
@@ -25,11 +27,16 @@ public class PlatformGenerator : MonoBehaviour
 
     void Update()
     {
-        // Verifica si es necesario generar más plataformas
-        Vector3 cameraPosition = Camera.main.transform.position;
-        if (cameraPosition.x >= lastTilePosition.x - generationOffset)
+        // Incrementar el temporizador
+        timer += Time.deltaTime;
+
+        // Verificar si es necesario generar más plataformas
+        if (timer >= generationFrequency)
         {
             GeneratePlatform();
+
+            // Reiniciar el temporizador
+            timer = 0f;
         }
     }
 
@@ -39,18 +46,20 @@ public class PlatformGenerator : MonoBehaviour
         TileBase randomTile = platformTiles[Random.Range(0, platformTiles.Length)];
 
         // Calcula las posiciones de la nueva plataforma
-        float verticalOffset = Random.Range(minVerticalSpacing, maxVerticalSpacing);
-        if (Random.value < 0.5f) // Genera algunas plataformas arriba y otras abajo
-        {
-            verticalOffset = -verticalOffset;
-        }
         float horizontalOffset = Random.Range(minHorizontalSpacing, maxHorizontalSpacing);
-        Vector3Int newTilePosition = lastTilePosition + new Vector3Int(platformWidth + Mathf.RoundToInt(horizontalOffset), Mathf.RoundToInt(verticalOffset), 0);
+        Vector3Int newTilePosition = lastTilePosition + new Vector3Int(platformWidth + Mathf.RoundToInt(horizontalOffset), Mathf.RoundToInt(heights[currentGenerationIndex]), 0);
 
         // Coloca el Tile en la posición calculada
         tilemap.SetTile(newTilePosition, randomTile);
 
         // Actualiza la posición de la última plataforma generada
         lastTilePosition = newTilePosition;
+
+        // Incrementa el índice de generación para la próxima plataforma
+        currentGenerationIndex++;
+        if (currentGenerationIndex >= heights.Length)
+        {
+            currentGenerationIndex = 0; // Vuelve al inicio del array si se alcanza el final
+        }
     }
 }

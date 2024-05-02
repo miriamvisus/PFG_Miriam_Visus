@@ -3231,6 +3231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1458268566}
+  - component: {fileID: 1458268567}
   m_Layer: 0
   m_Name: PlatformManager
   m_TagString: Untagged
@@ -3253,6 +3254,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1458268567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458268564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f86f6dc9b3a66499d2afea92aeb953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 0}
+  platformTiles: []
+  platformWidth: 1
+  heights: []
+  minHorizontalSpacing: 0
+  maxHorizontalSpacing: 0.1
+  generationOffset: 10
+  generationFrequency: 0
 --- !u!1 &1479084694
 GameObject:
   m_ObjectHideFlags: 0
@@ -3981,8 +4002,6 @@ GameObject:
   - component: {fileID: 1816424713}
   - component: {fileID: 1816424716}
   - component: {fileID: 1816424715}
-  - component: {fileID: 1816424718}
-  - component: {fileID: 1816424717}
   m_Layer: 0
   m_Name: Audio&ModelManager
   m_TagString: Untagged
@@ -4127,36 +4146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 125c0ed9af20b6345930ba7fbd0e6e38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1816424717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816424709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 125d11ba2f0a0714792912f610cdadd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  modelAsset: {fileID: 5022602860645237092, guid: 15925b59b0c3d7946974319447b3b7d4, type: 3}
-  speedText: {fileID: 0}
-  frequencyText: {fileID: 0}
-  heightText: {fileID: 0}
---- !u!114 &1816424718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816424709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e663ff594f007d48b58d9de2314a0ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serverIP: 127.0.0.1
-  port: 8001
 --- !u!1 &1913171081
 GameObject:
   m_ObjectHideFlags: 0
@@ -4505,29 +4494,15 @@ GameObject:
   - component: {fileID: 2061736568}
   - component: {fileID: 2061736567}
   - component: {fileID: 2061736566}
-  - component: {fileID: 2061736565}
+  - component: {fileID: 2061736571}
   - component: {fileID: 2061736570}
   m_Layer: 0
-  m_Name: bunny
+  m_Name: Bunny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2061736565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061736564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e47850c7423a1834694e694eeb0be0ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 5
-  JumpForce: 600
 --- !u!70 &2061736566
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4678,6 +4653,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2061736571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061736564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47850c7423a1834694e694eeb0be0ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0
+  JumpForce: 500
 --- !u!1 &2080866827
 GameObject:
   m_ObjectHideFlags: 0

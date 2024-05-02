@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,9 @@ public class ModelRunner : MonoBehaviour
 
     private IWorker worker;
     private const int NUM_INPUTS = 2; 
+
+    public GameObject Bunny;
+    public GameObject PlatformManager;
 
     // Método para procesar los datos recibidos
     public void ProcessData(float tempo, float[] energy)
@@ -42,12 +46,31 @@ public class ModelRunner : MonoBehaviour
             // Procesar los valores de salida
             float speed = outputSpeed[0];
             float frequency = outputFrequency[0];
-            float height = outputHeight[0];
+            // Obtener la longitud del tensor de altura
+            int heightLength = outputHeight.length;
+
+            // Crear un array para almacenar las alturas
+            float[] heights = new float[heightLength];
+
+            // Copiar los datos del tensor al array
+            for (int i = 0; i < heightLength; i++)
+            {
+                heights[i] = outputHeight[0, i, 0, 0]; // El tensor es de forma (1, length, 1, 1)
+            }
+
+            // Obtener los scripts BunnyMovement y PlatformGenerator
+            BunnyMovement bunnyScript = Bunny.GetComponent<BunnyMovement>();
+            PlatformGenerator platformScript = PlatformManager.GetComponent<PlatformGenerator>();
+
+            // Actualizar las variables en los scripts BunnyMovement y PlatformGenerator
+            bunnyScript.Speed = speed;
+            platformScript.generationFrequency = frequency;
+            platformScript.heights = heights;
 
             // Actualizar la UI con los resultados del modelo
             speedText.text = "Speed: " + speed.ToString();
             frequencyText.text = "Frequency: " + frequency.ToString();
-            heightText.text = "Height: " + height.ToString();
+            heightText.text = "Heights: " + string.Join(", ", heights);
         }
         catch (System.Exception e)
         {

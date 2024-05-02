@@ -12,7 +12,7 @@ public class DataReceiver : MonoBehaviour
     TcpListener server;
     TcpClient client;
 
-    
+    public ModelRunner modelRunner; // Referencia al componente ModelRunner
 
     public void StartReceiving()
     {
@@ -43,18 +43,18 @@ public class DataReceiver : MonoBehaviour
             // Cierra la conexión
             stream.Close();
             client.Close();
+            server.Stop(); // Detener el TcpListener
 
             // Haz lo que quieras con los datos de tempo y energía
             Debug.Log("Tempo recibido: " + tempo);
             Debug.Log("Energía recibida: " + string.Join(", ", energy));
 
-            
+            // Después de recibir los datos, pasa los datos al ModelRunner
+            modelRunner.ProcessData(tempo, energy);
         }
-
         catch (Exception e)
         {
             Debug.LogError("Error al recibir datos de audio: " + e.Message);
         }
-
     }
 }
