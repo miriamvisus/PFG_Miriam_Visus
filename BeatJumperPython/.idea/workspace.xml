@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="be">
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/EditorInstance.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/__Backupscenes/0.backup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/workerlic" afterDir="false" />
+    <list default="true" id="81898884-122d-4908-b7a4-d12a4c3a59c6" name="Changes" comment="bh">
+      <change beforePath="$PROJECT_DIR$/output_audio.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/output_audio.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_audio.wav" beforeDir="false" afterPath="$PROJECT_DIR$/output_audio.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/ArtifactDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/backend1.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/backend1.traceevents" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/fullprofile.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/fullprofile.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/tundra.digestcache" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/Bee/tundra.digestcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/EditorInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/EditorInstance.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Library/ilpp.pid" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Library/ilpp.pid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Temp/FSTimeGet-aab0f6b4e3a164a44bdbc8cec8f6b80b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Temp/UnityLockfile" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatJumperUnity/Temp/UnityLockfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BeatJumperUnity/Temp/__Backupscenes/0.backup" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,14 +173,7 @@
       <workItem from="1714647736758" duration="530000" />
       <workItem from="1714648958105" duration="1622000" />
       <workItem from="1714652680908" duration="431000" />
-    </task>
-    <task id="LOCAL-00043" summary="tm">
-      <option name="closed" value="true" />
-      <created>1714256447590</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1714256447590</updated>
+      <workItem from="1714653217687" duration="414000" />
     </task>
     <task id="LOCAL-00044" summary="-a">
       <option name="closed" value="true" />
@@ -565,7 +559,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714652915039</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="bg">
+      <option name="closed" value="true" />
+      <created>1714653298800</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1714653298801</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -583,8 +585,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="w" />
-    <MESSAGE value="x" />
     <MESSAGE value="y" />
     <MESSAGE value="z" />
     <MESSAGE value="aa" />
@@ -608,7 +608,9 @@
     <MESSAGE value="bc" />
     <MESSAGE value="bd" />
     <MESSAGE value="be" />
-    <option name="LAST_COMMIT_MESSAGE" value="be" />
+    <MESSAGE value="bg" />
+    <MESSAGE value="bh" />
+    <option name="LAST_COMMIT_MESSAGE" value="bh" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BeatJumperPython$prueba_2.coverage" NAME="prueba 2 Coverage Results" MODIFIED="1711049165017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
