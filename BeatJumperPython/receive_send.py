@@ -94,35 +94,34 @@ def process_audio_data(audio_file):
     except Exception as e:
         print(f"Error al procesar datos de audio: {e}")
 
+import json
+
 def send_data_to_unity(tempo, energy, energy_length):
     try:
-        # Comprobar si energy contiene solo valores de punto flotante
-        if all(isinstance(x, float) for x in energy):
-            # Crear un socket TCP/IP
-            client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        # Crear un diccionario que contenga todos los datos a enviar
+        data = {
+            'tempo': tempo,
+            'energy_length': energy_length,
+            'energy': energy.tolist()  # Convertir energy a una lista antes de enviar
+        }
 
-            # Conectar al servidor
-            client_socket.connect((HOST, SEND_PORT))
+        # Serializar los datos a JSON
+        json_data = json.dumps(data)
 
-            # Empaquetar los datos de tempo, longitud de energía y energía
-            tempo_bytes = struct.pack('f', tempo)
-            energy_length_bytes = struct.pack('I', energy_length)
-            energy_format = f'{len(energy)}f'
-            energy_bytes = struct.pack(energy_format, *energy)
+        # Crear un socket TCP/IP
+        client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-            # Enviar los datos de tempo, longitud de energía y energía
-            client_socket.send(tempo_bytes)
-            client_socket.send(energy_length_bytes)
-            client_socket.send(energy_bytes)
+        # Conectar al servidor
+        client_socket.connect((HOST, SEND_PORT))
 
-            # Cerrar la conexión
-            client_socket.close()
-        else:
-            raise ValueError("La lista 'energy' no contiene solo valores de punto flotante")
+        # Enviar los datos serializados
+        client_socket.sendall(json_data.encode())
+
+        # Cerrar la conexión
+        client_socket.close()
 
     except Exception as e:
         print(f"Error al enviar datos a Unity: {e}")
-
 
 
 tempo, energy, energy_length = receive_audio_data()

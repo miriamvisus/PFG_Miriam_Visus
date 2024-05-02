@@ -4,12 +4,15 @@ using System.Net.Sockets;
 using System.IO;
 using UnityEngine;
 
+
 public class DataReceiver : MonoBehaviour
 {
     public string serverIP = "127.0.0.1"; 
     public int port = 8001;
     TcpListener server;
     TcpClient client;
+
+    public ModelRunner modelRunner; // Referencia al componente ModelRunner
 
     public void StartReceiving()
     {
@@ -44,11 +47,15 @@ public class DataReceiver : MonoBehaviour
             // Haz lo que quieras con los datos de tempo y energía
             Debug.Log("Tempo recibido: " + tempo);
             Debug.Log("Energía recibida: " + string.Join(", ", energy));
+
+            // Después de recibir los datos, pasa los datos al ModelRunner
+            modelRunner.ProcessData(tempo, energy);
         }
 
         catch (Exception e)
         {
             Debug.LogError("Error al recibir datos de audio: " + e.Message);
         }
+
     }
 }

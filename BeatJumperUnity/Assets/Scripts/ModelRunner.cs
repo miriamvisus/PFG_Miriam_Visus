@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,66 +6,60 @@ using Unity.Barracuda;
 
 public class ModelRunner : MonoBehaviour
 {
+    // Variables para las referencias a los objetos de la UI y el modelo
     public NNModel modelAsset;
     public Text speedText;
     public Text frequencyText;
     public Text heightText;
 
     private IWorker worker;
-    private const int NUM_INPUTS = 11; // Adjust according to your input shape
+    private const int NUM_INPUTS = 2; 
 
-    void Start()
+    // Método para procesar los datos recibidos
+    public void ProcessData(float tempo, float[] energy)
     {
-        var model = ModelLoader.Load(modelAsset);
-        worker = WorkerFactory.CreateWorker(WorkerFactory.Type.ComputePrecompiled, model);
-
-        // Example input values, replace with your own
-        var tempo = Random.Range(60f, 180f);
-        var energy = new float[NUM_INPUTS];
-        for (int i = 0; i < energy.Length; i++)
+        try
         {
-            energy[i] = Random.Range(0f, 1f);
+            var model = ModelLoader.Load(modelAsset);
+            worker = WorkerFactory.CreateWorker(WorkerFactory.Type.ComputePrecompiled, model);
+
+            // Preparar los datos de entrada para el modelo
+            var inputTempo = new Tensor(1, 1, 1, 1);
+            inputTempo[0] = tempo;
+            var inputEnergy = new Tensor(1, NUM_INPUTS, 1, 1, energy);
+
+            // Ejecutar el modelo con los datos de entrada
+            var inputs = new Dictionary<string, Tensor>();
+            inputs["input_tempo"] = inputTempo;
+            inputs["input_energy"] = inputEnergy;
+            worker.Execute(inputs);
+
+            // Obtener los tensores de salida
+            var outputSpeed = worker.PeekOutput("output_speed");
+            var outputFrequency = worker.PeekOutput("output_frequency");
+            var outputHeight = worker.PeekOutput("output_height");
+
+            // Procesar los valores de salida
+            float speed = outputSpeed[0];
+            float frequency = outputFrequency[0];
+            float height = outputHeight[0];
+
+            // Actualizar la UI con los resultados del modelo
+            speedText.text = "Speed: " + speed.ToString();
+            frequencyText.text = "Frequency: " + frequency.ToString();
+            heightText.text = "Height: " + height.ToString();
         }
-
-        // Normalize input values if needed
-        // ...
-
-        // Prepare input tensor
-        Tensor inputTempo = new Tensor(1, 1, 1, 1);
-        inputTempo[0] = tempo;
-        Tensor inputEnergy = new Tensor(1, NUM_INPUTS, 1, 1, energy);
-
-        // Execute model
-        var inputs = new Dictionary<string, Tensor>();
-        inputs["input_tempo"] = inputTempo;
-        inputs["input_energy"] = inputEnergy;
-        worker.Execute(inputs);
-
-        // Get output tensors
-        Tensor outputSpeed = worker.PeekOutput("output_speed");
-        Tensor outputFrequency = worker.PeekOutput("output_frequency");
-        Tensor outputHeight = worker.PeekOutput("output_height");
-
-        // Process output values
-        float speed = outputSpeed[0];
-        float frequency = outputFrequency[0];
-        float height = outputHeight[0];
-
-        // Update UI or do something with the output values
-        speedText.text = "Speed: " + speed.ToString();
-        frequencyText.text = "Frequency: " + frequency.ToString();
-        heightText.text = "Height: " + height.ToString();
-
-        // Dispose tensors
-        inputTempo.Dispose();
-        inputEnergy.Dispose();
-        outputSpeed.Dispose();
-        outputFrequency.Dispose();
-        outputHeight.Dispose();
-    }
-
-    void OnDestroy()
-    {
-        worker.Dispose();
+        catch (System.Exception e)
+        {
+            Debug.LogError("Error al procesar datos: " + e.Message);
+        }
+        finally
+        {
+            // Liberar los tensores
+            if (worker != null)
+            {
+                worker.Dispose();
+            }
+        }
     }
 }
