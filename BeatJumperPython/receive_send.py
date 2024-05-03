@@ -9,27 +9,27 @@ import time
 
 # Dirección IP y puerto del servidor
 HOST = '127.0.0.1'
-RECEIVE_PORT = 8000
-SEND_PORT = 8001
+PORT = 8000
+
+# Crear un socket TCP/IP
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Enlazar el socket a la dirección y puerto especificados
+sock.bind((HOST, PORT))
+
+# Poner el socket en modo de escucha
+sock.listen(1)
+
+print(f"Servidor escuchando en {HOST}:{PORT}")
+conn, addr = sock.accept()
+
+# Aceptar conexiones entrantes
+client_socket, client_address = sock.accept()
+
+print(f"Conexión establecida desde {client_address}")
 
 def receive_audio_data():
     try:
-
-        # Crear un socket TCP/IP
-        server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-        # Enlazar el socket a la dirección y puerto especificados
-        server_socket.bind((HOST, RECEIVE_PORT))
-
-        # Poner el socket en modo de escucha
-        server_socket.listen(1)
-
-        print(f"Servidor escuchando en {HOST}:{RECEIVE_PORT}")
-
-        # Aceptar conexiones entrantes
-        client_socket, client_address = server_socket.accept()
-
-        print(f"Conexión establecida desde {client_address}")
 
         # Recibe el tamaño del archivo de audio
         size_bytes = b""
@@ -69,7 +69,6 @@ def receive_audio_data():
 
         # Cierra la conexión
         client_socket.close()
-        server_socket.close()
 
         return tempo, energy, energy_length
 
@@ -104,11 +103,6 @@ def send_data_to_unity(tempo, energy, energy_length):
 
         # Comprobar si energy contiene solo valores de punto flotante
         if all(isinstance(x, float) for x in energy_flat):
-            # Crear un socket TCP/IP
-            client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-            # Conectar al servidor
-            client_socket.connect((HOST, SEND_PORT))
 
             # Empaquetar los datos de tempo, longitud de energía y energía
             tempo_bytes = struct.pack('f', tempo)
@@ -122,12 +116,12 @@ def send_data_to_unity(tempo, energy, energy_length):
             print("Datos de energía enviados:", energy_bytes)
 
             # Enviar los datos de tempo, longitud de energía y energía
-            client_socket.send(tempo_bytes)
-            client_socket.send(energy_length_bytes)
-            client_socket.send(energy_bytes)
+            sock.send(tempo_bytes)
+            sock.send(energy_length_bytes)
+            sock.send(energy_bytes)
 
             # Cerrar la conexión
-            client_socket.close()
+            sock.close()
         else:
             raise ValueError("La lista 'energy' no contiene solo valores de punto flotante")
 
@@ -136,5 +130,4 @@ def send_data_to_unity(tempo, energy, energy_length):
 
 
 tempo, energy, energy_length = receive_audio_data()
-time.sleep(40)
 send_data_to_unity(tempo, energy, energy_length)
