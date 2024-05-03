@@ -12,19 +12,18 @@ HOST = '127.0.0.1'
 PORT = 8000
 
 # Crear un socket TCP/IP
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Enlazar el socket a la dirección y puerto especificados
-sock.bind((HOST, PORT))
+server_socket.bind((HOST, PORT))
 
 # Poner el socket en modo de escucha
-sock.listen(1)
+server_socket.listen(1)
 
 print(f"Servidor escuchando en {HOST}:{PORT}")
-conn, addr = sock.accept()
 
 # Aceptar conexiones entrantes
-client_socket, client_address = sock.accept()
+client_socket, client_address = server_socket.accept()
 
 print(f"Conexión establecida desde {client_address}")
 
@@ -116,12 +115,15 @@ def send_data_to_unity(tempo, energy, energy_length):
             print("Datos de energía enviados:", energy_bytes)
 
             # Enviar los datos de tempo, longitud de energía y energía
-            sock.send(tempo_bytes)
-            sock.send(energy_length_bytes)
-            sock.send(energy_bytes)
+            client_socket.send(tempo_bytes)
+            client_socket.send(energy_length_bytes)
+            client_socket.send(energy_bytes)
 
-            # Cerrar la conexión
-            sock.close()
+            # Cerrar la conexión del cliente
+            client_socket.close()
+
+            # Cerrar la conexión del servidor
+            server_socket.close()
         else:
             raise ValueError("La lista 'energy' no contiene solo valores de punto flotante")
 
