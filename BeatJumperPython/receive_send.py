@@ -66,9 +66,6 @@ def receive_audio_data():
         energy_length = energy.shape[1]
         print("Longitud de la energía:", energy_length)
 
-        # Cierra la conexión
-        client_socket.close()
-
         return tempo, energy, energy_length
 
     except Exception as e:
@@ -122,14 +119,14 @@ def send_data_to_unity(tempo, energy, energy_length):
             # Cerrar la conexión del cliente
             client_socket.close()
 
-            # Cerrar la conexión del servidor
-            server_socket.close()
         else:
             raise ValueError("La lista 'energy' no contiene solo valores de punto flotante")
 
     except Exception as e:
         print(f"Error al enviar datos a Unity: {e}")
 
-
 tempo, energy, energy_length = receive_audio_data()
 send_data_to_unity(tempo, energy, energy_length)
+
+# Cerrar la conexión del servidor
+server_socket.close()
