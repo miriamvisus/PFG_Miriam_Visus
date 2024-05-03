@@ -4,6 +4,8 @@ import numpy as np
 import struct
 import soundfile as sf
 from pydub import AudioSegment
+import time
+
 
 # Dirección IP y puerto del servidor
 HOST = '127.0.0.1'
@@ -134,4 +136,5 @@ def send_data_to_unity(tempo, energy, energy_length):
 
 
 tempo, energy, energy_length = receive_audio_data()
+time.sleep(40)
 send_data_to_unity(tempo, energy, energy_length)
