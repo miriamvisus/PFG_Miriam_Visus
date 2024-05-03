@@ -97,8 +97,11 @@ def process_audio_data(audio_file):
 
 def send_data_to_unity(tempo, energy, energy_length):
     try:
+        # Convertir la matriz de energía a una lista plana de valores flotantes
+        energy_flat = energy.flatten().tolist()
+
         # Comprobar si energy contiene solo valores de punto flotante
-        if all(isinstance(x, float) for x in energy):
+        if all(isinstance(x, float) for x in energy_flat):
             # Crear un socket TCP/IP
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -108,8 +111,13 @@ def send_data_to_unity(tempo, energy, energy_length):
             # Empaquetar los datos de tempo, longitud de energía y energía
             tempo_bytes = struct.pack('f', tempo)
             energy_length_bytes = struct.pack('I', energy_length)
-            energy_format = f'{len(energy)}f'
-            energy_bytes = struct.pack(energy_format, *energy)
+            energy_format = f'{len(energy_flat)}f'
+            energy_bytes = struct.pack(energy_format, *energy_flat)
+
+            # Impresiones adicionales para verificar el flujo de datos
+            print("Datos de tempo enviados:", tempo_bytes)
+            print("Datos de longitud de energía enviados:", energy_length_bytes)
+            print("Datos de energía enviados:", energy_bytes)
 
             # Enviar los datos de tempo, longitud de energía y energía
             client_socket.send(tempo_bytes)

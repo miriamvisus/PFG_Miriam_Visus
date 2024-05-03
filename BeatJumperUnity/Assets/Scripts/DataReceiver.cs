@@ -45,9 +45,13 @@ public class DataReceiver : MonoBehaviour
             client.Close();
             server.Stop(); // Detener el TcpListener
 
-            // Haz lo que quieras con los datos de tempo y energía
             Debug.Log("Tempo recibido: " + tempo);
             Debug.Log("Energía recibida: " + string.Join(", ", energy));
+
+            // Líneas de depuración adicionales para verificar los datos recibidos
+            Debug.Log("tempoBytes recibidos: " + BitConverter.ToString(tempoBytes));
+            Debug.Log("energyLengthBytes recibidos: " + BitConverter.ToString(energyLengthBytes));
+            Debug.Log("energyBytes recibidos: " + BitConverter.ToString(energyBytes));
 
             ModelRunner modelScript = ModelManager.GetComponent<ModelRunner>();
 
