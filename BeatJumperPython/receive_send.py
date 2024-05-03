@@ -4,30 +4,41 @@ import numpy as np
 import struct
 import soundfile as sf
 from pydub import AudioSegment
-import time
+import threading
 
 
-# Dirección IP y puerto del servidor
-HOST = '127.0.0.1'
-PORT = 8000
+def main():
+    # Dirección IP y puerto del servidor
+    HOST = '127.0.0.1'
+    PORT = 8000
 
-# Crear un socket TCP/IP
-server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # Crear un socket TCP/IP
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# Enlazar el socket a la dirección y puerto especificados
-server_socket.bind((HOST, PORT))
+    try:
+        # Enlazar el socket a la dirección y puerto especificados
+        server_socket.bind((HOST, PORT))
 
-# Poner el socket en modo de escucha
-server_socket.listen(1)
+        # Poner el socket en modo de escucha
+        server_socket.listen(1)
 
-print(f"Servidor escuchando en {HOST}:{PORT}")
+        print(f"Servidor escuchando en {HOST}:{PORT}")
 
-# Aceptar conexiones entrantes
-client_socket, client_address = server_socket.accept()
+        while True:
+            # Aceptar conexiones entrantes
+            client_socket, client_address = server_socket.accept()
+            print(f"Conexión establecida desde {client_address}")
 
-print(f"Conexión establecida desde {client_address}")
+            # Iniciar un hilo para manejar la conexión con el cliente
+            client_thread = threading.Thread(target=handle_client, args=(client_socket,))
+            client_thread.start()
 
-def receive_audio_data():
+    finally:
+        # Cerrar la conexión del servidor
+        server_socket.close()
+
+
+def receive_audio_data(client_socket):
     try:
 
         # Recibe el tamaño del archivo de audio
@@ -92,7 +103,7 @@ def process_audio_data(audio_file):
         print(f"Error al procesar datos de audio: {e}")
 
 
-def send_data_to_unity(tempo, energy, energy_length):
+def send_data_to_unity(client_socket, tempo, energy, energy_length):
     try:
         # Convertir la matriz de energía a una lista plana de valores flotantes
         energy_flat = energy.flatten().tolist()
@@ -125,8 +136,14 @@ def send_data_to_unity(tempo, energy, energy_length):
     except Exception as e:
         print(f"Error al enviar datos a Unity: {e}")
 
-tempo, energy, energy_length = receive_audio_data()
-send_data_to_unity(tempo, energy, energy_length)
+def handle_client(client_socket):
+    try:
+        # Lógica para manejar la conexión con el cliente
+        tempo, energy, energy_length = receive_audio_data(client_socket)
+        send_data_to_unity(client_socket, tempo, energy, energy_length)
+    finally:
+        # Cerrar la conexión del cliente
+        client_socket.close()
 
-# Cerrar la conexión del servidor
-server_socket.close()
+if __name__ == "__main__":
+    main()
