@@ -1,0 +1,524 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.17f1 (4fc78088f837) revision 5228416'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'es' Physical Memory: 16055 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Users\miria.PORMIR\Downloads\2022.3.17f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/Users/miria.PORMIR/PFG_Miriam_Visus_Martin/BeatJumperUnity
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+61317
+Successfully changed project path to: C:/Users/miria.PORMIR/PFG_Miriam_Visus_Martin/BeatJumperUnity
+C:/Users/miria.PORMIR/PFG_Miriam_Visus_Martin/BeatJumperUnity
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [17224] Host "[IP] 192.168.0.12 [Port] 0 [Flags] 2 [Guid] 1245982839 [EditorId] 1245982839 [Version] 1048832 [Id] WindowsEditor(7,PORMIR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [17224] Host "[IP] 192.168.0.12 [Port] 0 [Flags] 2 [Guid] 1245982839 [EditorId] 1245982839 [Version] 1048832 [Id] WindowsEditor(7,PORMIR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
+Refreshing native plugins compatible for Editor in 39.03 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.17f1 (4fc78088f837)
+[Subsystems] Discovering subsystems at path C:/Users/miria.PORMIR/Downloads/2022.3.17f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/miria.PORMIR/PFG_Miriam_Visus_Martin/BeatJumperUnity/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0x46a8)
+    Vendor:   Intel
+    VRAM:     8027 MB
+    Driver:   31.0.101.4032
+Initialize mono
+Mono path[0] = 'C:/Users/miria.PORMIR/Downloads/2022.3.17f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Users/miria.PORMIR/Downloads/2022.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Users/miria.PORMIR/Downloads/2022.3.17f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56820
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Users/miria.PORMIR/Downloads/2022.3.17f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Users/miria.PORMIR/Downloads/2022.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.017880 seconds.
+- Loaded All Assemblies, in  0.427 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.302 seconds
+Domain Reload Profiling: 727ms
+	BeginReloadAssembly (164ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (68ms)
+	LoadAllAssembliesAndSetupDomain (154ms)
+		LoadAssemblies (163ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (151ms)
+			TypeCache.Refresh (150ms)
+				TypeCache.ScanAssembly (136ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (303ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (236ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (14ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (165ms)
+			ProcessInitializeOnLoadMethodAttributes (49ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.937 seconds
+Refreshing native plugins compatible for Editor in 6.98 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.629 seconds
+Domain Reload Profiling: 1560ms
+	BeginReloadAssembly (133ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (21ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (721ms)
+		LoadAssemblies (475ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (322ms)
+			TypeCache.Refresh (277ms)
+				TypeCache.ScanAssembly (253ms)
+			ScanForSourceGeneratedMonoScriptInfo (35ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (630ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (440ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (85ms)
+			ProcessInitializeOnLoadAttributes (306ms)
+			ProcessInitializeOnLoadMethodAttributes (29ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 21.77 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4240 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 91 unused Assets / (22.8 MB). Loaded Objects now: 4679.
+Memory consumption went from 193.0 MB to 170.2 MB.
+Total: 8.865600 ms (FindLiveObjects: 0.445800 ms CreateObjectMapping: 0.229300 ms MarkObjects: 3.899700 ms  DeleteObjects: 4.288900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 667.943986 seconds.
+  path: Assets/kenney_jumper-pack/Spritesheets
+  artifactKey: Guid(09a649ebb9df8ba48a9c806294d9aab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/Spritesheets using Guid(09a649ebb9df8ba48a9c806294d9aab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c59cfb6b7d08635a5dd8a5a030f8ef3') in 0.005284 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/kenney_jumper-pack/Donate on Itch.io.url
+  artifactKey: Guid(46712e07259bd4a499d494e2fe88b87f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/Donate on Itch.io.url using Guid(46712e07259bd4a499d494e2fe88b87f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f59608a2227fa7d9d2066d5886e0f111') in 0.020754 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.698512 seconds.
+  path: Assets/kenney_jumper-pack/Spritesheets/Materials
+  artifactKey: Guid(6dd2ffb25f24d354b8fc67264d386e6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/Spritesheets/Materials using Guid(6dd2ffb25f24d354b8fc67264d386e6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd4d3a52592031e8f7d94fec406d0df1') in 0.001828 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.051812 seconds.
+  path: Assets/kenney_jumper-pack/Spritesheets/Materials/spritesheet_jumper.mat
+  artifactKey: Guid(29fd5df43fadb8f41b6c594baa7bfc18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/Spritesheets/Materials/spritesheet_jumper.mat using Guid(29fd5df43fadb8f41b6c594baa7bfc18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '959526dba0db36a229609bae323635e1') in 0.184491 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 3.611230 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Background/bg_layer2.png
+  artifactKey: Guid(ceef353b2e26b3a439ce29b1f444e5e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Background/bg_layer2.png using Guid(ceef353b2e26b3a439ce29b1f444e5e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acc1d26c9f3dc885a1cda98ecc460556') in 0.086298 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000458 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Background/bg_layer4.png
+  artifactKey: Guid(ca2943e3d14d58f47968a2e906a8d628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Background/bg_layer4.png using Guid(ca2943e3d14d58f47968a2e906a8d628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5b686bac76f82382369877a9500bdd4') in 0.040272 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 359.510928 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Items/bronze_2.png
+  artifactKey: Guid(cbbee8e91e0c64a4a9c794fd7339b4db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Items/bronze_2.png using Guid(cbbee8e91e0c64a4a9c794fd7339b4db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c11d3a5dc09aa4294f5925618dc446f') in 0.043061 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Items/carrot.png
+  artifactKey: Guid(a695a714c4708164d91a57e0a18ffafb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Items/carrot.png using Guid(a695a714c4708164d91a57e0a18ffafb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c294ca62e3474044222fe3fd488e88d') in 0.023800 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Items/gold_2.png
+  artifactKey: Guid(8803493f8517a0d4eb026b08f31c7876) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Items/gold_2.png using Guid(8803493f8517a0d4eb026b08f31c7876) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6877dd0b760b5a2f68964320c35c46f9') in 0.025230 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Items/silver_1.png
+  artifactKey: Guid(d6245ee0bce24324b95b13bbd7e12ca2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Items/silver_1.png using Guid(d6245ee0bce24324b95b13bbd7e12ca2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '224e05cef1ef619aefdea33148c3710e') in 0.027010 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Items/powerup_empty.png
+  artifactKey: Guid(ce09b8498b30c2c44b9ebc370020002c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Items/powerup_empty.png using Guid(ce09b8498b30c2c44b9ebc370020002c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a43ebfa35eb6dce8441a406a1c2370a') in 0.030854 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000081 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Items/wing_right.png
+  artifactKey: Guid(40ea5c192f588c74cad8b7d712280601) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Items/wing_right.png using Guid(40ea5c192f588c74cad8b7d712280601) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98c04cbd6a5aab639253e6f548e8a1b1') in 0.035242 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Items/powerup_bubble.png
+  artifactKey: Guid(f260fc8277aefca41afc8b32e2f1d9f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Items/powerup_bubble.png using Guid(f260fc8277aefca41afc8b32e2f1d9f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce0e4bbd5e0b9aaa5ed267b48451a64f') in 0.024907 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Items/silver_4.png
+  artifactKey: Guid(b73b0a90b43060a48adff4193c3407a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Items/silver_4.png using Guid(b73b0a90b43060a48adff4193c3407a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fccabd4c66452ec33be970f9da32c7de') in 0.030841 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Items/gold_1.png
+  artifactKey: Guid(9d6781983026e3a419254bc621a1d20c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Items/gold_1.png using Guid(9d6781983026e3a419254bc621a1d20c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff4b9eec47aaea61dbff9baf39278608') in 0.037365 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Items/bronze_4.png
+  artifactKey: Guid(f9e1f63690195af42bfb88d1758b897c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Items/bronze_4.png using Guid(f9e1f63690195af42bfb88d1758b897c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4dfd7b988e2ad3fb3ab46b8608b1935') in 0.039579 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Items/spring.png
+  artifactKey: Guid(a3aff91db34f24941874ae67c6c6173c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Items/spring.png using Guid(a3aff91db34f24941874ae67c6c6173c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0aa895ff83c7e02569aed1cda4bb522') in 0.030384 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Items/wing_left.png
+  artifactKey: Guid(94155bbd518de504bab9695f1d6db3e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Items/wing_left.png using Guid(94155bbd518de504bab9695f1d6db3e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '949db03d12f5564991248475c60248fb') in 0.025550 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000102 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Items/powerup_wings.png
+  artifactKey: Guid(ef275a0966bd27f43944893e22aa016e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Items/powerup_wings.png using Guid(ef275a0966bd27f43944893e22aa016e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85b3dcb86dd9e7eba7b3958e8a6a913b') in 0.032446 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Items/bronze_3.png
+  artifactKey: Guid(76ba8fb34ac818e469b132881a9a84ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Items/bronze_3.png using Guid(76ba8fb34ac818e469b132881a9a84ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e41ce3798e8b61f0634b5b0fbcd1b9b3') in 0.026527 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Items/portal_orange.png
+  artifactKey: Guid(3460b8e0ad15b6d499958d67b885a61f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Items/portal_orange.png using Guid(3460b8e0ad15b6d499958d67b885a61f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bf4e5311fddb008011adbb503474b74') in 0.035509 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 4.516746 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Particles/lighting_blue.png
+  artifactKey: Guid(9b987b79e6444724fa12528e1cfa44ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Particles/lighting_blue.png using Guid(9b987b79e6444724fa12528e1cfa44ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c53a1542a84b7f16ca91327200874713') in 0.033292 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Particles/particle_pink.png
+  artifactKey: Guid(565b0a729a369ac488bd70f3ea2bc186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Particles/particle_pink.png using Guid(565b0a729a369ac488bd70f3ea2bc186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '634a08cc4ac577c46cc0fa9593816b82') in 0.039247 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Particles/smoke.png
+  artifactKey: Guid(18ab6639280f76548a8470fb9bbd249f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Particles/smoke.png using Guid(18ab6639280f76548a8470fb9bbd249f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d375d72b149b4f9387a01ad7c70ac7a') in 0.041930 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Particles/particle_darkGrey.png
+  artifactKey: Guid(93ea1723b6783ef41b2602bfb3838b8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Particles/particle_darkGrey.png using Guid(93ea1723b6783ef41b2602bfb3838b8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '224f92d47061d7649a3a9cf48dacdc84') in 0.052138 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000096 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Particles/particle_darkBrown.png
+  artifactKey: Guid(3340471a2bdc60d488720ae3273b069e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Particles/particle_darkBrown.png using Guid(3340471a2bdc60d488720ae3273b069e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e08470f617d328d16e00a210309e2127') in 0.035374 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Particles/particle_grey.png
+  artifactKey: Guid(711fa556ba75d3343a3fe626197c6e87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Particles/particle_grey.png using Guid(711fa556ba75d3343a3fe626197c6e87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a62a9b035dcdbba95241541927af2351') in 0.033284 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Particles/particle_beige.png
+  artifactKey: Guid(4f147970c06b948478002cc2423b8c72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Particles/particle_beige.png using Guid(4f147970c06b948478002cc2423b8c72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b73ec95397db3ac5751f2b209272f0b2') in 0.041540 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 39.632308 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Players/bunny1_ready.png
+  artifactKey: Guid(7e0ca2a9d06bf4041a7f8df3e3a2ac17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Players/bunny1_ready.png using Guid(7e0ca2a9d06bf4041a7f8df3e3a2ac17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ba924f9fe6796604467e11e75023a24') in 0.054393 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Players/bunny1_walk1.png
+  artifactKey: Guid(a8489079542145e4daf375ce4141dd1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Players/bunny1_walk1.png using Guid(a8489079542145e4daf375ce4141dd1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fca60fa5c244bd19c3ebf8ab559cf126') in 0.035867 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.714839 seconds.
+  path: Assets/kenney_jumper-pack/PNG/HUD/coin_gold.png
+  artifactKey: Guid(4380e28b1cf72fb40ae570cdba453656) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/HUD/coin_gold.png using Guid(4380e28b1cf72fb40ae570cdba453656) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c9022ce3233595bf8d63ef4be1e54d9') in 0.042985 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.461387 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Environment/grass2.png
+  artifactKey: Guid(779b6debe6d4f3542b42a3d1a0956cfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Environment/grass2.png using Guid(779b6debe6d4f3542b42a3d1a0956cfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0eef930224f74691607bd985ceaed55') in 0.039648 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000094 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Environment/ground_snow.png
+  artifactKey: Guid(c744216ed10488e419227427e3d7fb73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Environment/ground_snow.png using Guid(c744216ed10488e419227427e3d7fb73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '260700c183e1f1273a26aeb0e966ad77') in 0.034320 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Environment/ground_cake.png
+  artifactKey: Guid(98f6923a4aa9d81428c6a0a565022c15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Environment/ground_cake.png using Guid(98f6923a4aa9d81428c6a0a565022c15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f853d75c7652dc51b84904f7e2f271f8') in 0.033598 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Environment/ground_grass_small.png
+  artifactKey: Guid(673eb3a44b60d8e44bb27ff4cf7a2099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Environment/ground_grass_small.png using Guid(673eb3a44b60d8e44bb27ff4cf7a2099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbf361006ee7a86029d45a08b7b99f1d') in 0.031499 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Environment/mushroom_red.png
+  artifactKey: Guid(95d2f30daa832ff499a93b37e77d9a1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Environment/mushroom_red.png using Guid(95d2f30daa832ff499a93b37e77d9a1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7924b2bc84aa01300915e8e05f1ff4f6') in 0.036500 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000094 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Environment/grass_brown1.png
+  artifactKey: Guid(3a53e3351f330984aafa9ee3ab7ae5bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Environment/grass_brown1.png using Guid(3a53e3351f330984aafa9ee3ab7ae5bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0823d513cce92bdf450afdc390b15d09') in 0.038262 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Environment/ground_snow_broken.png
+  artifactKey: Guid(41c8f2bf617dfc2458a8c2ca1a073925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Environment/ground_snow_broken.png using Guid(41c8f2bf617dfc2458a8c2ca1a073925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '055bd3d974820c0dfe4f5bc614fb3ac1') in 0.040642 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Environment/ground_cake_small_broken.png
+  artifactKey: Guid(73daa06e2415da9418a9151438c3f85f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Environment/ground_cake_small_broken.png using Guid(73daa06e2415da9418a9151438c3f85f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86810032e52f4bb00dde8d918176f501') in 0.034067 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Environment/grass_brown2.png
+  artifactKey: Guid(ced7aa59e58aff14ca9a6ec3c3abc6e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Environment/grass_brown2.png using Guid(ced7aa59e58aff14ca9a6ec3c3abc6e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '661cc6bd0452f32b37744d951894655e') in 0.042571 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Environment/ground_sand_small_broken.png
+  artifactKey: Guid(238d93a811e13ce41808ee04821a98f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Environment/ground_sand_small_broken.png using Guid(238d93a811e13ce41808ee04821a98f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fdb8b9018cb06478ddb7392ebec3d57') in 0.044761 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/kenney_jumper-pack/PNG/Environment/ground_snow_small_broken.png
+  artifactKey: Guid(30deb2ab984d04f47925cf746e16030b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_jumper-pack/PNG/Environment/ground_snow_small_broken.png using Guid(30deb2ab984d04f47925cf746e16030b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bdeb98a2b962c87eee9879de46c6782') in 0.052442 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: La operación de E/S se anuló por una salida de subproceso o por una solicitud de aplicación.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
