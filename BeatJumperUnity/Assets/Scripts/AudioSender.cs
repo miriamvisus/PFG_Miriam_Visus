@@ -15,7 +15,7 @@ public class AudioSender : MonoBehaviour
     {
         try
         {
-             // Carga el archivo de audio
+            // Carga el archivo de audio
             AudioClip audioClip = GetComponent<AudioSource>().clip;
             float[] audioData = new float[audioClip.samples * audioClip.channels];
             audioClip.GetData(audioData, 0);

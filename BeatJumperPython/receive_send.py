@@ -118,14 +118,16 @@ def send_data_to_unity(client_socket, tempo, energy, energy_length):
             energy_bytes = struct.pack(energy_format, *energy_flat)
 
             # Impresiones adicionales para verificar el flujo de datos
-            print("Datos de tempo enviados:", tempo_bytes)
-            print("Datos de longitud de energía enviados:", energy_length_bytes)
-            print("Datos de energía enviados:", energy_bytes)
+            print("Datos de tempo:", tempo_bytes)
+            print("Datos de longitud de energía:", energy_length_bytes)
+            print("Datos de energía:", energy_bytes)
 
             # Enviar los datos de tempo, longitud de energía y energía
             client_socket.send(tempo_bytes)
             client_socket.send(energy_length_bytes)
             client_socket.send(energy_bytes)
+
+            print("Datos enviados a Unity")
 
             # Cerrar la conexión del cliente
             client_socket.close()
