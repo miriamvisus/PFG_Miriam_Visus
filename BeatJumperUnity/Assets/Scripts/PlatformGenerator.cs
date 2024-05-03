@@ -7,8 +7,7 @@ using UnityEngine.Tilemaps;
 public class PlatformGenerator : MonoBehaviour
 {
     public Tilemap tilemap;
-    public TileBase[] platformTiles;
-    
+    public TileBase platformTile; // Tipo de plataforma
     public int platformWidth = 1;
     public float[] heights;
     public float minHorizontalSpacing = 0f;
@@ -42,15 +41,12 @@ public class PlatformGenerator : MonoBehaviour
 
     void GeneratePlatform()
     {
-        // Selecciona un Tile aleatorio para la plataforma
-        TileBase randomTile = platformTiles[Random.Range(0, platformTiles.Length)];
-
         // Calcula las posiciones de la nueva plataforma
         float horizontalOffset = Random.Range(minHorizontalSpacing, maxHorizontalSpacing);
         Vector3Int newTilePosition = lastTilePosition + new Vector3Int(platformWidth + Mathf.RoundToInt(horizontalOffset), Mathf.RoundToInt(heights[currentGenerationIndex]), 0);
 
         // Coloca el Tile en la posición calculada
-        tilemap.SetTile(newTilePosition, randomTile);
+        tilemap.SetTile(newTilePosition, platformTile);
 
         // Actualiza la posición de la última plataforma generada
         lastTilePosition = newTilePosition;

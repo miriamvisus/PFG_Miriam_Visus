@@ -12,7 +12,7 @@ public class DataReceiver : MonoBehaviour
     TcpListener server;
     TcpClient client;
 
-    public ModelRunner modelRunner; // Referencia al componente ModelRunner
+    public GameObject ModelManager;
 
     public void StartReceiving()
     {
@@ -49,8 +49,10 @@ public class DataReceiver : MonoBehaviour
             Debug.Log("Tempo recibido: " + tempo);
             Debug.Log("Energía recibida: " + string.Join(", ", energy));
 
+            ModelRunner modelScript = ModelManager.GetComponent<ModelRunner>();
+
             // Después de recibir los datos, pasa los datos al ModelRunner
-            modelRunner.ProcessData(tempo, energy);
+            modelScript.ProcessData(tempo, energy);
         }
         catch (Exception e)
         {

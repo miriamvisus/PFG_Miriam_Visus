@@ -9,9 +9,6 @@ public class ModelRunner : MonoBehaviour
 {
     // Variables para las referencias a los objetos de la UI y el modelo
     public NNModel modelAsset;
-    public Text speedText;
-    public Text frequencyText;
-    public Text heightText;
 
     private IWorker worker;
     private const int NUM_INPUTS = 2; 
@@ -66,16 +63,13 @@ public class ModelRunner : MonoBehaviour
             bunnyScript.Speed = speed;
             platformScript.generationFrequency = frequency;
             platformScript.heights = heights;
-
-            // Actualizar la UI con los resultados del modelo
-            speedText.text = "Speed: " + speed.ToString();
-            frequencyText.text = "Frequency: " + frequency.ToString();
-            heightText.text = "Heights: " + string.Join(", ", heights);
         }
+
         catch (System.Exception e)
         {
             Debug.LogError("Error al procesar datos: " + e.Message);
         }
+
         finally
         {
             // Liberar los tensores
