@@ -8,8 +8,8 @@ using System.Threading;
 public class DataReceiver : MonoBehaviour
 {
     Thread thread;
-    public string  = "127.0.0.1"; 
-    public int port = 8000;
+    public string serverIP = "127.0.0.1"; 
+    public int port = 8001;
     TcpListener server;
     bool running;
 
@@ -25,9 +25,9 @@ public class DataReceiver : MonoBehaviour
     void ReceiveData()
     {
         try
-        {serverIP
+        {
             // Establece la conexión
-            server = new TcpListener(IPAddress.serverIP, port);
+            server = new TcpListener(IPAddress.Parse(serverIP), port);
             server.Start();
 
             // Start listening
