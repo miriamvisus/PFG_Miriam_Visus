@@ -42,8 +42,8 @@ public class AudioSender : MonoBehaviour
             Debug.Log("Total de bytes de audio enviados: " + totalBytesSent + " bytes");
 
             // Cierra la conexión
-            stream.Close();
-            client.Close();
+            //stream.Close();
+            //client.Close();
         }
         
         catch (Exception ex)
