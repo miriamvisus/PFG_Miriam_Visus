@@ -66,8 +66,8 @@ def receive_audio_data():
         print("Longitud de la energía:", energy_length)
 
         # Cierra la conexión
-        #client_socket.close()
-        #server_socket.close()
+        client_socket.close()
+        server_socket.close()
 
         return tempo, energy, energy_length
 
@@ -125,7 +125,7 @@ def send_data_to_unity(tempo, energy, energy_length):
             client_socket.send(energy_bytes)
 
             # Cerrar la conexión
-            #client_socket.close()
+            client_socket.close()
         else:
             raise ValueError("La lista 'energy' no contiene solo valores de punto flotante")
 
