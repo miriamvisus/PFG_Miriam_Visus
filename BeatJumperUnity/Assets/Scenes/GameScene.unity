@@ -1927,7 +1927,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1458268566}
-  - component: {fileID: 1458268567}
   m_Layer: 0
   m_Name: PlatformManager
   m_TagString: Untagged
@@ -1950,26 +1949,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1458268567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458268564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f86f6dc9b3a66499d2afea92aeb953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilemap: {fileID: 2039985165}
-  platformTile: {fileID: 11400000, guid: 151590f5315baee41af6dac10bf8df7d, type: 2}
-  platformWidth: 1
-  heights: []
-  minHorizontalSpacing: 0
-  maxHorizontalSpacing: 0.1
-  generationOffset: 10
-  generationFrequency: 0
 --- !u!1 &1479084694
 GameObject:
   m_ObjectHideFlags: 0
