@@ -24,22 +24,29 @@ public class DataReceiver : MonoBehaviour
 
     void ReceiveData()
     {
-        // Establece la conexión
-        server = new TcpListener(IPAddress.Parse(serverIP), port);
-        server.Start();
-
-        // Start listening
-        running = true;
-        while (running)
+        try 
         {
-            TcpClient client = server.AcceptTcpClient();
-            // Imprime por pantalla el mensaje indicando que el servidor está escuchando
-            Debug.Log($"Servidor escuchando en {serverIP}:{port}");
-            Connection(client);
-            client.Close();
-        }
+            // Establece la conexión
+            server = new TcpListener(IPAddress.Parse(serverIP), port);
+            server.Start();
 
-        server.Stop();
+            // Start listening
+            running = true;
+            while (running)
+            {
+                TcpClient client = server.AcceptTcpClient();
+                // Imprime por pantalla el mensaje indicando que el servidor está escuchando
+                Debug.Log($"Servidor escuchando en {serverIP}:{port}");
+                Connection(client);
+                client.Close();
+            }
+
+            server.Stop();
+        }
+        catch(Exception ex)
+        {
+            Debug.LogError("Error al recibir datos de audio: " + ex.Message);
+        }
     }
 
     void Connection(TcpClient client)
