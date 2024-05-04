@@ -389,6 +389,7 @@
 "Assets/Scripts/FallDetectorMovement.cs"
 "Assets/Scripts/GoBack.cs"
 "Assets/Scripts/InfiniteBackground.cs"
+"Assets/Scripts/MainThreadDispacher.cs"
 "Assets/Scripts/Menu.cs"
 "Assets/Scripts/ModelRunner.cs"
 "Assets/Scripts/PlatformGenerator.cs"
