@@ -22,6 +22,14 @@ public class PlatformGenerator : MonoBehaviour
     void Start()
     {
         lastTilePosition = tilemap.origin;
+
+        ModelRunner.OnModelReady += StartGeneration;
+    }
+
+    void StartGeneration()
+    {
+        // Iniciar la generación de plataformas aquí
+        Debug.Log("Iniciando generación de plataformas...");
     }
 
     void Update()
@@ -57,5 +65,10 @@ public class PlatformGenerator : MonoBehaviour
         {
             currentGenerationIndex = 0; // Vuelve al inicio del array si se alcanza el final
         }
+    }
+
+    void OnDestroy()
+    {
+        ModelRunner.OnModelReady -= StartGeneration;
     }
 }

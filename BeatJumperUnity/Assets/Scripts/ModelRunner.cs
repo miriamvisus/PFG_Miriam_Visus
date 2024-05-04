@@ -16,6 +16,13 @@ public class ModelRunner : MonoBehaviour
     public GameObject Bunny;
     public GameObject PlatformManager;
 
+    public static event Action OnModelReady; // Evento para notificar cuando el modelo está listo
+
+    void Start()
+    {
+        DataReceiver.OnDataReceived += ProcessData;
+    }
+
     // Método para procesar los datos recibidos
     public void ProcessData(float tempo, float[] energy)
     {
@@ -55,6 +62,9 @@ public class ModelRunner : MonoBehaviour
                 heights[i] = outputHeight[0, i, 0, 0]; // El tensor es de forma (1, length, 1, 1)
             }
 
+            // Una vez que el modelo esté listo, activa el evento OnModelReady
+            OnModelReady?.Invoke();
+
             // Obtener los scripts BunnyMovement y PlatformGenerator
             BunnyMovement bunnyScript = Bunny.GetComponent<BunnyMovement>();
             PlatformGenerator platformScript = PlatformManager.GetComponent<PlatformGenerator>();
@@ -78,5 +88,10 @@ public class ModelRunner : MonoBehaviour
                 worker.Dispose();
             }
         }
+    }
+
+    void OnDestroy()
+    {
+        DataReceiver.OnDataReceived -= ProcessData;
     }
 }

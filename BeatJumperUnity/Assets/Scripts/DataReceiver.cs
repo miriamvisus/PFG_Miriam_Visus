@@ -15,6 +15,8 @@ public class DataReceiver : MonoBehaviour
 
     public GameObject ModelManager;
 
+    public static event Action<float, float[]> OnDataReceived; // Evento para notificar cuando se reciben datos
+
     void Start()
     {
         // Receive on a separate thread so Unity doesn't freeze waiting for data
@@ -73,6 +75,9 @@ public class DataReceiver : MonoBehaviour
 
             Debug.Log("Tempo recibido: " + tempo);
             Debug.Log("Energía recibida: " + string.Join(", ", energy));
+
+            // Disparar el evento con los datos recibidos
+            OnDataReceived?.Invoke(tempo, energy);
 
             ModelRunner modelScript = ModelManager.GetComponent<ModelRunner>();
 

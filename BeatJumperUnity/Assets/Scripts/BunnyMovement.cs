@@ -17,6 +17,14 @@ public class BunnyMovement : MonoBehaviour
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
+
+        ModelRunner.OnModelReady += StartMovement;
+    }
+
+    void StartMovement()
+    {
+        // Iniciar el movimiento del personaje aquí
+        Debug.Log("Iniciando movimiento del personaje...");
     }
 
     void Update()
@@ -60,5 +68,10 @@ public class BunnyMovement : MonoBehaviour
     {
         Debug.Log("El juego ha terminado.");
         SceneManager.LoadScene("GameOverScene");
+    }
+
+    void OnDestroy()
+    {
+        ModelRunner.OnModelReady -= StartMovement;
     }
 }
