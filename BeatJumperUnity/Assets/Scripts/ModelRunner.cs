@@ -28,6 +28,8 @@ public class ModelRunner : MonoBehaviour
     {
         try
         {
+            Debug.Log("Inicializando modelo.");
+
             var model = ModelLoader.Load(modelAsset);
             worker = WorkerFactory.CreateWorker(WorkerFactory.Type.ComputePrecompiled, model);
 

@@ -17,11 +17,16 @@ public class DataReceiver : MonoBehaviour
 
     public static event Action<float, float[]> OnDataReceived; // Evento para notificar cuando se reciben datos
 
+    private ModelRunner modelRunner;
+
     void Start()
     {
         // Receive on a separate thread so Unity doesn't freeze waiting for data
         thread = new Thread(ReceiveData);
         thread.Start();
+
+        // Obtener referencia a ModelRunner
+        modelRunner = ModelManager.GetComponent<ModelRunner>();
     }
 
     void ReceiveData()
@@ -32,7 +37,7 @@ public class DataReceiver : MonoBehaviour
             server = new TcpListener(IPAddress.Parse(serverIP), port);
             server.Start();
 
-            // Start listening
+            // Empieza a escuchar
             running = true;
             while (running)
             {
@@ -79,10 +84,8 @@ public class DataReceiver : MonoBehaviour
             // Disparar el evento con los datos recibidos
             OnDataReceived?.Invoke(tempo, energy);
 
-            ModelRunner modelScript = ModelManager.GetComponent<ModelRunner>();
-
             // Después de recibir los datos, pasa los datos al ModelRunner
-            modelScript.ProcessData(tempo, energy);
+            modelRunner.ProcessData(tempo, energy);
         }
         catch (Exception ex)
         {
