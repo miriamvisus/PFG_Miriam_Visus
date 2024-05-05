@@ -14,12 +14,13 @@ public class DataReceiver : MonoBehaviour
 
     public GameObject ModelManager;
 
-    public static event Action<float, float[]> OnDataReceived; // Evento para notificar cuando se reciben datos
+    public static event Action<float, float[], int> OnDataReceived; // Evento para notificar cuando se reciben datos
 
     private ModelRunner modelRunner;
     private AutoResetEvent dataReceivedEvent = new AutoResetEvent(false);
     private float tempo;
     private float[] energy;
+    private int energyLength;
 
     void Start()
     {
@@ -34,7 +35,7 @@ public class DataReceiver : MonoBehaviour
         dataReceivedEvent.WaitOne();
 
         // Después de recibir los datos, pasa los datos al ModelRunner
-        modelRunner.ProcessData(tempo, energy);
+        modelRunner.ProcessData(tempo, energy, energyLength);
     }
 
     void ReceiveData()
@@ -79,7 +80,7 @@ public class DataReceiver : MonoBehaviour
             // Recibe la longitud del array de energía
             byte[] energyLengthBytes = new byte[4];
             stream.Read(energyLengthBytes, 0, energyLengthBytes.Length);
-            int energyLength = BitConverter.ToInt32(energyLengthBytes, 0);
+            energyLength = BitConverter.ToInt32(energyLengthBytes, 0);
 
             // Recibe los datos de energía
             byte[] energyBytes = new byte[sizeof(float) * energyLength];
@@ -91,7 +92,7 @@ public class DataReceiver : MonoBehaviour
             Debug.Log("Energía recibida: " + string.Join(", ", energy));
 
             // Disparar el evento con los datos recibidos
-            OnDataReceived?.Invoke(tempo, energy);
+            OnDataReceived?.Invoke(tempo, energy, energyLength);
             
             // Liberar el evento para permitir que el hilo principal continúe
             dataReceivedEvent.Set();

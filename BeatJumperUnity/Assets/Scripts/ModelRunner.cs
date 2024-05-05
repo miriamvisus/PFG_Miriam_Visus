@@ -10,8 +10,7 @@ public class ModelRunner : MonoBehaviour
     // Variables para las referencias a los objetos de la UI y el modelo
     public NNModel modelAsset;
 
-    private IWorker worker;
-    private const int NUM_INPUTS = 2; 
+    private IWorker worker; 
 
     public GameObject Bunny;
     public GameObject PlatformManager;
@@ -24,7 +23,7 @@ public class ModelRunner : MonoBehaviour
     }
 
     // Método para procesar los datos recibidos
-    public void ProcessData(float tempo, float[] energy)
+    public void ProcessData(float tempo, float[] energy, int energyLength)
     {
         try
         {
@@ -36,7 +35,7 @@ public class ModelRunner : MonoBehaviour
             // Preparar los datos de entrada para el modelo
             var inputTempo = new Tensor(1, 1, 1, 1);
             inputTempo[0] = tempo;
-            var inputEnergy = new Tensor(1, NUM_INPUTS, 1, 1, energy);
+            var inputEnergy = new Tensor(1, energyLength, 1, 1, energy);
 
             // Ejecutar el modelo con los datos de entrada
             var inputs = new Dictionary<string, Tensor>();
