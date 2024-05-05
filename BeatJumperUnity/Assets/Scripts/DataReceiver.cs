@@ -21,12 +21,15 @@ public class DataReceiver : MonoBehaviour
 
     void Start()
     {
-        // Receive on a separate thread so Unity doesn't freeze waiting for data
+        // Recibir en un hilo separado
         thread = new Thread(ReceiveData);
         thread.Start();
 
         // Obtener referencia a ModelRunner
         modelRunner = ModelManager.GetComponent<ModelRunner>();
+
+        // Después de recibir los datos, pasa los datos al ModelRunner
+        modelRunner.ProcessData(tempo, energy);
     }
 
     void ReceiveData()
@@ -50,6 +53,7 @@ public class DataReceiver : MonoBehaviour
 
             server.Stop();
         }
+
         catch(Exception ex)
         {
             Debug.LogError("Error al recibir datos de audio: " + ex.Message);
@@ -83,10 +87,8 @@ public class DataReceiver : MonoBehaviour
 
             // Disparar el evento con los datos recibidos
             OnDataReceived?.Invoke(tempo, energy);
-
-            // Después de recibir los datos, pasa los datos al ModelRunner
-            modelRunner.ProcessData(tempo, energy);
         }
+        
         catch (Exception ex)
         {
             Debug.LogError("Error al recibir datos de audio: " + ex.Message);
