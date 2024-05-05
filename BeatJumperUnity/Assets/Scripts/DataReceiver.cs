@@ -4,7 +4,6 @@ using System.Net.Sockets;
 using UnityEngine;
 using System.Threading;
 
-
 public class DataReceiver : MonoBehaviour
 {
     Thread thread;
@@ -18,6 +17,9 @@ public class DataReceiver : MonoBehaviour
     public static event Action<float, float[]> OnDataReceived; // Evento para notificar cuando se reciben datos
 
     private ModelRunner modelRunner;
+    private AutoResetEvent dataReceivedEvent = new AutoResetEvent(false);
+    private float tempo;
+    private float[] energy;
 
     void Start()
     {
@@ -27,6 +29,9 @@ public class DataReceiver : MonoBehaviour
 
         // Obtener referencia a ModelRunner
         modelRunner = ModelManager.GetComponent<ModelRunner>();
+
+        // Esperar hasta que se reciban los datos
+        dataReceivedEvent.WaitOne();
 
         // Después de recibir los datos, pasa los datos al ModelRunner
         modelRunner.ProcessData(tempo, energy);
@@ -69,7 +74,7 @@ public class DataReceiver : MonoBehaviour
             // Recibe los datos de tempo
             byte[] tempoBytes = new byte[4];
             stream.Read(tempoBytes, 0, tempoBytes.Length);
-            float tempo = BitConverter.ToSingle(tempoBytes, 0);
+            tempo = BitConverter.ToSingle(tempoBytes, 0);
 
             // Recibe la longitud del array de energía
             byte[] energyLengthBytes = new byte[4];
@@ -79,7 +84,7 @@ public class DataReceiver : MonoBehaviour
             // Recibe los datos de energía
             byte[] energyBytes = new byte[sizeof(float) * energyLength];
             stream.Read(energyBytes, 0, energyBytes.Length);
-            float[] energy = new float[energyLength];
+            energy = new float[energyLength];
             Buffer.BlockCopy(energyBytes, 0, energy, 0, energyBytes.Length);
 
             Debug.Log("Tempo recibido: " + tempo);
@@ -87,6 +92,9 @@ public class DataReceiver : MonoBehaviour
 
             // Disparar el evento con los datos recibidos
             OnDataReceived?.Invoke(tempo, energy);
+            
+            // Liberar el evento para permitir que el hilo principal continúe
+            dataReceivedEvent.Set();
         }
         
         catch (Exception ex)
