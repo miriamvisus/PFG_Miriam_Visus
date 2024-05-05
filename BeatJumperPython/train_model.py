@@ -230,19 +230,19 @@ platform_heights_train, platform_heights_test = train_test_split(platform_height
 
 def create_model():
     # Capa de entrada para el tempo
-    tempo_input = Input(shape=(1, ), name='tempo_input')  # Una característica: tempo
+    input_tempo = Input(shape=(1, ), name='input_tempo')  # Una característica: tempo
 
     # Capa de entrada para la energía
-    energy_input = Input(shape=(energies_train.shape[1], energies_train.shape[2]), name='energy_input')  # Varias características: energía
+    input_energy = Input(shape=(energies_train.shape[1], energies_train.shape[2]), name='input_energy')  # Varias características: energía
 
-    dense_tempo = Dense(128, activation='relu')(tempo_input)
+    dense_tempo = Dense(128, activation='relu')(input_tempo)
     dense_tempo = Dense(64, activation='relu')(dense_tempo)
     dense_tempo = Dense(32, activation='relu')(dense_tempo)
     dense_tempo = Dense(16, activation='relu')(dense_tempo)
     dense_tempo = Dense(8, activation='relu')(dense_tempo)
     dense_tempo = Dropout(0.5)(dense_tempo)
 
-    dense_energy = Dense(128, activation='relu')(energy_input)
+    dense_energy = Dense(128, activation='relu')(input_energy)
     dense_energy = Dense(64, activation='relu')(dense_energy)
     dense_energy = Dense(32, activation='relu')(dense_energy)
     dense_energy = Dense(16, activation='relu')(dense_energy)
@@ -259,7 +259,7 @@ def create_model():
     output_height = Dense(1, name='output_height')(dense_energy)  # Salida continua para la altura de las plataformas
 
     # Modelo que toma dos entradas: tempo y energía, y tiene tres salidas: velocidad, frecuencia y altura
-    model = Model(inputs=[tempo_input, energy_input], outputs=[output_speed, output_frequency, output_height])
+    model = Model(inputs=[input_tempo, input_energy], outputs=[output_speed, output_frequency, output_height])
 
     return model
 
