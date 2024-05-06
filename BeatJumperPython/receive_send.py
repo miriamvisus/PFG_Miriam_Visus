@@ -1,11 +1,9 @@
 import socket
-import librosa
 import numpy as np
 import struct
 import soundfile as sf
 from pydub import AudioSegment
-from train_model import calculate_max_duration, process_audio_data
-
+from train_model import process_audio_data
 
 
 # Dirección IP y puerto del servidor
@@ -13,13 +11,6 @@ HOST = '127.0.0.1'
 RECEIVE_PORT = 8000
 SEND_PORT = 8001
 
-# Especifica los nombres de las carpetas y la cantidad de imágenes por carpeta en el repositorio Git
-git_repo_url = 'https://github.com/miriamvisus/PFG_Miriam_Visus_Martin'
-audio_folder = 'AUDIOS'
-num_audios = 115
-
-# Ajustar la duración a la del modelo
-max_duration = calculate_max_duration(git_repo_url, audio_folder, num_audios)
 
 def receive_audio_data():
     try:
@@ -71,6 +62,9 @@ def receive_audio_data():
         audio = AudioSegment.from_wav("output_audio.wav")
         audio.export("output_audio.mp3", format="mp3")
 
+        # Duración del audio más largo (audio 88), se necesita para que la energía el audio recibido tenga
+        # la misma forma que las energías del modelo
+        max_duration = 1687.6350566893425
         # Procesar los datos de audio
         tempo, energy = process_audio_data("output_audio.mp3", max_duration)
         # Imprimir las formas de los datos
