@@ -677,6 +677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 249235092}
+  - component: {fileID: 249235093}
   m_Layer: 0
   m_Name: ModelManager
   m_TagString: Untagged
@@ -699,6 +700,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &249235093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249235090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 125d11ba2f0a0714792912f610cdadd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modelAsset: {fileID: 5022602860645237092, guid: ee5652d07e6c3d840892ab6a7b8fc4c8, type: 3}
+  Bunny: {fileID: 2061736564}
+  PlatformManager: {fileID: 1458268564}
 --- !u!1 &309073329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,6 +2236,7 @@ GameObject:
   - component: {fileID: 1816424711}
   - component: {fileID: 1816424713}
   - component: {fileID: 1816424714}
+  - component: {fileID: 1816424715}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -2352,6 +2369,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverIP: 127.0.0.1
   port: 8000
+--- !u!114 &1816424715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816424709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e663ff594f007d48b58d9de2314a0ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serverIP: 127.0.0.1
+  port: 8001
+  ModelManager: {fileID: 249235090}
 --- !u!1 &1913171081
 GameObject:
   m_ObjectHideFlags: 0

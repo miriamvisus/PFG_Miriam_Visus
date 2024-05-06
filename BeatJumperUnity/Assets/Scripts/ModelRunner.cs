@@ -44,9 +44,9 @@ public class ModelRunner : MonoBehaviour
             worker.Execute(inputs);
 
             // Obtener los tensores de salida
-            var outputSpeed = worker.PeekOutput("output_speed");
-            var outputFrequency = worker.PeekOutput("output_frequency");
-            var outputHeight = worker.PeekOutput("output_height");
+            var outputSpeed = worker.PeekOutput("output_0");
+            var outputFrequency = worker.PeekOutput("output_1");
+            var outputHeight = worker.PeekOutput("output_2");
 
             // Procesar los valores de salida
             float speed = outputSpeed[0];

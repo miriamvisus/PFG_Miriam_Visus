@@ -1,3 +1,50 @@
+import librosa
+import requests
+import os
+import tempfile
+
+
+# Calcular duración máxima
+def calculate_duration(git_repo_url, audio_folder, num_audios):
+    base_url = git_repo_url.rstrip('/')  + '/raw/main'
+
+    audio_path = f"{audio_folder}/Audio88.mp3"
+    audio_url = f"{base_url}/{audio_path}"
+
+    response_audio = requests.get(audio_url)
+
+    if response_audio.status_code == 200:
+        with tempfile.NamedTemporaryFile(suffix='.mp3', delete=False) as temp_audio_file:
+            temp_audio_file.write(response_audio.content)
+            temp_audio_file.close()
+            audio_file_path = temp_audio_file.name
+
+            try:
+
+                # Calcular la duración
+                duration = librosa.get_duration(filename=audio_file_path)
+
+                #  Actualizar la duración máxima
+                print("Duración:", duration)
+
+
+            finally:
+                # Eliminar el archivo temporal después de usarlo
+                os.unlink(audio_file_path)
+    else:
+        print(f"Failed to fetch audio from {audio_url}. Status code: {response_audio.status_code}")
+
+
+    return duration
+
+# Especifica los nombres de las carpetas y la cantidad de imágenes por carpeta en el repositorio Git
+git_repo_url = 'https://github.com/miriamvisus/PFG_Miriam_Visus_Martin'
+audio_folder = 'AUDIOS'
+num_audios = 115
+
+duration = calculate_duration(git_repo_url, audio_folder, num_audios)
+
+
 import socket
 import librosa
 import numpy as np

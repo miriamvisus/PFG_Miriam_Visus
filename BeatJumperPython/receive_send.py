@@ -5,6 +5,7 @@ import struct
 import soundfile as sf
 from pydub import AudioSegment
 
+
 # Dirección IP y puerto del servidor
 HOST = '127.0.0.1'
 RECEIVE_PORT = 8000
@@ -84,6 +85,10 @@ def process_audio_data(audio_file):
     try:
         # Cargar los datos de audio utilizando librosa.load()
         y, sr = librosa.load(audio_file, sr=None)
+
+        duration = 1687.6350566893425
+        # Asegurar que todos los audios tengan la misma duración
+        y = librosa.util.fix_length(y, size=int(duration * sr))
 
         # Calcular el tempo
         tempo = librosa.beat.tempo(y=y, sr=sr)
