@@ -85,13 +85,6 @@ def process_audio_data(audio_file):
         # Cargar los datos de audio utilizando librosa.load()
         y, sr = librosa.load(audio_file, sr=None)
 
-        # Duración del audio más largo (audio 88), se necesita para que la energía el audio recibido tenga
-        # la misma forma que las energías del modelo
-        max_duration = 1687.6350566893425
-
-        # Asegurar que todos los audios tengan la misma duración
-        y = librosa.util.fix_length(y, size=int(max_duration * sr))
-
         # Calcular el tempo
         tempo = librosa.beat.tempo(y=y, sr=sr)
 
