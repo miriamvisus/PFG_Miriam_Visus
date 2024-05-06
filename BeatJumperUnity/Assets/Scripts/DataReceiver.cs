@@ -28,9 +28,6 @@ public class DataReceiver : MonoBehaviour
         thread = new Thread(ReceiveData);
         thread.Start();
 
-        // Obtener referencia a ModelRunner
-        modelRunner = ModelManager.GetComponent<ModelRunner>();
-
         // Esperar hasta que se reciban los datos
         dataReceivedEvent.WaitOne();
     }
@@ -90,6 +87,9 @@ public class DataReceiver : MonoBehaviour
 
             // Disparar el evento con los datos recibidos
             OnDataReceived?.Invoke(tempo, energy, energyLength);
+
+            // Obtener referencia a ModelRunner
+            modelRunner = ModelManager.GetComponent<ModelRunner>();
 
             // Después de recibir los datos, pasa los datos al ModelRunner
             modelRunner.ProcessData(tempo, energy, energyLength);
