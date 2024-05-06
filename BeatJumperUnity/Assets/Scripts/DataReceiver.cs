@@ -33,9 +33,6 @@ public class DataReceiver : MonoBehaviour
 
         // Esperar hasta que se reciban los datos
         dataReceivedEvent.WaitOne();
-
-        // Después de recibir los datos, pasa los datos al ModelRunner
-        modelRunner.ProcessData(tempo, energy, energyLength);
     }
 
     void ReceiveData()
@@ -93,6 +90,9 @@ public class DataReceiver : MonoBehaviour
 
             // Disparar el evento con los datos recibidos
             OnDataReceived?.Invoke(tempo, energy, energyLength);
+
+            // Después de recibir los datos, pasa los datos al ModelRunner
+            modelRunner.ProcessData(tempo, energy, energyLength);
             
             // Liberar el evento para permitir que el hilo principal continúe
             dataReceivedEvent.Set();

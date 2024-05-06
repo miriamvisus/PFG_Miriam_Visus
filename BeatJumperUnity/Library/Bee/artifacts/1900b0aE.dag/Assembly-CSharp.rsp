@@ -392,6 +392,7 @@
 "Assets/Scripts/Menu.cs"
 "Assets/Scripts/ModelRunner.cs"
 "Assets/Scripts/PlatformGenerator.cs"
+"Assets/Scripts/UnityMainThreadDispacher.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"
