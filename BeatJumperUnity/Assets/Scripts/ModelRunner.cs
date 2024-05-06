@@ -39,8 +39,8 @@ public class ModelRunner : MonoBehaviour
 
             // Ejecutar el modelo con los datos de entrada
             var inputs = new Dictionary<string, Tensor>();
-            inputs["input_tempo"] = inputTempo;
-            inputs["input_energy"] = inputEnergy;
+            inputs["inputs"] = inputTempo;
+            inputs["inputs_1"] = inputEnergy;
             worker.Execute(inputs);
 
             // Obtener los tensores de salida

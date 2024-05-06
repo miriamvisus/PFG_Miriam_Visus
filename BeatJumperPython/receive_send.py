@@ -1,10 +1,9 @@
 import socket
 import numpy as np
+import librosa
 import struct
 import soundfile as sf
 from pydub import AudioSegment
-from train_model import process_audio_data
-
 
 # Dirección IP y puerto del servidor
 HOST = '127.0.0.1'
@@ -62,11 +61,8 @@ def receive_audio_data():
         audio = AudioSegment.from_wav("output_audio.wav")
         audio.export("output_audio.mp3", format="mp3")
 
-        # Duración del audio más largo (audio 88), se necesita para que la energía el audio recibido tenga
-        # la misma forma que las energías del modelo
-        max_duration = 1687.6350566893425
         # Procesar los datos de audio
-        tempo, energy = process_audio_data("output_audio.mp3", max_duration)
+        tempo, energy = process_audio_data("output_audio.mp3")
         # Imprimir las formas de los datos
         print("Forma del tempo:", tempo.shape)
         print("Forma de la energía:", energy.shape)
@@ -81,6 +77,34 @@ def receive_audio_data():
 
     except Exception as e:
         print(f"Error al recibir datos de audio: {e}")
+
+
+# Calcular tempo y energía
+def process_audio_data(audio_file):
+    try:
+        # Cargar los datos de audio utilizando librosa.load()
+        y, sr = librosa.load(audio_file, sr=None)
+
+        # Duración del audio más largo (audio 88), se necesita para que la energía el audio recibido tenga
+        # la misma forma que las energías del modelo
+        max_duration = 1687.6350566893425
+
+        # Asegurar que todos los audios tengan la misma duración
+        y = librosa.util.fix_length(y, size=int(max_duration * sr))
+
+        # Calcular el tempo
+        tempo = librosa.beat.tempo(y=y, sr=sr)
+
+        # Calcular la energía
+        energy = librosa.feature.rms(y=y)
+
+        print("Tempo:", tempo)
+        print("Energía:", energy)
+
+        return tempo, energy
+
+    except Exception as e:
+        print(f"Error al procesar datos de audio: {e}")
 
 
 def send_data_to_unity(tempo, energy, energy_length):
