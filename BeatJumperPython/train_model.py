@@ -3,14 +3,12 @@ import numpy as np
 import requests
 import os
 import tempfile
-
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, f1_score
 from tensorflow.keras.models import Sequential, Model
-from tensorflow.keras.layers import Input, Dense, Dropout, LeakyReLU, Concatenate, LSTM
-from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.layers import Input, Dense, Dropout
 
-#Calcular duración máxima
+
+# Calcular duración máxima
 def calculate_max_duration(git_repo_url, audio_folder, num_audios):
     base_url = git_repo_url.rstrip('/')  + '/raw/main'
     max_duration = 0
@@ -31,8 +29,10 @@ def calculate_max_duration(git_repo_url, audio_folder, num_audios):
 
                     print(f"Calculando la duración del audio {i + 1}")
 
-                    # Actualizar la duración máxima
+                    # Calcular la duración
                     duration = librosa.get_duration(filename=audio_file_path)
+
+                    #  Actualizar la duración máxima
                     print("Duración:", duration)
                     if duration > max_duration:
                         max_duration = duration
@@ -47,7 +47,7 @@ def calculate_max_duration(git_repo_url, audio_folder, num_audios):
     return max_duration
 
 
-#Calcular tempo y energía
+# Calcular tempo y energía
 def process_audio_data(audio_file, max_duration):
     try:
         # Cargar los datos de audio utilizando librosa.load()

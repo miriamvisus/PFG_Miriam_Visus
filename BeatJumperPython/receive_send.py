@@ -4,11 +4,22 @@ import numpy as np
 import struct
 import soundfile as sf
 from pydub import AudioSegment
+from train_model import calculate_max_duration, process_audio_data
+
+
 
 # Dirección IP y puerto del servidor
 HOST = '127.0.0.1'
 RECEIVE_PORT = 8000
 SEND_PORT = 8001
+
+# Especifica los nombres de las carpetas y la cantidad de imágenes por carpeta en el repositorio Git
+git_repo_url = 'https://github.com/miriamvisus/PFG_Miriam_Visus_Martin'
+audio_folder = 'AUDIOS'
+num_audios = 115
+
+# Ajustar la duración a la del modelo
+max_duration = calculate_max_duration(git_repo_url, audio_folder, num_audios)
 
 def receive_audio_data():
     try:
@@ -61,7 +72,10 @@ def receive_audio_data():
         audio.export("output_audio.mp3", format="mp3")
 
         # Procesar los datos de audio
-        tempo, energy = process_audio_data("output_audio.mp3")
+        tempo, energy = process_audio_data("output_audio.mp3", max_duration)
+        # Imprimir las formas de los datos
+        print("Forma del tempo:", tempo.shape)
+        print("Forma de la energía:", energy.shape)
         energy_length = energy.shape[1]
         print("Longitud de la energía:", energy_length)
 
@@ -73,26 +87,6 @@ def receive_audio_data():
 
     except Exception as e:
         print(f"Error al recibir datos de audio: {e}")
-
-
-def process_audio_data(audio_file):
-    try:
-        # Cargar los datos de audio utilizando librosa.load()
-        y, sr = librosa.load(audio_file, sr=None)
-
-        # Calcular el tempo
-        tempo = librosa.beat.tempo(y=y, sr=sr)
-
-        # Calcular la energía
-        energy = librosa.feature.rms(y=y)
-
-        print("Tempo:", tempo)
-        print("Energía:", energy)
-
-        return tempo, energy
-
-    except Exception as e:
-        print(f"Error al procesar datos de audio: {e}")
 
 
 def send_data_to_unity(tempo, energy, energy_length):
