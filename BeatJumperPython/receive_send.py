@@ -85,7 +85,7 @@ def process_audio_data(audio_file):
     try:
         # Cargar los datos de audio utilizando librosa.load()
         y, sr = librosa.load(audio_file, sr=None)
-
+        # 1687.6350566893425
         # Calcular el tempo
         tempo = librosa.beat.tempo(y=y, sr=sr)
 
