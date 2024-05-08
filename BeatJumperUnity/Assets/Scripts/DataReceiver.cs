@@ -4,6 +4,7 @@ using System.Net.Sockets;
 using UnityEngine;
 using System.Threading;
 
+
 public class DataReceiver : MonoBehaviour
 {
     Thread thread;
@@ -14,38 +15,30 @@ public class DataReceiver : MonoBehaviour
 
     public GameObject ModelManager;
 
-    public static event Action<float, float[], int> OnDataReceived; // Evento para notificar cuando se reciben datos
+    public delegate void DataReceivedHandler(float tempo, float[] energy, int energyLength);
+    public static event DataReceivedHandler OnDataReceived;
 
-    private ModelRunner modelRunner;
-    //private AutoResetEvent dataReceivedEvent = new AutoResetEvent(false);
     private float tempo;
     private float[] energy;
     private int energyLength;
 
     void Start()
     {
-        // Recibir en un hilo separado
         thread = new Thread(ReceiveData);
         thread.Start();
-
-        // Esperar hasta que se reciban los datos
-        //dataReceivedEvent.WaitOne();
     }
 
     void ReceiveData()
     {
         try 
         {
-            // Establece la conexión
             server = new TcpListener(IPAddress.Parse(serverIP), port);
             server.Start();
 
-            // Empieza a escuchar
             running = true;
             while (running)
             {
                 TcpClient client = server.AcceptTcpClient();
-                // Imprime por pantalla el mensaje indicando que el servidor está escuchando
                 Debug.Log($"Servidor escuchando en {serverIP}:{port}");
                 Connection(client);
                 client.Close();
@@ -66,17 +59,14 @@ public class DataReceiver : MonoBehaviour
         {
             NetworkStream stream = client.GetStream();
 
-            // Recibe los datos de tempo
             byte[] tempoBytes = new byte[4];
             stream.Read(tempoBytes, 0, tempoBytes.Length);
             tempo = BitConverter.ToSingle(tempoBytes, 0);
 
-            // Recibe la longitud del array de energía
             byte[] energyLengthBytes = new byte[4];
             stream.Read(energyLengthBytes, 0, energyLengthBytes.Length);
             energyLength = BitConverter.ToInt32(energyLengthBytes, 0);
 
-            // Recibe los datos de energía
             byte[] energyBytes = new byte[sizeof(float) * energyLength];
             stream.Read(energyBytes, 0, energyBytes.Length);
             energy = new float[energyLength];
@@ -85,17 +75,8 @@ public class DataReceiver : MonoBehaviour
             Debug.Log("Tempo recibido: " + tempo);
             Debug.Log("Energía recibida: " + string.Join(", ", energy));
 
-            // Disparar el evento con los datos recibidos
+            // Invoca el evento para notificar que los datos han sido recibidos
             OnDataReceived?.Invoke(tempo, energy, energyLength);
-
-            // Obtener referencia a ModelRunner
-            modelRunner = ModelManager.GetComponent<ModelRunner>();
-
-            // Después de recibir los datos, pasa los datos al ModelRunner
-            modelRunner.ProcessData(tempo, energy, energyLength);
-            
-            // Liberar el evento para permitir que el hilo principal continúe
-            //dataReceivedEvent.Set();
         }
         
         catch (Exception ex)
@@ -107,6 +88,30 @@ public class DataReceiver : MonoBehaviour
     void OnDestroy()
     {
         running = false;
-        thread.Join(); // Espera a que el hilo termine antes de destruir el objeto
+        thread.Join();
+    }
+}
+
+
+public class MainClass : MonoBehaviour
+{
+    private DataReceiver dataReceiver;
+
+    void Start()
+    {
+        dataReceiver = GetComponent<DataReceiver>();
+        DataReceiver.OnDataReceived += HandleDataReceived;
+    }
+
+    void HandleDataReceived(float tempo, float[] energy, int energyLength)
+    {
+        // Aquí puedes acceder a los elementos del hilo principal
+        ModelRunner modelRunner = dataReceiver.ModelManager.GetComponent<ModelRunner>();
+        modelRunner.ProcessData(tempo, energy, energyLength);
+    }
+
+    void OnDestroy()
+    {
+        DataReceiver.OnDataReceived -= HandleDataReceived;
     }
 }
