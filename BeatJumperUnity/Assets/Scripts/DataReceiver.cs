@@ -17,7 +17,7 @@ public class DataReceiver : MonoBehaviour
     public static event Action<float, float[], int> OnDataReceived; // Evento para notificar cuando se reciben datos
 
     private ModelRunner modelRunner;
-    private AutoResetEvent dataReceivedEvent = new AutoResetEvent(false);
+    //private AutoResetEvent dataReceivedEvent = new AutoResetEvent(false);
     private float tempo;
     private float[] energy;
     private int energyLength;
@@ -29,7 +29,7 @@ public class DataReceiver : MonoBehaviour
         thread.Start();
 
         // Esperar hasta que se reciban los datos
-        dataReceivedEvent.WaitOne();
+        //dataReceivedEvent.WaitOne();
     }
 
     void ReceiveData()
@@ -95,7 +95,7 @@ public class DataReceiver : MonoBehaviour
             modelRunner.ProcessData(tempo, energy, energyLength);
             
             // Liberar el evento para permitir que el hilo principal continúe
-            dataReceivedEvent.Set();
+            //dataReceivedEvent.Set();
         }
         
         catch (Exception ex)
