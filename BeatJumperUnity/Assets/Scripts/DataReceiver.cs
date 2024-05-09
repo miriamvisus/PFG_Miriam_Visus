@@ -79,24 +79,15 @@ public class DataReceiver : MonoBehaviour
             Debug.Log("Tempo recibido: " + tempo);
             Debug.Log("Energía recibida: " + string.Join(", ", energy));
 
-            UnityMainThreadDispatcher.Instance().Enqueue(() => HandleReceivedData(tempo, energy, energyLength));
+            UnityMainThreadDispatcher.Instance().Enqueue(() => OnDataReceived?.Invoke(tempo, energy, energyLength));
+
+            UnityMainThreadDispatcher.Instance().Enqueue(() => modelRunner.ProcessData(tempo, energy, energyLength));
         }
         
         catch (Exception ex)
         {
             Debug.LogError("Error al recibir datos de audio: " + ex.Message);
         }
-    }
-
-    IEnumerator HandleReceivedData(float tempo, float[] energy, int energyLength)
-    {
-        // Invoca el evento para notificar que los datos han sido recibidos
-        OnDataReceived?.Invoke(tempo, energy, energyLength);
-
-        // Ejecutar el modelo
-        modelRunner.ProcessData(tempo, energy, energyLength);
-
-        yield return null;
     }
 
     void OnDestroy()
