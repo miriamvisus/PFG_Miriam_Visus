@@ -1,8 +1,10 @@
 using System;
 using System.Net;
 using System.Net.Sockets;
-using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 using System.Threading;
+using UnityEngine;
 
 
 public class DataReceiver : MonoBehaviour
@@ -13,10 +15,10 @@ public class DataReceiver : MonoBehaviour
     TcpListener server;
     bool running;
 
-    public GameObject ModelManager;
+    public ModelRunner modelRunner;
 
-    public delegate void DataReceivedHandler(float tempo, float[] energy, int energyLength);
-    public static event DataReceivedHandler OnDataReceived;
+    public delegate void DataReceived(float tempo, float[] energy, int energyLength);
+    public static event DataReceived OnDataReceived;
 
     private float tempo;
     private float[] energy;
@@ -24,6 +26,7 @@ public class DataReceiver : MonoBehaviour
 
     void Start()
     {
+        modelRunner = GetComponent<ModelRunner>();
         thread = new Thread(ReceiveData);
         thread.Start();
     }
@@ -75,8 +78,7 @@ public class DataReceiver : MonoBehaviour
             Debug.Log("Tempo recibido: " + tempo);
             Debug.Log("Energía recibida: " + string.Join(", ", energy));
 
-            // Invoca el evento para notificar que los datos han sido recibidos
-            OnDataReceived?.Invoke(tempo, energy, energyLength);
+            UnityMainThreadDispatcher.Instance().Enqueue(() => HandleReceivedData(tempo, energy, energyLength));
         }
         
         catch (Exception ex)
@@ -85,33 +87,20 @@ public class DataReceiver : MonoBehaviour
         }
     }
 
+    IEnumerator HandleReceivedData(float tempo, float[] energy, int energyLength)
+    {
+        // Invoca el evento para notificar que los datos han sido recibidos
+        OnDataReceived?.Invoke(tempo, energy, energyLength);
+
+        // Ejecutar el modelo
+        modelRunner.ProcessData(tempo, energy, energyLength);
+
+        yield return null;
+    }
+
     void OnDestroy()
     {
         running = false;
         thread.Join();
-    }
-}
-
-
-public class MainClass : MonoBehaviour
-{
-    private DataReceiver dataReceiver;
-
-    void Start()
-    {
-        dataReceiver = GetComponent<DataReceiver>();
-        DataReceiver.OnDataReceived += HandleDataReceived;
-    }
-
-    void HandleDataReceived(float tempo, float[] energy, int energyLength)
-    {
-        // Aquí puedes acceder a los elementos del hilo principal
-        ModelRunner modelRunner = dataReceiver.ModelManager.GetComponent<ModelRunner>();
-        modelRunner.ProcessData(tempo, energy, energyLength);
-    }
-
-    void OnDestroy()
-    {
-        DataReceiver.OnDataReceived -= HandleDataReceived;
     }
 }

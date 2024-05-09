@@ -70,11 +70,9 @@ public class ModelRunner : MonoBehaviour
             // Una vez que el modelo esté listo, activa el evento OnModelReady
             OnModelReady?.Invoke();
 
-            // Obtener los scripts BunnyMovement y PlatformGenerator
             BunnyMovement bunnyMovement = Bunny.GetComponent<BunnyMovement>();
             PlatformGenerator platformGenerator = PlatformManager.GetComponent<PlatformGenerator>();
 
-            // Actualizar las variables en los scripts BunnyMovement y PlatformGenerator
             bunnyMovement.Speed = speed;
             platformGenerator.generationFrequency = frequency;
             platformGenerator.heights = heights;

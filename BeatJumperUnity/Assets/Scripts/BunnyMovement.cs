@@ -23,13 +23,9 @@ public class BunnyMovement : MonoBehaviour
 
     void StartMovement()
     {
-        // Iniciar el movimiento del personaje aquí
         Debug.Log("Iniciando movimiento del personaje...");
-    }
 
-    void Update()
-    {
-        transform.Translate(Vector2.right * Speed * Time.deltaTime);
+        transform.Translate(Vector2.right * Speed);
 
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {

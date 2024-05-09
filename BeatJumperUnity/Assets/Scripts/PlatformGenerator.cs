@@ -16,7 +16,6 @@ public class PlatformGenerator : MonoBehaviour
     public float generationFrequency;  // Frecuencia de generación de plataformas (segundos por plataforma)
 
     private int currentGenerationIndex = 0;
-    private float timer = 0f;
     private Vector3Int lastTilePosition;
 
     void Start()
@@ -28,23 +27,10 @@ public class PlatformGenerator : MonoBehaviour
 
     void StartGeneration()
     {
-        // Iniciar la generación de plataformas aquí
         Debug.Log("Iniciando generación de plataformas...");
-    }
 
-    void Update()
-    {
-        // Incrementar el temporizador
-        timer += Time.deltaTime;
-
-        // Verificar si es necesario generar más plataformas
-        if (timer >= generationFrequency)
-        {
-            GeneratePlatform();
-
-            // Reiniciar el temporizador
-            timer = 0f;
-        }
+        // Iniciar la generación de plataformas
+        InvokeRepeating("GeneratePlatform", 0f, generationFrequency);
     }
 
     void GeneratePlatform()
