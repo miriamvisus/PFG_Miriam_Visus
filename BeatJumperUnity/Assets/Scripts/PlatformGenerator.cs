@@ -11,7 +11,7 @@ public class PlatformGenerator : MonoBehaviour
     public int platformWidth = 1;
     public float[] heights;
     public float minHorizontalSpacing = 0f;
-    public float maxHorizontalSpacing = 0.1f;
+    public float maxHorizontalSpacing = 3f;
     public float generationOffset = 10f; // Distancia desde la cámara para comenzar a generar
     public float generationFrequency;  // Frecuencia de generación de plataformas (segundos por plataforma)
 
@@ -37,7 +37,7 @@ public class PlatformGenerator : MonoBehaviour
     {
         // Calcula las posiciones de la nueva plataforma
         float horizontalOffset = Random.Range(minHorizontalSpacing, maxHorizontalSpacing);
-        Vector3Int newTilePosition = lastTilePosition + new Vector3Int(platformWidth + Mathf.RoundToInt(horizontalOffset), Mathf.RoundToInt(heights[currentGenerationIndex]), 0);
+        Vector3Int newTilePosition = new Vector3Int(lastTilePosition.x + platformWidth + Mathf.RoundToInt(horizontalOffset), Mathf.RoundToInt(heights[currentGenerationIndex]), 0);
 
         // Coloca el Tile en la posición calculada
         tilemap.SetTile(newTilePosition, platformTile);
@@ -47,6 +47,7 @@ public class PlatformGenerator : MonoBehaviour
 
         // Incrementa el índice de generación para la próxima plataforma
         currentGenerationIndex++;
+
         if (currentGenerationIndex >= heights.Length)
         {
             currentGenerationIndex = 0; // Vuelve al inicio del array si se alcanza el final

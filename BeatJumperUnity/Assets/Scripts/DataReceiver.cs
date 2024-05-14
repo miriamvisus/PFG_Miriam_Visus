@@ -18,7 +18,7 @@ public class DataReceiver : MonoBehaviour
 
     public ModelRunner modelRunner;
 
-    public delegate void DataReceived(float tempo, float[] energy, int energyLength);
+    public delegate void DataReceived(float tempo, float[] energy);
     public static event DataReceived OnDataReceived;
 
     private float tempo;
@@ -79,9 +79,9 @@ public class DataReceiver : MonoBehaviour
             Debug.Log("Tempo recibido: " + tempo);
             Debug.Log("Energía recibida: " + string.Join(", ", energy));
 
-            UnityMainThreadDispatcher.Instance().Enqueue(() => OnDataReceived?.Invoke(tempo, energy, energyLength));
+            UnityMainThreadDispatcher.Instance().Enqueue(() => OnDataReceived?.Invoke(tempo, energy));
 
-            UnityMainThreadDispatcher.Instance().Enqueue(() => modelRunner.ProcessData(tempo, energy, energyLength));
+            UnityMainThreadDispatcher.Instance().Enqueue(() => modelRunner.ProcessData(tempo, energy));
         }
         
         catch (Exception ex)

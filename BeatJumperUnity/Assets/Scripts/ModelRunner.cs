@@ -25,7 +25,7 @@ public class ModelRunner : MonoBehaviour
     }
 
     // Método para procesar los datos recibidos
-    public void ProcessData(float tempo, float[] energy, int energyLength)
+    public void ProcessData(float tempo, float[] energy)
     {
         try
         {
@@ -38,7 +38,7 @@ public class ModelRunner : MonoBehaviour
             var inputTempo = new Tensor(1, 1, 1, 1);
             inputTempo[0] = tempo;
             // 145361 --> este valor es el genergies.shape[2]
-            var inputEnergy = new Tensor(1, 1, energyLength, 1, energy);
+            var inputEnergy = new Tensor(1, 1, energy.Length, 1, energy);
 
             Debug.Log("Tensor de entrada de tempo: " + inputTempo);
             Debug.Log("Tensor de entrada de energía: " + inputEnergy);
@@ -70,7 +70,7 @@ public class ModelRunner : MonoBehaviour
             // Copiar los datos del tensor al array
             for (int i = 0; i < heightLength; i++)
             {
-                heights[i] = outputHeight[0, 0, i, 0]; // El tensor es de forma (1, 1, energyLength, 1)
+                heights[i] = outputHeight[0, 0, i, 0]; // El tensor es de forma (1, 1, energy.Length, 1)
             }
             
             Debug.Log("Velocidad: " + speed);
