@@ -85,7 +85,13 @@ def process_audio_data(audio_file):
     try:
         # Cargar los datos de audio utilizando librosa.load()
         y, sr = librosa.load(audio_file, sr=None)
-        # 1687.6350566893425
+
+        # Duración del audio más largo del modelo
+        duration = 1687.6350566893425
+
+        # Asegurar que sea del mismo tamaño que los audios del modelo
+        y = librosa.util.fix_length(y, size=int(duration * sr))
+
         # Calcular el tempo
         tempo = librosa.beat.tempo(y=y, sr=sr)
 
