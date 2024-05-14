@@ -8,7 +8,8 @@ using Unity.Barracuda;
 public class ModelRunner : MonoBehaviour
 {
     // Variables para las referencias a los objetos de la UI y el modelo
-    public NNModel modelAsset;
+    [SerielizeField]
+    private NNModel onnxModel;
 
     private IWorker worker; 
 
@@ -48,9 +49,13 @@ public class ModelRunner : MonoBehaviour
             var outputFrequency = worker.PeekOutput("output_1");
             var outputHeight = worker.PeekOutput("output_2");
 
+            Debug.Log("Tensor de salida de velocidad: " + outputSpeed);
+            Debug.Log("Tensor de salida de frecuencia: " + outputFrequency);
+            Debug.Log("Tensor de salida de altura: " + outputHeight);
+
             // Procesar los valores de salida
-            float speed = outputSpeed[0];
-            float frequency = outputFrequency[0];
+            float speed = outputSpeed[0, 0, 0, 0];
+            float frequency = outputFrequency[0, 0, 0, 0];
             // Obtener la longitud del tensor de altura
             int heightLength = outputHeight.length;
 

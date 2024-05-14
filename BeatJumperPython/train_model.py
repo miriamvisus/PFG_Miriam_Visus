@@ -210,13 +210,18 @@ character_speeds = np.array(character_speeds)
 platform_frequencies = np.array(platform_frequencies)
 platform_heights = np.array(platform_heights)
 
+print("Forma de character_speeds:", character_speeds.shape)
+print("Forma de platform_frequencies:", platform_frequencies.shape)
 print("Forma de platform_heights:", platform_heights.shape)
 # Redimensionar platform_heights para que todos los arrays tengan el mismo número de muestras
 platform_heights = np.reshape(platform_heights, (num_audios, 1, energies.shape[2]))
-
+print("Forma de platform_heights:", platform_heights.shape)
 
 # Dividir los datos de tempo y energía en conjuntos de entrenamiento y prueba
-tempos_train, tempos_test, energies_train, energies_test = train_test_split(tempos, energies, test_size=0.2, random_state=42)
+tempos_train, tempos_test = train_test_split(tempos, test_size=0.2, random_state=42)
+
+# Dividir los datos de tempo y energía en conjuntos de entrenamiento y prueba
+energies_train, energies_test = train_test_split(energies, test_size=0.2, random_state=42)
 
 # Dividir las etiquetas de velocidad en conjuntos de entrenamiento y prueba de manera consistente
 character_speeds_train, character_speeds_test = train_test_split(character_speeds, test_size=0.2, random_state=42)
@@ -226,6 +231,17 @@ platform_frequencies_train, platform_frequencies_test = train_test_split(platfor
 
 # Dividir las etiquetas de altura de plataformas en conjuntos de entrenamiento y prueba de manera consistente
 platform_heights_train, platform_heights_test = train_test_split(platform_heights, test_size=0.2, random_state=42)
+
+print("Forma de tempos_train:", tempos_train.shape)
+print("Forma de tempos_test:", tempos_test.shape)
+print("Forma de energies_train:", energies_train.shape)
+print("Forma de energies_test:", energies_test.shape)
+print("Forma de character_speeds_train:", character_speeds_train.shape)
+print("Forma de character_speeds_test:", character_speeds_test.shape)
+print("Forma de platform_frequencies_train:", platform_frequencies_train.shape)
+print("Forma de platform_frequencies_test:", platform_frequencies_test.shape)
+print("Forma de platform_heights_train:", platform_heights_train.shape)
+print("Forma de platform_heights_test:", platform_heights_test.shape)
 
 
 def create_model():
@@ -256,10 +272,10 @@ def create_model():
     output_frequency = Dense(1, name='output_frequency')(dense_tempo)  # Salida continua para la frecuencia de generación de plataformas
 
     # Capa de salida para la altura de las plataformas
-    output_height = Dense(1, name='output_height')(dense_energy)  # Salida continua para la altura de las plataformas
+    output_heights = Dense(energies_train.shape[2], name='output_heights')(dense_energy)  # Salida continua para las alturas de las plataformas
 
     # Modelo que toma dos entradas: tempo y energía, y tiene tres salidas: velocidad, frecuencia y altura
-    model = Model(inputs=[input_tempo, input_energy], outputs=[output_speed, output_frequency, output_height])
+    model = Model(inputs=[input_tempo, input_energy], outputs=[output_speed, output_frequency, output_heights])
 
     return model
 
