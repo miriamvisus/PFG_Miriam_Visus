@@ -10,8 +10,8 @@ public class PlatformGenerator : MonoBehaviour
     public TileBase platformTile; // Tipo de plataforma
     public int platformWidth = 1;
     public float[] heights;
-    public float minHorizontalSpacing = 0f;
-    public float maxHorizontalSpacing = 3f;
+    public float minHorizontalSpacing = 1f;
+    public float maxHorizontalSpacing = 4f;
     public float generationOffset = 10f; // Distancia desde la cámara para comenzar a generar
     public float generationFrequency;  // Frecuencia de generación de plataformas (segundos por plataforma)
 
