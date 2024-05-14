@@ -8,8 +8,7 @@ using Unity.Barracuda;
 public class ModelRunner : MonoBehaviour
 {
     // Variables para las referencias a los objetos de la UI y el modelo
-    [SerielizeField]
-    private NNModel onnxModel;
+    public NNModel modelAsset;
 
     private IWorker worker; 
 

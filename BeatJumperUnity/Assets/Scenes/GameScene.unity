@@ -2236,7 +2236,7 @@ GameObject:
   - component: {fileID: 1816424715}
   - component: {fileID: 1816424716}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: Audio&ModelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2381,7 +2381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverIP: 127.0.0.1
   port: 8001
-  modelRunner: {fileID: 1816424716}
+  modelRunner: {fileID: 0}
 --- !u!114 &1816424716
 MonoBehaviour:
   m_ObjectHideFlags: 0
