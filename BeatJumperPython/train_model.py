@@ -289,7 +289,7 @@ model.compile(optimizer='adam', loss='mean_squared_error')
 model.fit(
     x=[tempos_train, energies_train],  # Usamos los datos de entrada ajustados para el entrenamiento
     y=[character_speeds_train, platform_frequencies_train, platform_heights_train],  # Etiquetas de salida
-    epochs=1000,
+    epochs=5000,
     batch_size=32,
     validation_data=([tempos_test, energies_test], [character_speeds_test, platform_frequencies_test, platform_heights_test])  # Datos de validación
 )
@@ -299,4 +299,4 @@ loss = model.evaluate([tempos_test, energies_test], [character_speeds_test, plat
 print("Pérdida en el conjunto de prueba:", loss)
 
 # Guardar el modelo entreando
-model.save('trained_model.h5')
+model.save('trained_model_to_export.h5')
