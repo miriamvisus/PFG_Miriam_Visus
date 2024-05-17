@@ -2226,9 +2226,8 @@ MonoBehaviour:
   platformTile: {fileID: 11400000, guid: 151590f5315baee41af6dac10bf8df7d, type: 2}
   platformWidth: 1
   heights: []
-  minHorizontalSpacing: 1
-  maxHorizontalSpacing: 4
-  generationOffset: 10
+  minHorizontalSpacing: 0.5
+  maxHorizontalSpacing: 2.5
   generationFrequency: 0
 --- !u!1 &1479084694
 GameObject:
@@ -2644,7 +2643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverIP: 127.0.0.1
   port: 8001
-  modelRunner: {fileID: 0}
+  modelRunner: {fileID: 1816424716}
 --- !u!114 &1816424716
 MonoBehaviour:
   m_ObjectHideFlags: 0
