@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using PimDeWitte.UnityMainThreadDispatcher;
 
 
 public class BunnyMovement : MonoBehaviour
@@ -12,6 +13,7 @@ public class BunnyMovement : MonoBehaviour
     private Rigidbody2D Rigidbody2D;
     private Animator Animator;
     private bool Grounded;
+    private bool IsModelReady;
 
     void Start()
     {
@@ -21,13 +23,15 @@ public class BunnyMovement : MonoBehaviour
         ModelRunner.OnModelReady += StartMovement;
     }
 
-    void StartMovement()
+    void Update()
     {
-        Debug.Log("Iniciando movimiento del personaje...");
+        if (!IsModelReady) return;
 
-        transform.Translate(Vector2.right * Speed);
+        // Movimiento horizontal continuo
+        transform.Translate(Vector2.right * Speed * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        // Verifica la entrada para el salto
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
         {
             Jump();
         }
@@ -35,6 +39,12 @@ public class BunnyMovement : MonoBehaviour
         // Actualización de la animación
         Animator.SetBool("Running", true);
         Animator.SetBool("Jumping", !Grounded);
+    }
+
+    void StartMovement()
+    {
+        Debug.Log("Iniciando movimiento del personaje...");
+        IsModelReady = true;
     }
 
     private void Jump()
@@ -55,15 +65,16 @@ public class BunnyMovement : MonoBehaviour
     {
         if (FallDetectorCollider.gameObject.CompareTag("FallDetector"))
         {
+            Debug.Log("Te has caído.");
             Animator.SetBool("Hurting", true);
-            Invoke("EndGameWithDelay", 0.3f);
+            UnityMainThreadDispatcher.Instance().Enqueue(() => Invoke("EndGameWithDelay", 0.3f));
         }
     }
 
     private void EndGameWithDelay()
     {
         Debug.Log("El juego ha terminado.");
-        SceneManager.LoadScene("GameOverScene");
+        UnityMainThreadDispatcher.Instance().Enqueue(() => SceneManager.LoadScene("GameOverScene"));
     }
 
     void OnDestroy()
