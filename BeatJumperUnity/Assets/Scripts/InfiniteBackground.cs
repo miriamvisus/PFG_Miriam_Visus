@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class InfiniteBackground : MonoBehaviour
 {
+    public GameObject Bunny; // Referencia al objeto Bunny
     public float backgroundWidth; // Ancho de cada segmento del fondo (configurado manualmente)
 
     private List<GameObject> backgrounds = new List<GameObject>(); // Lista para almacenar los segmentos del fondo
@@ -19,8 +21,15 @@ public class InfiniteBackground : MonoBehaviour
 
         // Agregar el primer segmento de fondo a la lista
         backgrounds.Add(initialBackground);
-        
-        while(true) 
+
+        // Crear un segundo segmento de fondo para comenzar
+        CreateNewBackgroundSegment();
+    }
+
+    void Update()
+    {
+        // Crear un nuevo segmento de fondo si el Bunny se ha movido más allá del segmento actual
+        if (Bunny.transform.position.x > lastBackgroundEndPosition.x - backgroundWidth)
         {
             CreateNewBackgroundSegment();
         }

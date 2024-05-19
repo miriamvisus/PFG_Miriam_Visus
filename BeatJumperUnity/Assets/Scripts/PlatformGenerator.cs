@@ -19,7 +19,7 @@ public class PlatformGenerator : MonoBehaviour
 
     void Start()
     {
-        lastTilePosition = tilemap.origin;
+        lastTilePosition = FindLastTilePosition();
 
         ModelRunner.OnModelReady += StartGeneration;
     }
@@ -51,6 +51,22 @@ public class PlatformGenerator : MonoBehaviour
         {
             currentGenerationIndex = 0; // Vuelve al inicio del array si se alcanza el final
         }
+    }
+
+    Vector3Int FindLastTilePosition()
+    {
+        Vector3Int lastPosition = tilemap.origin;
+        foreach (var pos in tilemap.cellBounds.allPositionsWithin)
+        {
+            if (tilemap.HasTile(pos))
+            {
+                if (pos.x > lastPosition.x)
+                {
+                    lastPosition = pos;
+                }
+            }
+        }
+        return lastPosition;
     }
 
     void OnDestroy()
