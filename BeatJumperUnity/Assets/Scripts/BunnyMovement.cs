@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using PimDeWitte.UnityMainThreadDispatcher;
 
 
 public class BunnyMovement : MonoBehaviour
@@ -67,14 +66,14 @@ public class BunnyMovement : MonoBehaviour
         {
             Debug.Log("Te has caído.");
             Animator.SetBool("Hurting", true);
-            UnityMainThreadDispatcher.Instance().Enqueue(() => Invoke("EndGameWithDelay", 0.3f));
+            Invoke("EndGameWithDelay", 0.3f);
         }
     }
 
     private void EndGameWithDelay()
     {
         Debug.Log("El juego ha terminado.");
-        UnityMainThreadDispatcher.Instance().Enqueue(() => SceneManager.LoadScene("GameOverScene"));
+        SceneManager.LoadScene("GameOverScene");
     }
 
     void OnDestroy()
