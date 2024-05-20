@@ -16,6 +16,7 @@ public class PlatformGenerator : MonoBehaviour
 
     private int currentGenerationIndex = 0;
     private Vector3Int lastTilePosition;
+    private bool isGenerating = false;
 
     void Start()
     {
@@ -28,12 +29,16 @@ public class PlatformGenerator : MonoBehaviour
     {
         Debug.Log("Iniciando generación de plataformas...");
 
+        isGenerating = true;
+
         // Iniciar la generación de plataformas
         InvokeRepeating("GeneratePlatform", 0f, generationFrequency);
     }
 
     void GeneratePlatform()
     {
+        if (!isGenerating) return;
+
         // Calcula las posiciones de la nueva plataforma
         float horizontalOffset = Random.Range(minHorizontalSpacing, maxHorizontalSpacing);
         Vector3Int newTilePosition = new Vector3Int(lastTilePosition.x + platformWidth + Mathf.RoundToInt(horizontalOffset), Mathf.RoundToInt(heights[currentGenerationIndex]), 0);
@@ -51,6 +56,13 @@ public class PlatformGenerator : MonoBehaviour
         {
             currentGenerationIndex = 0; // Vuelve al inicio del array si se alcanza el final
         }
+    }
+
+    public void StopGeneration()
+    {
+        Debug.Log("Deteniendo generación de plataformas...");
+        isGenerating = false;
+        CancelInvoke("GeneratePlatform");
     }
 
     Vector3Int FindLastTilePosition()

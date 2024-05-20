@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using PimDeWitte.UnityMainThreadDispatcher;
 
 
 public class BunnyMovement : MonoBehaviour
@@ -20,6 +21,15 @@ public class BunnyMovement : MonoBehaviour
         Animator = GetComponent<Animator>();
 
         ModelRunner.OnModelReady += StartMovement;
+
+        if (UnityMainThreadDispatcher.Instance() == null)
+        {
+            Debug.LogError("UnityMainThreadDispatcher is not initialized. Ensure it is added to the scene.");
+        }
+        else
+        {
+            Debug.Log("UnityMainThreadDispatcher initialized successfully.");
+        }
     }
 
     void Update()
@@ -66,12 +76,29 @@ public class BunnyMovement : MonoBehaviour
         {
             Debug.Log("Te has caído.");
             Animator.SetBool("Hurting", true);
-            Invoke("EndGameWithDelay", 0.3f);
+            
+            // Detener la generación de plataformas
+            GameObject platformManager = GameObject.Find("PlatformManager");
+            if (platformManager != null)
+            {
+                PlatformGenerator platformGenerator = platformManager.GetComponent<PlatformGenerator>();
+                if (platformGenerator != null)
+                {
+                    platformGenerator.StopGeneration();
+                }
+            }
+
+            StartCoroutine(EndGameWithDelay());
         }
     }
 
-    private void EndGameWithDelay()
+    private IEnumerator EndGameWithDelay()
     {
+        Debug.Log("Iniciando Coroutine para EndGameWithDelay");
+        yield return new WaitForSeconds(0.3f);
+        Debug.Log("Coroutine terminada, llamando a EndGameWithDelay");
+
+        // Cargar la escena directamente para descartar problemas con el Dispatcher
         Debug.Log("El juego ha terminado.");
         SceneManager.LoadScene("GameOverScene");
     }
