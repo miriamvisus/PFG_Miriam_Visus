@@ -1080,7 +1080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 125d11ba2f0a0714792912f610cdadd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelAsset: {fileID: 5022602860645237092, guid: ee5652d07e6c3d840892ab6a7b8fc4c8, type: 3}
+  modelAsset: {fileID: 5022602860645237092, guid: 05d03c966ddc13e42b0bf1b089e50ca0, type: 3}
   Bunny: {fileID: 2061736564}
   PlatformManager: {fileID: 1458268564}
 --- !u!1 &1830045682
