@@ -42,20 +42,32 @@ public class DataReceiver : MonoBehaviour
             running = true;
             while (running)
             {
-                TcpClient client = server.AcceptTcpClient();
-                Debug.Log($"Servidor escuchando en {serverIP}:{port}");
-                Connection(client);
-                client.Close();
+                if (!server.Pending()) // Espera hasta que haya un cliente
+                {
+                    Thread.Sleep(100); // Evitar el uso excesivo de CPU
+                    continue;
+                }
+
+                using (TcpClient client = server.AcceptTcpClient())
+                {
+                    Debug.Log($"Servidor escuchando en {serverIP}:{port}");
+                    Connection(client);
+                }
             }
-
-            server.Stop();
         }
-
         catch(Exception ex)
         {
             Debug.LogError("Error al recibir datos de audio: " + ex.Message);
         }
+        finally
+        {
+            if (server != null)
+            {
+                server.Stop();
+            }
+        }
     }
+
 
     void Connection(TcpClient client)
     {
@@ -93,6 +105,13 @@ public class DataReceiver : MonoBehaviour
     void OnDestroy()
     {
         running = false;
-        thread.Join();
+        if (thread != null && thread.IsAlive)
+        {
+            thread.Join();
+        }
+        if (server != null)
+        {
+            server.Stop();
+        }
     }
 }

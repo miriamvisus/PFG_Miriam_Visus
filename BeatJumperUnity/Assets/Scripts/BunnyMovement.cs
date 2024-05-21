@@ -21,15 +21,6 @@ public class BunnyMovement : MonoBehaviour
         Animator = GetComponent<Animator>();
 
         ModelRunner.OnModelReady += StartMovement;
-
-        if (UnityMainThreadDispatcher.Instance() == null)
-        {
-            Debug.LogError("UnityMainThreadDispatcher is not initialized. Ensure it is added to the scene.");
-        }
-        else
-        {
-            Debug.Log("UnityMainThreadDispatcher initialized successfully.");
-        }
     }
 
     void Update()
@@ -70,7 +61,7 @@ public class BunnyMovement : MonoBehaviour
         Grounded = Physics2D.Raycast(transform.position, Vector2.down, 2.0f);
     }
 
-    public void OnTriggerEnter2D(Collider2D FallDetectorCollider)
+    void OnTriggerEnter2D(Collider2D FallDetectorCollider)
     {
         if (FallDetectorCollider.gameObject.CompareTag("FallDetector"))
         {
@@ -88,19 +79,8 @@ public class BunnyMovement : MonoBehaviour
                 }
             }
 
-            StartCoroutine(EndGameWithDelay());
+            SceneManager.LoadScene("GameOverScene");
         }
-    }
-
-    private IEnumerator EndGameWithDelay()
-    {
-        Debug.Log("Iniciando Coroutine para EndGameWithDelay");
-        yield return new WaitForSeconds(0.3f);
-        Debug.Log("Coroutine terminada, llamando a EndGameWithDelay");
-
-        // Cargar la escena directamente para descartar problemas con el Dispatcher
-        Debug.Log("El juego ha terminado.");
-        SceneManager.LoadScene("GameOverScene");
     }
 
     void OnDestroy()
