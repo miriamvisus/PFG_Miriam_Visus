@@ -99,7 +99,7 @@ def load_audios_from_git(git_repo_url, audio_folder, num_audios, max_duration):
                     print("Forma del tempo:", tempo.shape)
                     print("Forma de la energía:", energy.shape)
 
-                    # Convertir tempo y energía a arrays numpy de una sola fila y varias columnasç
+                    # Convertir tempo y energía a arrays numpy de una sola fila y varias columnas
                     tempos.append(tempo)
                     energies.append(energy)
 
