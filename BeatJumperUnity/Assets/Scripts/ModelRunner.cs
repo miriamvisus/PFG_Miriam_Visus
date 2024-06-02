@@ -37,7 +37,6 @@ public class ModelRunner : MonoBehaviour
             // Preparar los datos de entrada para el modelo
             var inputTempo = new Tensor(1, 1, 1, 1);
             inputTempo[0] = tempo;
-            // 145361 --> este valor es el genergies.shape[2]
             var inputEnergy = new Tensor(1, 1, energy.Length, 1, energy);
 
             Debug.Log("Tensor de entrada de tempo: " + inputTempo);

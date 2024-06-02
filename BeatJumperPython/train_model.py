@@ -298,5 +298,18 @@ model.fit(
 loss = model.evaluate([tempos_test, energies_test], [character_speeds_test, platform_frequencies_test, platform_heights_test])
 print("Pérdida del conjunto de prueba:", loss)
 
+# Predecir las velocidades del personaje, frecuencias de generación de plataformas y alturas de las plataformas
+predicted_speeds, predicted_frequencies, predicted_heights = model.predict([tempos_test, energies_test])
+
+# Calcular el error cuadrático medio (MSE) para cada aspecto
+mse_speeds = np.mean(np.square(predicted_speeds - character_speeds_test))
+mse_frequencies = np.mean(np.square(predicted_frequencies - platform_frequencies_test))
+mse_heights = np.mean(np.square(predicted_heights - platform_heights_test))
+
+# Imprimir las métricas de precisión
+print("Error cuadrático medio de velocidades del personaje:", mse_speeds)
+print("Error cuadrático medio de frecuencias de generación de plataformas:", mse_frequencies)
+print("Error cuadrático medio de alturas de las plataformas:", mse_heights)
+
 # Guardar el modelo entreando
 model.save('trained_model.h5')
