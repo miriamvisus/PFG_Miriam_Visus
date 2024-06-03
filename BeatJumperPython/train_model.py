@@ -217,19 +217,19 @@ print("Forma de platform_heights:", platform_heights.shape)
 platform_heights = np.reshape(platform_heights, (num_audios, 1, energies.shape[2]))
 print("Forma de platform_heights:", platform_heights.shape)
 
-# Dividir los datos de tempo y energía en conjuntos de entrenamiento y prueba
+# Dividir los datos de tempo en conjuntos de entrenamiento y prueba
 tempos_train, tempos_test = train_test_split(tempos, test_size=0.2, random_state=42)
 
-# Dividir los datos de tempo y energía en conjuntos de entrenamiento y prueba
+# Dividir los datos de energía en conjuntos de entrenamiento y prueba
 energies_train, energies_test = train_test_split(energies, test_size=0.2, random_state=42)
 
-# Dividir las etiquetas de velocidad en conjuntos de entrenamiento y prueba de manera consistente
+# Dividir las etiquetas de velocidad en conjuntos de entrenamiento y prueba
 character_speeds_train, character_speeds_test = train_test_split(character_speeds, test_size=0.2, random_state=42)
 
-# Dividir las etiquetas de frecuencia de plataformas en conjuntos de entrenamiento y prueba de manera consistente
+# Dividir las etiquetas de frecuencia de plataformas en conjuntos de entrenamiento y prueba
 platform_frequencies_train, platform_frequencies_test = train_test_split(platform_frequencies, test_size=0.2, random_state=42)
 
-# Dividir las etiquetas de altura de plataformas en conjuntos de entrenamiento y prueba de manera consistente
+# Dividir las etiquetas de altura de plataformas en conjuntos de entrenamiento y prueba
 platform_heights_train, platform_heights_test = train_test_split(platform_heights, test_size=0.2, random_state=42)
 
 print("Forma de tempos_train:", tempos_train.shape)
