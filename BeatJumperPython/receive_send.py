@@ -99,7 +99,7 @@ def process_audio_data(audio_file):
         energy = librosa.feature.rms(y=y)
 
         print("Tempo:", tempo)
-        print("Energía:", energy)
+        print("Energí (diez primeros valores):", energy[:10])
 
         return tempo, energy
 
