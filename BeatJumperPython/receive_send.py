@@ -99,7 +99,8 @@ def process_audio_data(audio_file):
         energy = librosa.feature.rms(y=y)
 
         print("Tempo:", tempo)
-        print("Energí (diez primeros valores):", energy[:10])
+        energy_list = energy[0].tolist()
+        print("Energía (diez primeros valores):", energy_list[:10])
 
         return tempo, energy
 
@@ -125,11 +126,6 @@ def send_data_to_unity(tempo, energy, energy_length):
             energy_length_bytes = struct.pack('I', energy_length)
             energy_format = f'{len(energy_flat)}f'
             energy_bytes = struct.pack(energy_format, *energy_flat)
-
-            # Impresiones adicionales para verificar el flujo de datos
-            print("Datos de tempo enviados:", tempo_bytes)
-            print("Datos de longitud de energía enviados:", energy_length_bytes)
-            print("Datos de energía enviados:", energy_bytes)
 
             # Enviar los datos de tempo, longitud de energía y energía
             client_socket.send(tempo_bytes)
